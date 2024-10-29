@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,200;1,300&display=swap');
+body{
+    background-color:transparent;
+}
+.main_div{
+    width: 8%;
+    margin-bottom:0.3vh;
+    margin-right: 1vh;
+}
+.name{
+    width: 100%;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,1) 50%);
+    border-right: #dea140 5px solid;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    justify-content: center;
+}
+
+.name h1{
+    font-size: calc(5px + (22 - 14) * ((100vw - 1px) / (1600 - 300)));
+    margin-bottom:-1px;
+    white-space: nowrap;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-align: right;
+}
+.clock{
+    padding-right: 15px;
+    width: 100%;
+    padding: 5px;
+    padding-top:1px;
+    padding-bottom: 1px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.05085784313725494) 0%, rgba(0,0,0,1) 50%);
+    border-right: #499ecb 5px solid;
+    margin-top:10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.clock h1{
+    font-size:1.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-right: 5px;
+    margin-bottom:15px; 
+    text-overflow: ellipsis;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    text-align: right;
+}
+.clock h2{
+    font-size:1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 5px;
+    margin-bottom:2px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-align: right;
+}
+#app {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+@media only screen and (max-width: 800px) {
+    .clock h2 {
+        font-size: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 5px;
+        margin-bottom: 2px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 500;
+        text-align: right;
+    }
+    .clock h1 {
+        font-size: 0.7em;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-top: 5px;
+        padding-right: 5px;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        text-align: right;
+    }
+  }

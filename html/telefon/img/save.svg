@@ -1,0 +1,41 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>save-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #27d106 } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="shp0" d="M512 122.51L512 480C512 497.67 497.67 512 480 512L32 512C14.33 512 0 497.67 0 480L0 32C0 14.33 14.33 0 32 0L64 0L64 112C64 120.84 71.16 128 80 128L336 128C344.84 128 352 120.84 352 112L352 0L389.49 0C406.46 0 422.74 6.74 434.75 18.74L493.25 77.25C505.26 89.26 512 105.53 512 122.51ZM448 256L64 256L64 448L448 448L448 256Z" />
+		<path id="Layer" class="shp0" d="M224 0L288 0L288 96L224 96L224 0Z" />
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+</svg>

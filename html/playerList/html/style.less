@@ -1,0 +1,113 @@
+body {
+    transition: all 0.5s ease;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent !important;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: transparent !important;
+    user-select: none;
+    overflow: hidden;
+  }
+  
+  .content {
+  
+    padding: 1vh;
+    backdrop-filter: blur(2px);
+    transition: all ease-in;
+    border-radius: 16px 16px 0 0;
+    display: grid;
+    grid-auto-flow: column;
+    background: linear-gradient(74.11deg, rgba(46, 55, 79, 0.855) 78.83%, rgba(27, 34, 52, 0.81) 130.91%);
+  }
+  
+  span {
+    justify-self: right;
+    align-self: center;
+    color: #fff;
+  }
+  
+  .general {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .headerimg {
+    width: 2.5vw;
+    justify-self: left;
+  }
+  
+  .playerList {
+    backdrop-filter: blur(2px);
+    border-radius: 0 0 0 16px;
+    height: 60vh;
+    width: 40vw;
+    background: linear-gradient(117.41deg, rgba(46, 55, 79, 0.95) 14.12%, rgba(27, 34, 52, 0.95) 66.25%);
+    text-align: center;
+  }
+  .playerList table tbody{
+    overflow-y: scroll;
+  }
+  table {
+    position: relative;
+    width: 100%;
+    border-spacing: 0;
+  }
+  
+  .playerList table thead {
+    background: linear-gradient(114.68deg, rgba(255, 179, 163, 0.9) 17.27%, rgba(202, 112, 93, 0.9) 109%);
+    width: 100%;
+  }
+  
+  .playerList table thead th {
+    width: 3vw;
+    top: 0;
+  }
+  
+  .playerList table thead .nameHeader {
+    width: 10vw;
+  }
+  
+  .playerList table tbody {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  .playerList table tbody td {
+    border: none;
+  
+  }
+  
+  .noselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+  }
+  
+  .playerList table tbody::-webkit-scrollbar-track {
+    border-radius: 0 0 16px 0;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #000000bf;
+  }
+  
+  .playerList table tbody::-webkit-scrollbar {
+    width: 6px;
+    background: #202636;
+  }
+  
+  .playerList table tbody::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background-color: #383737bd;
+  
+  }
+  
+  .swing-in-top-fwd {
+    -webkit-animation: swing-in-top-fwd 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  }

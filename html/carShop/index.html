@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC tattoShop</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+</head>
+
+<body>
+
+
+    <div class="mainContent">
+        
+
+        <div class="mContent">
+            <img class="logo" src="./img/pGYY8t.png" alt="">
+            <div class="carInfo">
+               <div class="carname"><p>{{ this.carList[this.currentVeh].name }}</p></div>
+               <div class="carp"> <p> Fiyat: {{ this.carList[this.currentVeh].price }}</p></div>
+                <p class="bagaj"> Bagaj: {{ this.carList[this.currentVeh].inventoryCapacity }} lt. | Vergi: ${{this.carList[this.currentVeh].defaultTax}} | Yakıt: {{this.carList[this.currentVeh].fuelConsumption}} L/km </p>
+                <label for="speed">Hız: </label>
+                <progress v-bind:value="speed" max="300" class="speed"></progress>
+                <label for="speed">Frenleme: </label>
+                <progress v-bind:value="breake" max="5" class="breaking"></progress>
+                <label for="speed">Hızlanma: </label>
+                <progress v-bind:value="horsePower" max="50" class="horsePower"></progress>
+                <label for="speed">Yol Tutuşu: </label>
+                <progress v-bind:value="rpm" max="1" class="RPM"></progress>
+            </div>
+    
+            <div class="sButtons">
+                <a @click="changeSelection(-1)" class="arrowButton"><img class="left" src="./img/2.png" alt=""></a>
+                <a @click="changeSelection(1)" class="arrowButton"><img class="right" src="./img/1.png" alt=""></a>
+            </div>
+    
+            <div class="interaction">
+                <a @click="buyCar" class="interactionButtons"><img class="left1" src="./img/4.png" alt=""></a>
+                <a @click="close" class="interactionButtons1"><img class="right1" src="./img/3.png" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./vue.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

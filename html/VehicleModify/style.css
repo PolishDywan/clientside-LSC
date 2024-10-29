@@ -1,0 +1,160 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ @import url("../assets/css/all.min.css");
+
+ *:focus {
+     outline: none;
+ }
+
+ html {
+     margin: 0;
+     height: 100%;
+     width: 100%;
+ }
+
+ body {
+     margin: 0;
+     outline-style: none;
+     user-select: none;
+     font-style: normal;
+     font-weight: normal;
+     box-shadow: none;
+     border-color: transparent;
+     height: 100%;
+     width: 100%;
+     background: transparent !important;
+     display: grid;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+ }
+.logo{
+width: 75px;
+height: auto;
+position: absolute;
+}
+
+ .mainContent {
+     display: grid;
+     padding-right: 2vw;
+     justify-content: right;
+     align-content: center;
+ }
+ 
+ .carname{
+
+    position: relative;
+    margin-left: 120px;
+    display: inline-block;
+    font-weight: bolder;
+
+
+ }
+ .bagaj{
+font-size: 11px;
+font-weight: bolder;
+
+
+ }
+ .carp{
+color: rgb(255 255 255);
+
+font-weight: bolder;
+ }
+
+.mContent{
+    width: 300px;
+    height: 400px;
+    padding: 31px 21px;
+    background: linear-gradient(180deg,rgba(0 157 249 / 63%) 0%, rgb(61 105 228 / 67%) 100%);
+   /* backdrop-filter: blur(10px); */
+    border-radius: 20px;
+
+    font-size: 15px;
+}
+
+.carInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: right;
+    color: white;
+}
+
+.sButtons{
+    text-align: right;  
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.arrowButton{
+    width: 25px;
+    height: 25px;
+    margin-top: 30px;
+    background: rgb(124 163 253 / 23%);
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 2px;
+    color: #ffff;
+    position: relative;
+    display: inline-block;
+    border-radius: 40px;
+    margin-left: 25px ;
+    font-size: 12px;
+    align-items: center;
+}    
+.left,.left1{
+width: 25px;
+height: 25px;
+display: inline-block;
+position: relative;
+margin-right: 5px;
+}
+.right,.right1{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    }
+.arrowButton:hover{
+
+    background: rgb(124 223 253);
+
+
+}
+
+.interaction{
+    text-align: right;
+    display: inline-block;
+    position: relative;
+    margin-left: 205px ;
+}
+
+.interactionButtons,.interactionButtons1{
+    width: 25px;
+    height: 25px;
+    margin-top: 30px;
+    background: rgb(124 163 253 / 23%);
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    border-radius: 40px;
+    margin-left: 5px;
+    font-size: 12px;
+    align-items: center;
+    cursor: pointer;
+   transition: 0.9s;
+}
+
+.interactionButtons:hover{
+    background: rgb(43 112 9);
+}
+.interactionButtons1:hover{
+
+background: rgb(193 8 8);
+
+
+}
+
+

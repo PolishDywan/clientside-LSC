@@ -1,0 +1,35 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+        <title>lsc</title>
+    </head>
+
+    <body>
+        
+        <div class="galaxy">
+            <div id="error">
+                <span>Kullanıcı adı veya Şifre hatalı.</span>
+            </div>
+            <div class="stars"></div>
+            <div class="content">
+                <img id="logo" src="./assets/images/logo.png">
+                <div id="main" class="hider">
+                    <h1 class="head_title"><b style="color:#4493be;">Hoşgeldin.</b> Oyun bilgilerini girerek oyuna erişebilirsin.</h1>
+                    <div><img src="./assets/images/user.png"><input id="kadi" type="text" maxlength="64" placeholder="Kullanıcı Adı"></div>
+                    <div><img src="./assets/images/lock.png"><input id="pass" type="password" maxlength="64" placeholder="Parola"><a style="width:40px; display:inline-block;height: 30px;position: absolute;" onclick="passwordfac()" ><img  src="./assets/images/view.png"></a></div>
+                </div>
+                <div id="button" class="hider">
+                    <img style="width:20px;margin-left:55px;position: absolute;" src="./assets/images/login.png"><span>GİRİŞ YAP</span>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    </html>

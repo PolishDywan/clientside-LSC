@@ -1,0 +1,190 @@
+body {
+    user-select: none;
+    background: transparent !important;
+    font-family: 'Muli', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#context-menu {
+    cursor:pointer;
+    position:fixed;
+    z-index:10000;
+    width:150px;
+    background:#1b1a1a;
+    border-radius:5px;
+    transform:scale(0);
+    transform-origin:top left;
+  }
+  #context-menu.active {
+    transform:scale(1);
+    transition:transform 300ms ease-in-out;
+  }
+  #context-menu .citem {
+    padding:8px 10px;
+    font-size:15px;
+    color:#eee;
+  }
+  #context-menu .citem:hover {
+    background:#555;
+  }
+  #context-menu .citem i {
+    display:inline-block;
+    margin-right:5px;
+  }
+  #context-menu hr {
+    margin:2px 0px;
+    border-color:#555;
+  }
+
+.container {
+    display:none;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 73.44%);
+    border-radius: 20px;
+    width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+    grid-template-rows: 20% 80%;
+    grid-gap: 20px
+}
+
+.head {
+    background: linear-gradient(90deg, rgba(73, 160, 205, 0.8) 43.23%, rgba(73, 160, 205, 0) 95.31%);
+    border-left: 5px #fff solid;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+}
+
+.text {
+    display: grid;
+    align-content: center;
+    font-size: 34px;
+    color: white;
+    margin-left: 5px;
+}
+
+.capacity {
+    display: grid;
+    align-content: center;
+}
+
+.capacity p {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px #fff solid;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    margin: 0 auto;
+}
+
+.inventory {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+}
+
+.character {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.parts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.part {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+}
+
+.weapons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.weapon {
+    width: 110px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.inEnv{
+    max-height:60px;
+}
+
+.value {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+}
+
+.weight {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+}
+
+.name {
+    position: absolute;
+    bottom: 2px;
+    left: 18px;
+    font-size: 14px;
+}
+
+.parts div img{
+    max-height:60px;
+    display:none;
+}
+
+.parts div img:last-child {
+    display:block;
+}
+
+.weapons div img{
+    max-height:60px;
+    display:none;
+}
+
+.weapons div img:last-child {
+    display:block;
+}
+

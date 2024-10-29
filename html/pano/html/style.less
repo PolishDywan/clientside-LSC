@@ -1,0 +1,84 @@
+body{
+    background-image: url(https://i.imgur.com/igFuLbJ.png);
+    background-repeat: no-repeat;
+    user-select: none; 
+    overflow: hidden;
+}
+
+.boardContent{
+    background-color: rgba(0, 0, 0, 0.452);
+    height: 60vh;
+    width: 50vw;
+    margin-top: 25vh;
+    margin-left: 25vw;
+
+}
+
+.logo{
+    img{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    margin-right: 25vw;
+    height: 5vh;
+    width: 2vw;
+    }
+    text-align: right;
+    button{
+        margin-left: 15vw;
+        margin-right: 1.5vw;
+        font-size: 2vh;
+        background-color: transparent;
+        border: none;
+        border-bottom: 0.2vh solid turquoise;
+    }
+}
+
+.header{
+    padding-top: 3vh;
+    text-align: center;
+    font-size: 4vh;
+    padding-bottom: 2vh;
+    color: white;
+
+}
+
+.items{
+    padding-top: 2vh;
+    padding-left: 1vw;
+    button{
+        background-color: transparent;
+        color: turquoise;
+        border: none;
+    }
+}
+
+.info{
+    text-align: center;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    color: white;
+
+    max-height: 37vh;
+    max-width: 48vw;
+    overflow-y: scroll;
+}
+
+.noselect{
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+}
+
+.info::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #000000bf;
+}
+.info::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+.info::-webkit-scrollbar-thumb
+{
+    background-color: #000000;
+   border: 1px solid #4a8bae;
+}

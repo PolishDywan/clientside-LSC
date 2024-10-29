@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
+
+html,
+body {
+  width: auto;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  overflow: hidden
+}
+
+#wrap {
+  display: block;
+  position: relative;
+  width: 15%;
+  margin: 0 auto;
+  top: 50%;
+  transform: scale(0.3);
+  overflow: visible;
+}
+p {
+  color: #fde470;
+  color: #22ff22;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0.5em;
+  &.disclaimer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    font-size: 0.9em;
+    color: #000;
+    font-weight: 300;
+  }
+}
+#collar {
+  display: block;
+  position: relative;
+  width: 1;
+  height: 100%;
+  visibility: hidden;
+}
+#cylinder {
+  display: block;
+  background: url(./cylinder.png);
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 12.9%;
+  left: 30%;
+}
+#driver {
+  display: block;
+  width: 450.1739%;
+  opacity: 0.5;
+  height: 84%;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/driver.png);
+  background-size: cover;
+  position: absolute;
+  top: 57%;
+  left: 140%;
+  transform-origin: 3% -3%;
+}
+#pin {
+  display: block;
+  background-size: cover;
+  width: 7.1304%; // 7.1304% of collar width
+  height: 116.4347%; // 146.4347% of collar width
+  position: absolute;
+  left: 140.4%;
+  top: -98%;
+  transform-origin: 50% 99%;
+  .top {
+    display: block;
+    width: 180%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./pinTop.png");
+    background-size: cover;
+  }
+  .bott {
+    display: block;
+    width: 180%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: url("./pinBott.png");
+    background-size: cover;
+  }
+}
+
+#modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  div {
+    margin-top: 5%;
+    display: inline-block;
+    background: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 1%;
+    h1 {
+      margin-bottom: 0.22em;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1.5em;
+      font-size: 1.4em;
+    }
+    h3 {
+      font-size: 1.1em;
+    }
+    h4 {
+      font-size: 0.8em;
+    }
+  }
+  #win {
+    display: none;
+  }
+  #lose {
+    display: none;
+  }
+}
+@media only screen and (max-width:1920px){
+  #pin{
+    left: 110%;
+    top: -91%;
+  }
+  #driver{
+    left: 115%;
+    top: 35%;
+  }
+}
+@media only screen and (max-width:1920px){
+  #pin{
+    left: 110%;
+    top: -91%;
+  }
+  #driver{
+    left: 115%;
+    top: 35%;
+  }
+}
+@media only screen and (max-width:1600px){
+  #pin{
+    left: 120%;
+  }
+  #driver{
+    left: 115%;
+    top: 35%;
+  }
+}
+@media only screen and (max-width:1440px){
+  #pin{
+    left: 138%;
+  }
+  #driver{
+    left: 115%;
+    top: 35%;
+  }
+}
+@media only screen and (max-width:2200px){
+  #pin{
+    left: 110%;
+    top: -91%;
+  }
+  #driver{
+    left: 115%;
+    top: 35%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #pin{
+    left: 220.4%;
+  }
+  #driver{
+    left: 200%;
+  }
+
+
+
+
+}
+

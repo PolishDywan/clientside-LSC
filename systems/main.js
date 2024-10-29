@@ -1,0 +1,20 @@
+import './adminCamera/startup';
+import './antiCheat/ac';
+import './jobs/main';
+import './gasStation/gas';
+import './pd/pd';
+import './uiBar/client';
+import './objects/aObjects';
+import './camera/cameraHelper';
+import './chair/chairSit';
+import './door/doorSystem';
+import './drug/drugSystem';
+import './hud/hud'; // Textlabel sisteme geçecek.
+import './injured/injuredEvents';
+import './interior/interiorManager';
+import './jacking/market';
+//import './objectPlacer/obj';
+import './player/main';
+import './events/server';
+import './vehicle/events';
+import './weapon/weapon';

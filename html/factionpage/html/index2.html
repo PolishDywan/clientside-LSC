@@ -1,0 +1,330 @@
+<html lang="en">
+
+<head>
+  <script src="https://kit.fontawesome.com/2d70973ebf.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>LSC FactionForm</title>
+</head>
+
+<body>
+  <div class="body">
+    <section class="side">
+      <img class="avatar" src="./image/avatar.png" alt="">
+      <h5 class="rankname">{{ this.userRank }}</h5>
+      <h4 class="nickname">{{ this.userName }}</h4>
+
+      <div class="sidebar">
+        <button class="pano" type="button" onclick="openNavs()"> <i class="fas fa-scroll fa-lg"></i> Pano</button>
+        <button type="button" class="uyelist" onclick="openNav()"><i class="fas fa-th-list fa-lg"></i> Üye
+          Listesi</button>
+        <button class="gorev"><i class="fas fa-calendar-plus fa-lg"></i> Görevler</button>
+        <button class="ayarlar" type="button" onclick="openNave()"><i class="fas fa-cogs fa-lg"></i> Ayarlar</button>
+      </div>
+      <a href="#" class="exit" @click="closeFactionPage"><i id="logout" class="fas fa-sign-out-alt"></i></a>
+      <div class="outdoor">
+        <img class="lsc1" src="./image/1.png" alt="">
+
+      </div>
+
+
+    </section>
+    <span id="maincontentt">
+      <span class="maincontent">
+        <h6 class="factionname">{{ this.fData.name }}
+        </h6>
+        <ul>
+          <li id="ese">Tür: {{ this.fData.typeName }}</li>
+          <li id="ese">Level: {{ this.fData.factionLevel }} </li>
+          <li id="ese">Tecrübe: {{ this.fData.factionExp }} </li>
+        </ul>
+
+        <div class="panor">
+          <div class="pano1">
+            <p>Üye Sayısı: {{ this.mData.length }}</p>
+          </div>
+          <div class="pano1">
+            <p>Araçlar: {{ this.cData }}</p>
+          </div>
+          <div class="pano1">
+            <p>Oluşum Kasası: {{ this.fData.cash }}$ </p>
+          </div>
+          <div class="pano1">
+            <p>Durum: {{ this.isApproved ? "Onaylı" : "Onaysız" }}</p>
+          </div>
+        </div>
+
+
+
+
+      </span>
+
+      <span class="factions">
+        <h6 class="factionote">Birlik Notları</h6>
+        <div class="hood">
+        </div>
+      </span>
+
+    </span>
+
+
+    <span id="demo1" class="acclist" style="display: none;">
+      <div id="radar" class="rankset" style="display:none;">
+        <button id="radar1" type="button" onclick="openNavm()" class="escape1">X</button>
+        <h5 class="ranktitles">Rütbe Seç</h5>
+
+        <span class="rankbody">
+            <button class="rankseletc" v-for="m of fData.rank" @click="editPlayerRank(m.Rank)">{{ m.RankName }}</button>
+        </span>
+      </div>
+
+
+
+      <h6 class="uyename"> Üye Listesi</h6>
+      <div class="conteiner">
+
+        <ul id="master" class="table" v-if="fData && mData">
+          <li class="table-header">
+            <div id="h1" class="col col-2">ISIM</div>
+            <div id="h2" class="col col-3">RUTBE</div>
+            <div id="h3" class="col col-4">AYARLAR</div>
+          </li>
+          <li class="table-row"  v-for="i of mData">
+            <div class="col col-1" data-label="Job Id">{{ i.name }}</div>
+            <div class="col col-2" data-label="Customer Name" v-if="fData.rank.find(x => x.Rank === i.rank)">{{ fData.rank.find(x => x.Rank === i.rank).RankName }}</div>
+            <div class="col col-2" data-label="Customer Name" v-else>YOK</div>
+            <div class="col col-3" data-label="Amount">
+              <div class="dropdwn">
+                <button type="button" onclick="openNavk()" class="dropbtn" @click="selectUserId(i.ID)">Rütbe</button>
+              </div>
+              <button class="factionleave" @click="kickPlayerFromFact(i.ID)">Oluşumdan At</button>
+            </div>
+
+          </li>
+          
+        </ul>
+
+      </div>
+
+    </span>
+
+
+    <span id="setting" class="setting" style="display:none;">
+
+      <h2 class="stitle">Oluşum Ayarları</h2>
+      <div class="sw1">
+        <h6 style="position: absolute; margin-top: 4px;">OOC Kanal</h6>
+        <span class="sw2">
+          <label class="switch">
+            <input type="checkbox" v-model="fData.settings.OOCChat" v-bind="test">
+            <span class="slider round"></span>
+          </label></span>
+      </div>
+      <div class="sw3">
+        <button type="button" onclick="openNavr()" class="newrank" @click="refreshRank">Rütbe Yarat</button>
+
+      </div>
+
+      <div class="conteinersetting">
+
+        <ul id="tablesetting" class="tablesetting">
+          <li class="table-header">
+            <div id="h1" class="col col-2">RUTBE NO</div>
+            <div id="h2" class="col col-3">RUTBE ADI</div>
+            <div id="h3" class="col col-4">AYARLAR</div>
+          </li>
+          <li class="table-row" v-for="i of this.fData.rank">
+            <div class="col col-1" data-label="Job Id">{{ i.Rank }}</div>
+            <div class="col col-2" data-label="Customer Name">{{ i.RankName }}</div>
+            <div class="col col-3" data-label="Amount">
+              <div class="dropdwn">
+                <button type="button" onclick="openNavz()" @click="editRank(i.Rank)" id="duzenle" class="dropbtn">Duzenle</button>
+              </div>
+              <button class="factionleave" @click="removeRank(i.Rank)">Kaldır</button>
+            </div>
+
+          </li>
+          
+
+
+
+        </ul>
+
+        <!-- Rütbe YARAT -->
+        <div id="ranks" class="ranksetting" style="display: none;">
+          <button type="button" onclick="openNavc()" class="escape">X</button>
+          <h5 class="newranktitle">Rütbe İsmi</h5>
+          <input class="newrankbox" placeholder="Rütbe İsmi" type="text" v-model="currEditing.rankName">
+
+          <h5 class="newranktitle1">Rütbe Maaşı</h5>
+          <input class="newrankbox1" placeholder="0" type="number" v-model="currEditing.Payday">
+          <div class="cont">
+            <div class="sw4">
+              <h6 style="position: relative; margin-top: 4px; color: white;">Araçlar Kullan</h6>
+              <span class="sw5">
+                <label class="switch">
+                  <input type="checkbox" v-model="currEditing.permission.canUseCar">
+                  <span class="slider round"></span>
+                </label></span>
+            </div>
+            <div class="sw4">
+              <h6 style="position: relative; margin-top: 4px; color: white;">Kasa Kontrolü </h6>
+              <span class="sw5">
+                <label class="switch">
+                  <input type="checkbox" v-model="currEditing.permission.canUseVault">
+                  <span class="slider round"></span>
+                </label></span>
+            </div>
+            <div class="sw4">
+              <h6 style="position: relative; margin-top: 4px; color: white;">Maaş Alabilir</h6>
+              <span class="sw5">
+                <label class="switch">
+                  <input type="checkbox" v-model="currEditing.permission.canUsePayday">
+                  <span class="slider round"></span>
+                </label></span>
+            </div>
+            <div class="sw4">
+              <h6 style="position: relative; margin-top: 4px; color: white;">Birlik Davet</h6>
+              <span class="sw5">
+                <label class="switch">
+                  <input type="checkbox" v-model="currEditing.permission.canUseInvite">
+                  <span class="slider round"></span>
+                </label></span>
+            </div>
+            <div class="sw4">
+              <h6 style="position: relative; margin-top: 4px; color: white;">Birlik At</h6>
+              <span class="sw5">
+                <label class="switch">
+                  <input type="checkbox" v-model="currEditing.permission.canUseKick">
+                  <span class="slider round"></span>
+                </label></span>
+            </div>
+            <div class="sw4">
+              <h6 style="position: relative; margin-top: 4px; color: white;">Rütbe Ver</h6>
+              <span class="sw5">
+                <label class="switch">
+                  <input type="checkbox" v-model="currEditing.permission.canUseRank">
+                  <span class="slider round"></span>
+                </label></span>
+            </div>
+          </div>
+          <button class="creat" @click="saveOrAdd">Oluştur</button>
+        </div>
+      </div>
+
+      <div id="set" class="ranksetting" style="display: none;">
+        <button type="button" onclick="openNavx()" class="escape">X</button>
+        <h5 class="newranktitle">Rütbe İsmi</h5>
+        <input style="width: 177px; height:21px;border: none;resize: none;" class="newrankbox" placeholder="Rütbe İsmi" type="text" v-model="currEditing.rankName">
+        <h5 class="newranktitle1">Rütbe Maaşı</h5>
+        <input class="newrankbox1" placeholder="0" type="number" v-model="currEditing.Payday">
+        <div class="cont">
+          <div class="sw4">
+            <h6 style="position: relative; margin-top: 4px; color: white;">Araçlar Kullan</h6>
+            <span class="sw5">
+              <label class="switch">
+                <input type="checkbox" v-model="currEditing.permission.canUseCar">
+                <span class="slider round"></span>
+              </label></span>
+          </div>
+          <div class="sw4">
+            <h6 style="position: relative; margin-top: 4px; color: white;">Kasa Kontrolü </h6>
+            <span class="sw5">
+              <label class="switch">
+                <input type="checkbox" v-model="currEditing.permission.canUseVault">
+                <span class="slider round"></span>
+              </label></span>
+          </div>
+          <div class="sw4">
+            <h6 style="position: relative; margin-top: 4px; color: white;">Maaş Alabilir</h6>
+            <span class="sw5">
+              <label class="switch">
+                <input type="checkbox" v-model="currEditing.permission.canUsePayday">
+                <span class="slider round"></span>
+              </label></span>
+          </div>
+          <div class="sw4">
+            <h6 style="position: relative; margin-top: 4px; color: white;">Birlik Davet</h6>
+            <span class="sw5">
+              <label class="switch">
+                <input type="checkbox" v-model="currEditing.permission.canUseInvite">
+                <span class="slider round"></span>
+              </label></span>
+          </div>
+          <div class="sw4">
+            <h6 style="position: relative; margin-top: 4px; color: white;">Birlik At</h6>
+            <span class="sw5">
+              <label class="switch">
+                <input type="checkbox" v-model="currEditing.permission.canUseKick">
+                <span class="slider round"></span>
+              </label></span>
+          </div>
+          <div class="sw4">
+            <h6 style="position: relative; margin-top: 4px; color: white;">Rütbe Ver</h6>
+            <span class="sw5">
+              <label class="switch">
+                <input type="checkbox" v-model="currEditing.permission.canUseRank">
+                <span class="slider round"></span>
+              </label></span>
+          </div>
+        </div>
+        <button class="creat" @click="saveOrAdd">Düzenle</button>
+      </div>
+  </div>
+
+
+  <script src="./vue.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="./app.js"></script>  
+</body>
+
+<script>
+
+  function openNav() {
+    document.getElementById("maincontentt").style.display = "none"
+    document.getElementById("demo1").style.display = "inline"
+    document.getElementById("setting").style.display = "none"
+  };
+  function openNavs() {
+    document.getElementById("maincontentt").style.display = "inline"
+    document.getElementById("demo1").style.display = "none"
+    document.getElementById("setting").style.display = "none"
+  };
+  function openNave() {
+    document.getElementById("maincontentt").style.display = "none"
+    document.getElementById("demo1").style.display = "none"
+    document.getElementById("setting").style.display = "inline"
+  };
+  function openNavr() {
+    document.getElementById("ranks").style.display = "block"
+    document.getElementById("tablesetting").style.filter = "blur(8px)"
+  };
+  function openNavc() {
+    document.getElementById("ranks").style.display = "none"
+    document.getElementById("tablesetting").style.filter = "blur(0px)"
+    document.getElementById("tablesetting").style.transition = "0.5s"
+  };
+  function openNavz() {
+    document.getElementById("set").style.display = "inline"
+    document.getElementById("tablesetting").style.filter = "blur(8px)"
+    document.getElementById("tablesetting").style.transition = "0.5s"
+  };
+  function openNavx() {
+    document.getElementById("set").style.display = "none"
+    document.getElementById("tablesetting").style.filter = "blur(0px)"
+    document.getElementById("tablesetting").style.transition = "0.5s"
+  };
+  function openNavk() {
+    document.getElementById("radar").style.display = "inline"
+    document.getElementById("master").style.filter = "blur(8px)"
+    document.getElementById("master").style.transition = "0.5s"
+  };
+  function openNavm() {
+    document.getElementById("radar").style.display = "none"
+    document.getElementById("master").style.filter = "blur(0px)"
+    document.getElementById("master").style.transition = "0.5s"
+  };
+</script>
+
+</html>

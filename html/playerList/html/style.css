@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap');
+body {
+  transition: all 0.5s ease;
+  font-family: 'Open Sans', sans-serif;
+  background: transparent !important;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: transparent !important;
+  user-select: none;
+  overflow: hidden;
+}
+
+.content {
+
+  padding: 1vh;
+  float: left;
+  backdrop-filter: blur(2px);
+  transition: all ease-in;
+  border-radius: 16px 16px 0 0;
+  display: grid;
+  grid-auto-flow: column;
+  background: linear-gradient(74.11deg, rgba(46, 55, 79, 0.855) 78.83%, rgba(27, 34, 52, 0.81) 130.91%);
+}
+
+span {
+  justify-self: right;
+  align-self: center;
+  color: #fff;
+}
+
+.general {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  grid-template-columns: 700px 400px;
+}
+
+.headerimg {
+  width: 2.5vw;
+  justify-self: left;
+}
+
+.playerList {
+  top: 50%;
+  backdrop-filter: blur(2px);
+  border-radius: 0 0 0 16px;
+  height: 650px;
+  width: 770px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-image: url('./logo.png');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-color: rgba(0, 0, 0, 0.842);
+  text-align: center;
+  overflow-y: scroll;
+}
+
+table {
+
+  position: relative;
+  width: 100%;
+  border-spacing: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+.playerList table thead {
+  background: linear-gradient(90deg, #49A0CD 100%, #165575 50%);
+  width: 100%;
+  color: white;
+  
+}
+
+.playerList table thead th {
+  width: 3vw;
+  top: 0;
+  border: none;
+  font-weight: 400;
+  outline: none;
+  font-family: 'Work Sans', sans-serif;
+  padding: 11px;
+  border-image-width: 0;
+}
+
+.playerList table thead .nameHeader {
+  width: 10vw;
+}
+
+.playerList table tbody {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.9vh;
+}
+
+.playerList table tbody td {
+  border: none;
+
+}
+.qua_earl{
+float: left;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+.noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+}
+.mystreo_main{
+  width: 250px;
+  height: 140px;
+  margin-left: 90px;
+  background-color: rgba(0, 0, 0, 0.842);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.mystreo_main h1{
+
+  margin: 0;
+  width: 250px;
+  height: 40px;
+  line-height:40px;
+  text-align: center;
+  font-size: 16px;
+  background: linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(22,85,117,1) 240%);
+  color: white;
+  font-weight: 200;
+  
+}
+
+.mystreo_main h2{
+  font-size: 15px;
+  font-weight: 200;
+  color: white;
+  padding-left: 40px;
+}
+th {
+  background:#3e95c4;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+}
+.mystreo_content img{
+width: 25px;
+position: absolute;
+margin-left: -30px;
+}
+.playerList::-webkit-scrollbar-track {
+  border-radius: 0 0 16px 0;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000000bf;
+}
+
+.playerList::-webkit-scrollbar {
+  width: 0px;
+  background: #202636;
+}
+
+.playerList::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background-color: #383737bd;
+
+}
+
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@media (min-width: 576px) { 
+  .general {
+  transform: scale(0.4);
+}
+}
+
+@media (min-width: 768px) {
+  .general {
+      transform: scale(0.6);
+  }
+}
+
+
+@media (min-width: 992px) {
+  .general {
+      transform: scale(0.8);
+  }
+}
+
+
+@media (min-width: 1201px) {
+  .general {
+      transform: scale(1);
+  }
+}

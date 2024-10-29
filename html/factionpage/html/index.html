@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC Faction Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />        
+    <link rel="stylesheet/less" type="text/css" href="./css/style.less" />   
+    
+</head>
+<body>
+ 
+
+    <!-- <component v-bind:is="getTabComponent" v-bind:data="data"></component> -->
+    <div class="main">
+
+        <div class="header">
+            <span>{{ this.data.fData.name }}</span>
+            <div class="closeButton">
+                <button @click="closeFactionPage">KAPAT</button>
+            </div>
+        </div>
+        <div class="leftbar">
+            <button @click="selectPage(0)">Ana Sayfa</button>
+            <button @click="selectPage(1)">Üyeler</button>
+            <button @click="selectPage(2)">Ayarlar</button>
+        </div>
+        <div class="content">
+            
+            <component v-bind:is="getTabComponent" v-bind:data="data"></component>
+
+        </div>
+    </div>
+
+
+    <script src="./vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+    <script src="./less.min.js"></script>
+    <!-- CONTENT PAGES -->
+    <script src="./utils/homescreen.js"></script>
+    <script src="./utils/members.js"></script>
+    <script src="./utils/factionsetting.js"></script>
+    <!-- CONTENT PAGES END -->
+    <script src="js/jquery.js"></script>
+    <script src="./app.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+    
+
+</body>
+    
+</html>

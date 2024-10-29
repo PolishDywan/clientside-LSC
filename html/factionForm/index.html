@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+        
+</head>
+<body>
+    
+    <div class="ui container">
+        <div class="ui top attached tabular menu">
+            <a class="active item" data-tab="first">Faction Name</a>
+            <a class="item" data-tab="second">Faction Name 2</a>
+            <a class="item" data-tab="third">Faction Name 3</a>
+          </div>
+          <div class="ui bottom attached active tab segment" data-tab="first">
+            First
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="second">
+            Second
+          </div>
+          <div class="ui bottom attached tab segment" data-tab="third">
+            Third
+          </div>
+    </div>   
+
+
+   </body>
+   <script src="./less.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+
+    <script>
+        $('.menu .item').tab();
+    </script>
+</html>

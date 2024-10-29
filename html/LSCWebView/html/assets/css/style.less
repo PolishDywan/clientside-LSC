@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Staatliches&display=swap');
+@dark: rgba(50, 50, 50, 1);
+@darker: rgba(10, 160, 230, 0.774);
+@medium: rgba(100, 100, 100, 1);
+@light: rgba(215, 215, 215, 1);
+@lighter: rgba(250, 250, 250, 1);
+@contrast: rgba(73, 160, 205, 0.57);
+@contrast-dark: rgb(87, 181, 209);
+@contrast-highlight: rgb(0, 238, 255);
+@contrast2: rgb(68, 110, 165);
+@contrast2-highlight: rgb(139, 168, 185);
+@error: rgb(202, 101, 61);
+@error-highlight: rgb(211, 154, 131);
+@Roboto: 'Roboto';
+@RobotoCondensed: 'Roboto Condensed';
+@RobotoMono: 'Roboto Mono';
+@Staatliches: 'Staatliches';
+@red: #ff595e;
+@yellow: #ffca3a;
+@green: #8ac926;
+@blue: #1982c4;
+@purple: #6a4c93;
+
+*,
+*:focus {
+    outline: none;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: @Roboto;
+}
+
+body {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("https://www.technopat.net/sosyal/eklenti/20180505174822_1-jpg.296099/");
+}
+
+.login-form{
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    width: 350px;
+    font-family: @RobotoCondensed;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.123);
+
+    .login-form-form{
+        width: 300px;
+        justify-content: center;
+        margin-left: 25px;
+    }
+    #inline-form-input-username,#inline-form-input-password{
+        border-radius: 0px 25px 25px 0px;
+        height: 40px;
+        color: @purple;
+    }
+
+}
+
+
+
+// ! Animations
+
+.slide-in-fwd-center{animation:slide-in-fwd-center 1.5s cubic-bezier(.25,.46,.45,.94) both}
+@keyframes slide-in-fwd-center{0%{transform:translateZ(-1400px);opacity:0}100%{transform:translateZ(0);opacity:1}}

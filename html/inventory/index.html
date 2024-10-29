@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lsc:inv</title>
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> // 
+    /*
+    [{"ID":1,"ownerId":1,"itemName":"Pekmez","itemId":1,"itemAmount":3,"itemSlot":-1,"itemWeight":0.1,"itemPicture":"xxxxx","Equipable":true},
+    {"ID":2,"ownerId":1,"itemName":"tahin","itemId":1,"itemAmount":3,"itemSlot":-1,"itemWeight":5.0,"itemPicture":"qqqqq","Equipable":false}]
+    */ var secilenItem = -1;
+       $(document).ready(function(){
+        
+        window.addEventListener("click",function(){
+                document.getElementById("context-menu").classList.remove("active");
+               
+        });
+        
+        alt.on('inventory:Open', function(){
+         $('.container').css('display', 'block');
+        });
+        alt.on('inventory:Close', function(){
+            $('.container').css('display', 'none');
+        });
+
+        alt.on('inventory:Update', function(data){
+            var t=0;
+            $('.citem').off();
+            $('.item').off();
+            $('.items').empty();
+            $(`div:not(.citem) img[item]`).remove();
+            data = JSON.parse(data);
+            data.forEach(e=>{
+                if(e.itemSlot != 0){
+                    $(`div:not(.citem)[id=${e.itemSlot}]`).append(`<img item id=${e.ID} weight="${e.itemWeight}" src="./itemicons/${e.itemPicture}.png">`);
+                    switch(e.itemSlot){
+                        case 1:
+                            alt.emit('inventory:setProp', 1, e.itemData, e.itemData2);
+                        break;
+                        case 2:
+                            alt.emit('inventory:setComp', 1, e.itemData, e.itemData2);
+                        break;
+                        case 3:
+                            alt.emit('inventory:setProp', 0, e.itemData, e.itemData2);
+                        break;
+                        case 4:
+                            alt.emit('inventory:setComp', 7, e.itemData, e.itemData2);
+                        break;
+                        case 5:
+                            alt.emit('inventory:setComp', 11, e.itemData, e.itemData2);
+                        break;
+                        case 6:
+                            alt.emit('inventory:setComp', 8, e.itemData, e.itemData2);
+                        break;
+                        case 7:
+                            alt.emit('inventory:setProp', 7, e.itemData, e.itemData2);
+                        break;
+                        case 8:
+                            alt.emit('inventory:setComp', 4, e.itemData, e.itemData2);
+                        break;
+                        case 9:
+                            alt.emit('inventory:setProp', 6, e.itemData, e.itemData2);
+                        break;
+                        case 10:
+                            alt.emit('inventory:setComp', 9, e.itemData, e.itemData2);
+                        break;
+                        case 11:
+                            alt.emit('inventory:setComp', 6, e.itemData, e.itemData2);
+                        break;
+                    }
+                }
+                else{
+                $('.items').append(`
+                <div id=${e.ID} equipable=${e.Equipable ? 1:0} class="item">
+                    <div class="value">${e.itemAmount}</div>
+                    <div class="weight"><span>` + e.itemWeight * e.itemAmount + `</span>kg</div>
+                    <div class="icon"><img class="inEnv" src="./itemicons/${e.itemPicture}.png"></div>
+                    <div class="name">${e.itemName}</div>
+                </div>
+                `);
+                }
+                t += (e.itemWeight * e.itemAmount);
+            })
+
+            $('.item, .part, .weapon').mousedown(function(ev){
+            if(ev.which == 3){
+                    $('.citem').show();
+                    if($(this).hasClass('part') || $(this).hasClass('weapon')) 
+                    {
+                        secilenItem = $(this).find('img:last-child').attr('id');
+                        $('.citem').hide();
+                        $('.citem:first-child').html(`<i class="fad fa-hand-pointer"></i> Çıkar`);
+                        $('.citem:first-child,.citem:last-child').show();
+                    }
+                    else{
+                    secilenItem = $(this).attr('id');
+                    if($(this).attr('equipable') == 1) $('.citem:first-child').html(`<i class="fad fa-hand-pointer"></i> Kuşan`);
+                    else $('.citem:first-child').html(`<i class="fad fa-hand-pointer"></i> Kullan`);
+                    }
+                    $('#context-menu').css('top', event.pageY);
+                    $('#context-menu').css('left', event.pageX);
+                    $('#context-menu').addClass('active');
+                 }
+            });
+
+            /*
+            $('.item, .part, .weapon').dblclick(function(){
+                console.log("girdi1");
+                if($(this).hasClass('part') || $(this).hasClass('weapon')){alt.emit('inventory:wantUse',$(this).find('img:last-child').attr('id'),1,1); console.log("girdi2");}
+                else{alt.emit('inventory:wantUse',$(this).attr('id'),1,1); console.log("girdi3");}
+            });
+            */
+
+            $('.citem').click(function(){
+            if($(this).attr('id') == 0) return;
+            alt.emit('inventory:wantUse',secilenItem,$(this).attr('id'), 1);
+            });
+        
+        
+       
+     
+       
+            $('.capacity p span').html(t.toFixed(4));
+
+
+        });
+        
+
+       });
+    </script>
+</head>
+
+<body oncontextmenu="return false;">
+    <div class="container">
+        <div id="context-menu">
+            <div id=1 class="citem">
+                <i class="fad fa-hand-pointer"></i> Kullan
+            </div>
+            <div id=2 class="citem">
+                <i class="fad fa-gift"></i> Ver
+            </div>
+            <div id=3 class="citem">
+                <i class="fas fa-level-down"></i> Yere Bırak
+            </div>
+            <div id=4 class="citem">
+                <i class="fad fa-car"></i> Arabaya Bırak
+            </div>
+            <div id=5 class="citem">
+                <i class="fad fa-tags"></i> Adını Değiştir
+            </div>
+            <hr>
+            <div id=0 class="citem">
+            İptal
+            </div>
+          </div>
+        <div class="head">
+            <div class="text">Envanter</div>
+            <div class="capacity">
+                <p>
+                    <span>0</span> / 30 kg
+                </p>
+            </div>
+        </div>
+        <div class="inventory">
+            <div class="character">
+                <div class="parts">
+                    <div id=1 class="part">
+                        <img src="glasses.svg" alt="">
+                    </div>
+                    <div id=2 class="part">
+                        <img src="mask.svg" alt="">
+                    </div>
+                    <div id=3 class="part">
+                        <img src="hat.svg" alt="">
+                    </div>
+                    <div id=4 class="part">
+                        <img src="tie.svg" alt="">
+                    </div>
+                    <div id=5 class="part">
+                        <img src="jacket.svg" alt="">
+                    </div>
+                    <div id=6 class="part">
+                        <img src="shirt.svg" alt="">
+                    </div>
+                    <div id=7 class="part">
+                        <img src="bracelet.svg" alt="">
+                    </div>
+                    <div id=8 class="part">
+                        <img src="pant.svg" alt="">
+                    </div>
+                    <div id=9 class="part">
+                        <img src="watch.svg" alt="">
+                    </div>
+                    <div id=10 class="part">
+                        <img src="armor.svg" alt="">
+                    </div>
+                    <div id=11 class="part">
+                        <img src="shoes.svg" alt="">
+                    </div>
+                    <div id=12 class="part">
+                        <img src="phone.svg" alt="">
+                    </div>
+                </div>
+                <div class="weapons">
+                    <div id=13 class="weapon">
+                        <img src="primary.svg" alt="">
+                    </div>
+                    <div id=14 class="weapon">
+                        <img src="secondary.svg" alt="">
+                    </div>
+                    <div id=15 class="weapon">
+                        <img src="knife.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <div id=${e.ID} equipable=${e.Equipable ? 1:0} class="item">
+                    <div class="value">${e.itemAmount}</div>
+                    <div class="weight"><span>${e.itemWeight}</span>kg</div>
+                    <div class="icon"><img class="inEnv" src="./itemicons/${e.itemPicture}.png"></div>
+                    <div class="name">${e.itemName}</div>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</body>
+
+</html>

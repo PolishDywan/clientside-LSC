@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />   
+    <title>LSC Oyuncu Listesi</title>
+    
+</head>
+<body class="noselect">
+    
+
+    <div class="general" v-bind="this.data">
+        <div class="playerList fadeIn" v-if="this.show">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th class="nameHeader">Karakter Adı</th>
+                    <th>Seviye</th>
+                    <th>Ping</th>
+                </tr>
+                </thead>
+                <tbody v-for="item of data">
+                    <tr>
+                        <td>{{ item.ID }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.level }}</td>
+                        <td>{{ item.ping }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="qua_earl" v-if="this.show">
+            <div class="mystreo_main">
+                <h1 class="mystreo_head">Oyuncu Sayısı</h1>
+                <h2 style="margin-top: 19px;" class="mystreo_content"> <img style="width: 22px !important;" src="./member-svg.svg" alt=""> Aktif Oyuncu Sayısı: <strong>{{this.data.length }}</strong></h2>
+                <h2 class="mystreo_content"> <img style="width: 22px !important;" src="./high-wifi-signal-svg.svg" alt=""> Rekor Oyuncu Sayısı: <strong>{{this.numbers.RecordPlayer}}</strong></h2>
+            </div>
+            <div class="mystreo_main" style="margin-top: 20px;">
+                <h1 class="mystreo_head">Yönetici & Helpers</h1>
+                <h2 style="margin-top: 19px;"  class="mystreo_content"><img style="width: 22px !important;" src="shield-svg.svg" alt="">Aktif Yönetici Sayısı: <strong>{{this.numbers.Admin}}</strong></h2>
+                <h2 class="mystreo_content"><img style="width: 22px !important;" src="shield1.svg" alt="">Aktif Helper Sayısı: <strong>{{this.numbers.Helper}}</strong></h2>
+            </div>
+            <div class="mystreo_main last" style="margin-top: 20px; height: 215px;">
+                <h1 class="mystreo_head">Devlet Kurumları</h1>
+                <!-- <h2 class="mystreo_content"><img style="width: 22px !important;" src="./policeman.svg" alt="">LSPD: <strong>{{this.numbers.Lspd}}</strong></h2> -->
+                <h2 class="mystreo_content"><img style="width: 22px !important;" src="./medicine.svg" alt="">LSFD: <strong>{{this.numbers.Lsmd}}</strong></h2>
+                <h2 class="mystreo_content"><img style="width: 22px !important;" src="./idea.svg" alt="">Basın: <strong>{{this.numbers.News}}</strong></h2>
+                <h2 class="mystreo_content"><img style="width: 22px !important;" src="./law.svg" alt="">Avukat: <strong>{{this.numbers.Avukat}}</strong></h2>
+                <h2 class="mystreo_content"><img style="width: 22px !important;" src="./taxi.svg" alt="">Taksici: <strong>{{this.numbers.Taxi}}</strong></h2>
+            </div>
+            
+    
+        </div>
+    </div>
+
+
+
+
+    
+    <script src="./vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+    <!-- CONTENT PAGES  ../../loginForm/assets/images/logo.svg -->
+    <!-- CONTENT PAGES END -->
+    <script src="./app.js"></script>   
+
+    
+</body>
+</html>

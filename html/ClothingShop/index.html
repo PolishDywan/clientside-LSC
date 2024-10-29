@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LSC UI</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+		<link href="https://unpkg.com/vuesax@4.0.1-alpha.25/dist/vuesax.min.css" rel="stylesheet">
+		<link rel="stylesheet/less" type="text/css" href="./style.less" />
+    </head>
+
+<body>
+		
+	<div class="mainContent noselect">
+
+		<div class="leftbar">
+			<h1>Kıyafetler</h1>
+			<div class="clothes">
+				
+				<h2 style="margin-left:10px; margin-bottom: 30px;">Menüler<br><b style="font-size: 12px; color: white; font-weight: 300;">Kıyafetlerinizi tek tek seçip satın alınız.</b></h2>
+				<button @click="setClothingType(false, 7)"><img src="./img/tie.svg"></button> <!-- Üst giyim -->
+				<button @click="setClothingType(false, 4)"><img src="./img/pants.svg"></button> <!-- iç giyim -->
+				<button @click="setClothingType(false, 6)"><img src="./img/boot.svg"></button> <!-- Aksesuar giyim -->
+				<button @click="setClothingType(false, 11)"><img src="./img/shirt.svg"></button> <!-- alt giyim -->
+				<button @click="setClothingType(false, 8)"><img src="./img/bikini.svg"></button> <!-- Ayakkabı -->	
+				<button @click="setClothingType(false, 1)"><img src="./img/eye-mask.svg"></button> <!-- Maske -->	
+			</div>
+			<div class="acc">
+				<button @click="setClothingType(true, 7)"><img src="./img/ring.svg"></button>
+				<button @click="setClothingType(true, 1)"><img src="./img/eye-glasses.svg"></button>
+				<button @click="setClothingType(true, 0)"><img src="./img/cap.svg"></button>
+				<button @click="setClothingType(true, 6)"><img src="./img/wristwatch.svg"></button>			
+			</div>
+		</div>
+		<div class="helpText">
+			<h1>Yardım Menüsü</h1>
+			<h3 style="margin-left: -12px;"><b style="background-color: #b1b1b1; padding: 2px; border-radius: 5px; color: black">Mouse</b> Sağ Tık YÖN / Scroll İleri-Geri</h3>
+			<h3 style="margin-left: 20px; margin-top: 20px;"class="w"><p style="font-weight: bold;background-color: #b1b1b1; padding: 3px; border-radius: 5px; color: black;width: 20px; display: inline-block;">W</p> Yukarı Kaydırma</h3>
+			<h3 style=" margin-top: 20px; margin-left: 5px;" class="w"><p style="font-weight: bold;background-color: #b1b1b1; padding: 3px; border-radius: 5px; color: black;width: 20px; display: inline-block;">A</p> Sola Kaydırma</h3>
+			<h3 style="margin-left: 20px; margin-top: 20px;" class="w"><p style="font-weight: bold;background-color: #b1b1b1; padding: 3px; border-radius: 5px; color: black;width: 20px; display: inline-block;">S</p> Aşağı Kaydırma</h3>
+			<h3 style="margin-left: 10px; margin-top: 20px;" class="w"><p style="font-weight: bold;background-color: #b1b1b1; padding: 3px; border-radius: 5px; color: black; width: 20px; display: inline-block;">D</p> Sağa Kaydırma</h3>
+			
+		</div>
+		<div class="rightbar">
+			<h1>Fiyat Menüsü</h1>
+			<h2>Mevcut Fiyat</h2>
+			<span><b style="color: green;">$</b>{{ clothPrice }}</span><br>
+			<button @click="buyClothes">Satın Al</button>
+			<button class="disag"  @click="closeClothingShop">İptal Et</button>
+		</div>
+		<div class="bottombar">
+			<div class="clothesChange">
+				<button class="clothesleft" @click="changeCloth(-1)"><i class="arrow left icon"></i></button>				
+				<input v-model:number="clothingId" @keypress.enter="takeClothes"/>
+				<button style="margin-left: 5px;"class="clothesright" @click="changeCloth(1)"><i class="arrow right icon"></i></button>
+			</div>
+			<div class="clothesTexture">
+				<button class="clothesleft" @click="changeTexture(-1)"><i class="arrow left icon"></i></button>
+				<span>Kaplama</span>
+				<button style="margin-left: 5px;" class="clothesright" @click="changeTexture(1)"><i class="arrow right icon"></i></button>
+			</div>
+		</div>
+
+	</div>
+
+	
+
+	<script src="./less.min.js"></script>
+	<script src="./vue.min.js"></script>
+	<script src="https://unpkg.com/vuesax@4.0.1-alpha.25/dist/vuesax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+	<script src="./app.js" type="text/javascript"></script>
+
+</body>
+</html>

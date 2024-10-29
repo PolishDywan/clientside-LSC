@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{            
+            overflow: hidden;
+        }
+
+        #background{
+            height: auto;
+            width: 100%;            
+        }
+    </style>
+</head>
+<body>
+    
+    <img id="background" src="https://img.favpng.com/23/11/9/test-computer-icons-education-school-dynamics-365-png-favpng-THjbAd5qazqsWV3tM1qe5SgTY.jpg">
+
+    <script src="../loginForm/assets/js/jquery.min.js"></script>
+
+    <script>
+
+            $(window).on("load", function() {
+				if('alt' in window){
+					alt.emit('News:BackgroundReady');
+
+                    alt.on('News:ChangeBackground', (link) => {
+                        $('#background').attr("src", link);
+                    })
+				}
+			})
+
+
+    </script>
+</body>
+</html>

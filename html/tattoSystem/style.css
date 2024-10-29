@@ -1,0 +1,182 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ @import url("../assets/css/all.min.css");
+
+ *:focus {
+     outline: none;
+ }
+
+ html {
+     margin: 0;
+     height: 100%;
+     width: 100%;
+ }
+
+ body {
+     margin: 0;
+     font-family: 'Roboto', sans-serif;
+     outline-style: none;
+     user-select: none;
+     font-style: normal;
+     font-weight: normal;
+     box-shadow: none;
+     border-color: transparent;
+     height: 100%;
+     width: 100%;
+     background: transparent !important;
+     display: grid;
+
+ }
+
+ #listcik{
+    font-weight: bold;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+     padding:0;
+     display:grid;
+     grid-template-areas: ". KAFA ."
+                          "SOLKOL GOVDE SAGKOL"
+                          "SOLBACAK . SAGBACAK";
+     grid-gap:10px;
+ }
+
+ #listcik span:hover{
+     cursor:pointer;
+     opacity:0.7;
+ }
+
+ #listcik span:nth-child(1){
+     grid-area:KAFA;
+ }
+ #listcik span:nth-child(2){
+    grid-area:SOLKOL;
+}
+#listcik span:nth-child(3){
+    grid-area:GOVDE;
+}
+#listcik span:nth-child(4){
+    grid-area:SAGKOL;
+}
+#listcik span:nth-child(5){
+    grid-area:SOLBACAK;
+}
+#listcik span:nth-child(6){
+    grid-area:SAGBACAK;
+}
+
+ .mainContent {
+     display: grid;
+     padding-right: 2vw;
+     justify-content: right;
+     align-content: center;
+ }
+
+ .dovmecontainer {
+     width: 401px;
+     height: 780px;
+     padding: 31px 21px;
+     background:linear-gradient(270deg, #7f6ef29c 0%, #79cbee9c 100%);
+     /*    backdrop-filter: blur(10px); */
+     border-radius: 20px;
+ }
+
+ .header {
+     padding-right: 10px;
+     padding-left: 10px;
+     display: grid;
+     justify-content: space-between;
+     grid-template-columns: repeat(2, max-content);
+ }
+
+ .header span {
+     margin-top: 15px;
+     font-size: 25px;
+     color: #FFFFFF;
+     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+ }
+
+ .content {
+     margin-top: 32px;
+     padding-right: 10px;
+     padding-left: 10px;
+     display: grid;
+     gap: 3px;
+     color: #FFFFFF;
+     grid-template-rows: repeat(2, max-content);
+ }
+
+ .content .m {
+     font-size: 20px;
+ }
+
+ .content .h {
+     font-size: 11px;
+ }
+
+ .tattoos {
+    margin-top: 5px;
+     height: 540px;
+     overflow-y: auto;
+     overflow-x: hidden;
+     display: grid;
+     gap: 8px;
+ }
+
+ .tattoos i {
+     font-size: 25px;
+ }
+
+ .tattoos i:hover {
+     color: #06d606;
+ }
+
+ .tattoo {
+     margin-bottom: 8px;
+     font-size: 13px;
+     color: #937D7D;
+     padding: 0 30px 0 20px;
+     display: grid;
+     grid-template-columns: repeat(2, max-content);
+     justify-content: space-between;
+     align-content: center;
+     align-items: center;
+     width: 358px;
+     height: 60px;
+
+     background: linear-gradient(89.91deg, #FFFFFF 0.77%, #FFFFFF 0.78%, #E4DBDB 99.92%);
+     border-radius: 10px;
+ }
+
+ .tattoo:hover {
+     cursor: pointer;
+     opacity: 0.9;
+ }
+
+ #tester:hover {
+     color: #063dd6;
+ }
+
+ .test{
+    margin-bottom: -7px;
+ }
+
+ /* width */
+ ::-webkit-scrollbar {
+     border-radius: 5px;
+     width: 10px;
+ }
+
+ /* Track */
+ ::-webkit-scrollbar-track {
+     background: #f1f1f1;
+ }
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+     background: #888;
+ }
+
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+     background: #555;
+ }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC tattoShop</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+</head>
+
+<body>
+
+
+    <div class="mainContent">
+        
+        <div class="modifiys" v-for="item in tuningData">
+            <div class="Tuning" v-if="item.maxTuning > 0">
+                <p>{{ item.name }}</p>
+                <button @click="changeModify(item.id ,-1)"><</button>
+
+                <button @click="changeModify(item.id, 1)">></button>
+            </div>
+        </div>
+
+        <div class="colors">
+
+            <div class="windowTint">
+                <p>Cam Filmi</p>
+                <button @click="changeColorID(1, -1)"><</button>
+
+                <button @click="changeColorID(1, 1)">></button>
+            </div>
+
+            <div class="dashboard">
+                <p>DashBoard</p>
+                <button @click="changeColorID(2, -1)"><</button>
+
+                <button @click="changeColorID(2, 1)">></button>
+            </div>
+
+            <div class="headLight">
+                <p>HeadLight</p>
+                <button @click="changeColorID(3, -1)"><</button>
+
+                <button @click="changeColorID(3, 1)">></button>
+            </div>
+
+            <div class="interior">
+                <p>İnterior</p>
+                <button @click="changeColorID(4, -1)"><</button>
+
+                <button @click="changeColorID(4, 1)">></button>
+            </div>
+
+            <div class="Neon">
+                <p>Neon</p>
+            </div>
+
+            <div class="pearl">
+                <p>Pearl</p>
+                <button @click="changeColorID(6, -1)"><</button>
+
+                <button @click="changeColorID(6, 1)">></button>
+            </div>
+
+            <div class="Tire">
+                <p>Tire</p>
+            </div>
+
+            <div class="Wheel">
+                <p>Lastik</p>
+                <button @click="changeColorID(8, -1)"><</button>
+
+                <button @click="changeColorID(8, 1)">></button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="./vue.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

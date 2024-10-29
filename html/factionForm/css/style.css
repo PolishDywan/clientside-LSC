@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+*:focus {
+  outline: 0;
+}
+
+
+body {
+  font-family: 'Segoe UI', 'Segoe UI Symbol', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.chatbox {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 450px;
+  height: 250px;
+  padding: 15px;
+  opacity: 1;
+  transition: all .5s;
+}
+
+.chatbox p {
+  color: #fff !important;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 1), 1px 1px 3px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  font-size: 0.85em;
+  width: 100%;
+  word-break: break-word;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/*
+.chatbox p b {
+  font-weight: 500;
+}
+*/
+
+.msglist {
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.messages{
+  display: grid !important;
+  grid-row-gap:2px;
+}
+
+#message{
+  display: grid;
+  grid-template-rows: 1fr 1px;
+}
+
+.overflowed {
+  -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%,  rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 100%);
+}
+
+.msginput {
+	display: none;
+	width: 100%;
+}
+
+.uzunluk{
+  color: #ffffff73;
+    align-self: end;
+    justify-self: end;
+    position: relative;
+    right: 7px;
+    bottom: 13px;
+    font-size: 15px;
+}
+
+.msginput input {
+  background: rgba(0, 0, 0, .5);
+  border: 0;
+  padding: 10px;
+  padding-right: 63px !important;
+  border-radius:10px;
+  width: 430px;
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9em;
+
+}
+
+.msginput input::selection {
+    background-color: #fff;
+    color: #000;
+}
+
+.msgsubmit {
+	font-size: 23px;
+    width: 65px;
+	height: 41px;
+    position: relative;
+    top: 5px;
+    right: 4px;
+    border: 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+	transition: all .3s;
+}
+
+.msgsubmit::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 70%;
+	margin-top: -1px;
+	margin-left: -0.5px;
+	background: rgba(255,255,255,.6);
+	transition: all .3s;
+}
+
+.msgsubmit:hover {
+	background: rgba(0,0,0,.55);
+}
+
+
+.scrollbar::-webkit-scrollbar {
+  background-color:#fff;
+  width:16px
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color:#fff
+}
+.scrollbar::-webkit-scrollbar-track:hover {
+  background-color:#f4f4f4
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color:#babac0;
+  border-radius:16px;
+  border:5px solid #fff
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color:#a0a0a5;
+  border:4px solid #f4f4f4
+}
+
+.scrollbar::-webkit-scrollbar-button {display:none}
+
+
+
+@media screen and (max-width: 2560px) {
+	body {
+		font-size: 20px;
+	}
+	.chatbox {
+		width: 600px;
+		height: 400px;
+	}
+	.msginput input {
+		width: 580px;
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 16px;
+  }
+  .chatbox {
+    width: 400px;
+    height: 300px;
+  }
+  .msginput input {
+    width: 380px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+	body {
+		font-size: 14px;
+	}
+	.chatbox {
+		width: 400px;
+		height: 300px;
+	}
+	.msginput input {
+		width: 380px;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+  .chatbox {
+    width: 350px;
+    height: 200px;
+  }
+  .msginput input {
+    width: 330px;
+    height: 15px;
+    margin-top: 10px;
+  }
+}

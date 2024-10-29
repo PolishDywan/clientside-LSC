@@ -1,0 +1,99 @@
+.uk-h1 {
+	font-size: 1.1rem;
+	font-weight: bold;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.uk-background-primary {
+	background-color: #191d29;
+}
+
+.uk-background-secondary {
+	background-color: #333846;
+}
+
+.uk-button-default,
+.uk-button-default:focus {
+    background-color: #595f70;
+	border: 0px;
+    color: #FFFFFF;
+}
+
+.uk-button-default:hover,
+.uk-button-default:active {
+    background-color: #05abed;
+    color: #FFFFFF;
+}
+
+.uk-button-primary,
+.uk-button-primary:focus {
+    background-color: #06abed !important;
+	border: 0px;
+    color: #FFFFFF !important;
+}
+
+.uk-button-primary:hover,
+.uk-button-primary:active {
+    background-color: #38c3fb !important;
+    color: #FFFFFF;
+}
+
+.uk-container-xsmall {
+	max-width: 450px;
+}
+
+.tm-shadow {
+	box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.3);  
+}
+
+#tm-headline {
+	background-color: #FFFFFF;
+    color: #000000;
+    display: block;
+	font-size: 15px;
+	margin-bottom: 5px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.uk-grid-divider>:not(.uk-first-column)::before {
+	border-left: 1px solid #191d29;
+}
+
+.uk-text-right {
+	padding-right: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #595e71; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #05abed; 
+}
+
+body {
+    background-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#tm-name{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;    
+}

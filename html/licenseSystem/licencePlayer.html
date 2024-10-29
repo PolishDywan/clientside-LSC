@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
+		<link rel="stylesheet" href="./general.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body class="noselect">
+
+		<div id="tm-licence-player" class="uk-position-medium uk-position-center-left">
+			<div id="tm-licence-player-animation">
+				<div class="tm-shadow uk-background-secondary uk-padding-remove">
+					<img id="bgIMG" data-src="aaa.png" width="450" height="245" uk-img>
+					<ul id="tm-data" class="uk-list">
+						<li id="tm-name"></li>						
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<script src="../loginForm/assets/js/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
+		<script>
+			$(window).on("load", function() {
+				if('alt' in window){
+					alt.emit('LicensePage:Ready');
+					alt.on('LicenseAddData', setLicencePlayerName);
+				}
+			})
+
+			$("#tm-licence-player-animation").addClass("uk-animation-slide-left");
+			setTimeout(
+				function() 
+				{
+					$("#tm-licence-player-animation").removeClass("uk-animation-slide-left");
+					$("#tm-licence-player-animation").addClass("uk-animation-slide-left-small uk-animation-reverse");
+					setTimeout(
+						function() 
+						{
+							alt.emit('CloseLicencePlayer');
+					}, 3000);
+				}, 10000);
+				
+			
+
+			function setLicencePlayerName(name, bg) {
+				$('#bgIMG').css('background-image', 'url(./img/'+bg+'.png)');
+				$("#tm-name").append(name);
+			}
+			
+		</script>
+    </body>
+</html>

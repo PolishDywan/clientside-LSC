@@ -1,0 +1,301 @@
+@font-face {
+  font-family: gta5;
+  src: url('../static/pricedown.ttf');
+}
+
+body{
+  background-color: transparent;
+  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+}
+
+
+.header{
+  background-color: rgb(173, 173, 173);
+  position: fixed;
+  margin-top: 15vh;
+  margin-left: 15vw;
+  width: 70vw;
+  height: 10vh;
+  border-left: .2vw solid black;
+  border-right: .2vw solid black;
+  border-top: .5vh solid black;
+  background-image: url(https://images.alphacoders.com/108/1083267.png);
+  background-position-y: -75vh;
+  text-align: center;
+  padding-top: 3vh;
+  span{    
+    margin-top: 10vh;
+    font-size: 5vh;
+    font-family: gta5;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px #000000;
+  }
+  .closeButton{
+    position: fixed;
+    margin-left: 66vw;
+    margin-top: -5.5vh;
+    button{
+      background-color: rgba(255, 0, 0, 0.527);
+      border: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5vh;
+      font-weight: bold;
+    }
+    button:hover{
+      background-color: white;
+    }
+  }
+}
+
+.leftbar{
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 10vw;
+  height: 50vh;
+  margin-top: 25vh;
+  margin-left: 15vw;
+  border-left: .2vw solid black;
+  border-bottom: .5vh solid black;
+  border-right: .2vw solid  rgb(173, 173, 173);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 1vw 1vh;
+  padding-top: 2vh;
+  
+  button{
+    margin-top: 1vh;
+    font-family: gta5;
+    background-color: rgba(14, 14, 14, 0.014);
+    border: none;
+    font-size: 3vh;
+  }
+  button:hover{
+    text-shadow: 0px 0px .5px #000000; 
+    color: rgb(109, 109, 109);
+  }
+}
+
+.content{
+  background-color: rgba(0, 0, 0, 0.733);
+  position: fixed;
+  width: 60vw;
+  height: 50vh;
+  margin-top: 25vh;
+  margin-left: 25vw;
+  border-right: .2vw solid black;
+  border-bottom: .5vh solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-size: 1.5vh;
+}
+
+.mainpage{
+  font-weight: bold;
+  .users{
+    text-align: center;
+    height: 5vh;
+    width: 15vw;
+    background-color: rgb(51, 51, 51);
+    padding-top: 1.5vh;
+    border-radius: 2vw 4vh;
+    margin-left: 20vw;
+    margin-top: 5vh;
+  }
+  .vehicles{    
+    text-align: center;
+    height: 5vh;
+    width: 15vw;
+    background-color: rgb(51, 51, 51);
+    padding-top: 1.5vh;
+    border-radius: 2vw 4vh;
+    margin-left: 20vw;
+    margin-top: 2vh;    
+  }
+  .vault{
+    .vehicles;
+  }
+  .exp{
+    .vehicles;
+    word-wrap: break-word;
+    height: 7vh;
+  }
+}
+
+.memberList{
+  text-align: center;
+  .memberListHeader{
+    padding-top: 2vh;
+    font-size: 3vh;
+    .tracking-in-expand-fwd
+  }
+
+  .memberListTable{
+    overflow-x:auto;
+    width: 50vw;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    th {
+      background-color: #4CAF50;
+      color: rgb(255, 255, 255);
+    }
+
+    tr:hover {background-color: #f5f5f517;}
+
+  }
+}
+
+.factionSettings{
+  padding-left: 2vw;
+  .factionSettingsHeader{
+    padding-top: 2vh;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+  }
+  .factionGenerals{
+    font-size: 1.5vh;
+    .factionChat{
+      text-align: left;
+      padding-top: 2vh;
+      margin-left: 2vw;
+    }
+    
+
+    .addRank{
+      position: fixed;      
+      width: 10vw;
+      margin-top: -2vh;
+      margin-left: 45vw;
+      font-weight: bold;      
+      border: 1px solid white;
+      text-align: right;
+
+      div{
+        padding: .5vh;
+      }
+      button{
+        background-color: rgba(255, 255, 255, 0.486);
+        border: none;
+      }
+      button:hover{
+        color:rgb(0, 119, 255);
+        background-color: white;
+      }
+
+      #newRankPayday{
+        width: 8vw;
+      }
+      #newRankinput{
+        width: 8vw;
+      }
+    }
+
+    .factionRanks{
+      overflow-x:auto;
+      width: 30vw;
+      max-height: 20vh;
+      margin-left: 5vw;
+      margin-top: 5vh;
+      th {
+        background-color: #4CAF50;
+        color: rgb(255, 255, 255);        
+      }
+      tr{
+        text-align: center;
+      }
+      tr:hover {background-color: #f5f5f517; }
+      .rankNumber{
+        width: 5vw;
+      }
+
+      button{
+        background-color: rgba(0, 255, 157, 0.637);
+        border: none;
+        margin-left: 1vw;
+        margin-right: .5vw;
+        font-size: 1.5vh;
+        width: 3.5vw;        
+      }
+      button:hover{
+        background-color: white;
+      }
+
+      .rankSettings{
+        width: 11vw;
+      }
+
+    }
+
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Animations
+.tracking-in-expand-fwd{-webkit-animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+
+.content::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.content::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: .5vh .2vw;
+  font-size: 1vh;
+  border: none;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 5vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

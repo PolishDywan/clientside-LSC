@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC tattoShop</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+</head>
+
+<body>
+
+
+    <div class="mainContent">
+
+        <div class="dovmecontainer">
+            <div class="header"><img style="width:75%;height:auto;"src="https://forum.lsc-rp.com/Themes/ninetynine/images/_style3/logo.png" /><span>Dövme Dükkanı</span></div>
+            <div class="content"><span class="m">Mevcut Dövmeler</span><span class="h">Dövmelerin üzerine tıklayarak
+                    deneyin ve daha sonra satın alın.<br>İşlem sonrasında ESC ile menüyü kapatabilirsiniz.</span>
+                <div id="listcik"><span v-on:click="changePage(0)">BAŞ</span><span v-on:click="changePage(1)">SOL KOL</span><span v-on:click="changePage(2)">GÖVDE</span>
+                <span v-on:click="changePage(3)">SAĞ KOL</span><span v-on:click="changePage(4)">SOL BACAK</span><span v-on:click="changePage(5)">SAĞ BACAK</span></ul>
+                </div>
+            <div class="tattoos">
+                <div v-for="(index, value) in tattos" class="test">
+                    <div v-if="n.zone == final" v-for="n in index">
+                        <div v-if="sex == 'male' && n.male" class="tattoo">
+                            <span>{{ n.name }}</span>
+                            <div style="padding-right: 20px;"><i @click='tryTatto(value, n)' id="tester" class="fal fa-eye" style="margin-right:10px;"></i><i @click='buyTatto(value, n)' class="fal fa-shopping-basket"></i></div>
+                        </div>
+                        <div v-else-if="sex == 'female' && n.female" class="tattoo">
+                            <span>{{ n.name }}</span>
+                            <div style="padding-right: 20px;"><i @click='tryTatto(value, n)' id="tester" class="fal fa-eye" style="margin-right:10px;"></i><i @click='buyTatto(value, n)' class="fal fa-shopping-basket"></i></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./vue.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

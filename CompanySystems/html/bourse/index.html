@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <link href="https://cdn.jsdelivr.net/npm/quasar@1.15.4/dist/quasar.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC RP Bourse</title>
+</head>
+<body>
+    
+    <div class="app">
+        <div class="content">
+            <br>
+            <b class="title">LSC Borsa</b>
+            <b class="title_2">Şirket Piyasa Yüzdeleri</b>
+            <div class="exiture">
+            <button class="exit" @click="exitApp">X</button>
+            </div>
+            <div class="companys q-pa-md flex flex-center">
+                <q-circular-progress v-if="companys" v-for="comp in companys"
+                    show-value
+                    font-size="10px"
+                    :value="comp.Percent"
+                    size="80px"
+                    :color="getColor(comp.ID)"
+                    class="q-ma-md"
+                    track-color="grey-3"
+                    @click="selectCompany(comp.ID)"
+                >
+                {{comp.Name.split(" ")[0]}}<br>
+                % {{comp.Percent.toFixed(0)}}<br>
+            </q-circular-progress>            
+            </div>
+            
+            <div class="BuyMenu">
+                <div class="companysBuy" >
+                    <q-card class="my-card" v-if="selected">
+                        <q-card-section class="bg-primary text-white">
+                        <div class="textarea">
+                        <div class="text-h6"><center>{{companys.find(x => x.ID == this.selected).Name}}</center></div>
+                        <div class="text-subtitle2">Piyasa değeri %{{companys.find(x => x.ID == this.selected).Percent}}</div>
+                        <div class="text-subtitle2">Garanti Edilebilecek Ücret: ${{companys.find(x => x.ID == this.selected).TotalPrice}}</div>
+                        <div class="text-subtitle2">Sahip olunan hisse : {{companys.find(x => x.ID == this.selected).PlayerShareTotal}}</div>
+                        </div>
+                        <div class="buttons">
+                        <button class="boursebtn" @click="buyShare">Hisse Al ${{(getPercentToBuy(companys.find(x => x.ID == this.selected).ID).toFixed(0))}}</button>
+                        <button class="boursebtn_sell" @click="sellShare" style="background-color: green;" v-if="getSharedColor">Hisse Sat ${{(getPercentToBuy(companys.find(x => x.ID == this.selected).ID) - 5).toFixed(1)}}</button>
+                        <button class="boursebtn_sell" @click="sellShare" v-else>Hisse Sat ${{(getPercentToBuy(companys.find(x => x.ID == this.selected).ID) - 5).toFixed(1)}}</button>
+                        </div>
+                    </q-card-section>
+                    </q-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@3.13" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@1.15.4/dist/quasar.umd.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

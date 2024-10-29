@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="lsc-dark.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome.old.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="centered" style="width: 965px; height: 500px;">
+        <div class="left-menu">
+            <div class="logo"><img src="./lscp.png" width="125" /><br />
+                Yardım Menüsü<br />
+                <a>(Kapatmak için ESC)</a>
+            </div>
+
+            <div class="accordion" style="overflow-y: scroll;max-height: 262px;">
+                <div class="section">
+                    <input type="radio" name="accordion-1" id="section-1" checked="checked" />
+                    <label for="section-1"><span>Genel Komutlar</span></label>
+
+                    <div class="content">
+                        <ul>
+                            <li class="section" target-panel="#commands"><i class="fa fa-cogs"></i><span>Komutlar</span></li>
+                            <li class="section" target-panel="#animations" ><i class="fa fa-user"></i><span>Animasyonlar</span></li>
+                            <li class="section" target-panel="#vehicles" ><i class="fa fa-car"></i><span>Araçlar</span></li>
+                            <li class="section" target-panel="#housing" ><i class="fa fa-home"></i><span>Mülkler</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="section">
+                    <input type="radio" name="accordion-1" id="section-2" value="toggle" />
+                    <label for="section-2"><span>Birlikler</span></label>
+
+                    <div class="content">
+                        <ul>
+                            <li class="section" target-panel="#lspd"><i class="fa fa-shield-alt"></i><span>LSPD</span></li>
+                            <li class="section" target-panel="#lsems" ><i class="fa fa-ambulance"></i><span>LSFD / EMS</span></li>
+                            <li class="section" target-panel="#mechanic" ><i class="fa fa-wrench"></i><span>Tamirhane</span></li>
+                            <li class="section" target-panel="#news" ><i class="far fa-newspaper"></i></i><span>Haber Ajansı</span></li>
+                            <li class="section" target-panel="#other"><i class="fa fa-shield-alt"></i><span>Diğer</span></li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+                    <div class="section">
+                        <input type="radio" name="accordion-1" id="section-3" value="toggle" />
+                        <label for="section-3"><span>Meslekler</span></label>
+                        
+                        <div class="content">
+                            <ul>
+                                <li class="section" target-panel="#cargo"><i class="fa fa-truck"></i><span>Kargoculuk</span></li>
+                                <li class="section" target-panel="#truck" ><i class="fa fa-truck"></i><span>Kamyonculuk</span></li>
+                                <li class="section" target-panel="#taxi" ><i class="fa fa-car"></i><span>Taksicilik</span></li>
+                                <li class="section" target-panel="#farm" ><i class="fa fa-car"></i><span>Çiftçilik</span></li>
+                            </ul>
+                        </div>
+
+                      </div>
+
+                      <div class="section" id="admins" hidden>
+                          <input type="radio" name="accordion-1" id="section-4" value="toggle" />
+                          <label for="section-4"><span>Yetkili Komutları</span></label>
+
+                          <div class="content">
+                              <ul id="a1" hidden> 
+                                <li class="section" target-panel="#Helper" ><i class="fas fa-money-bill"></i><span>Helper</span></li>
+                              </ul>
+                              <ul id="a2" hidden>
+                                <li class="section" target-panel="#Admin2" ><i class="fas fa-money-bill"></i><span>Yetkili (II)</span></li>
+                              </ul>
+                              <ul id="a3" hidden>
+                                <li class="section" target-panel="#Admin3" ><i class="fas fa-money-bill"></i><span>Yetkili (III)</span></li>
+                              </ul>
+                              <ul id="a4" hidden>
+                                <li class="section" target-panel="#Admin4" ><i class="fas fa-money-bill"></i><span>Yetkili (IV)</span></li>
+                              </ul>
+                              <ul  id="a5" hidden>
+                                <li class="section" target-panel="#Admin5" ><i class="fas fa-money-bill"></i><span>Yetkili (V)</span></li>
+                              </ul>
+                              <ul id="a6" hidden>
+                                <li class="section" target-panel="#Admin6" ><i class="fas fa-money-bill"></i><span>Yetkili (VI)</span></li>
+                              </ul>
+                          </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="commands" class="panel panel-dark panel-scale" style="width: 760px;">
+            <div class="panel-header"><div>Erişime Açık Tüm Komutlar</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+	            <table style="width: 100%;">
+					<tbody>
+						<tr>
+							<td style="width: 15px;"><b>Komut/Kısayol</b></td>
+							<td style="width: 15px;"><b>İşlev</b></td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">F1</td>
+              <td style="width: 15px;">Video Kaydı</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">F2</td>
+              <td style="width: 15px;">Oyuncu Listesi</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">F3</td>
+              <td style="width: 15px;">Telefon Etkileşimi</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">F7</td>
+              <td style="width: 15px;">Ekran Görüntüsü</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">F9</td>
+              <td style="width: 15px;">Hud Kapatma/Açma</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">F10</td>
+              <td style="width: 15px;">NameTag Kapatma/Açma</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">F11</td>
+              <td style="width: 15px;">Hız Sabitleyici Açma/Kapatma</td>
+						</tr><tr>
+							<td style="width: 15px;">F12</td>
+              <td style="width: 15px;">Oto sürüş Açma/Kapatma</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">CTRL</td>
+              <td style="width: 15px;">Eğilme</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">BACKSPACE</td>
+              <td style="width: 15px;">Menü Kapatma</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">TAB</td>
+              <td style="width: 15px;">Teçhizat Menüsü</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">U</td>
+              <td style="width: 15px;">Ragdoll</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">I</td>
+              <td style="width: 15px;">Envanter</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">T</td>
+              <td style="width: 15px;">Sohbet Baloncuğu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">V</td>
+              <td style="width: 15px;">Kamera Açıları</td>
+						</tr>
+            <tr>
+							<td style="width: 15px;">/c [yazı]</td>
+							<td style="width: 15px;">Kısık Ses</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/s [yazı]</td>
+							<td style="width: 15px;">Bağırma</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/e [yazı]</td>
+							<td style="width: 15px;">İkinci Dil</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/w [ID] [yazı]</td>
+							<td style="width: 15px;">Fısıldama</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/f [yazı]</td>
+							<td style="width: 15px;">Birlik Sohbet Kanalı</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/pm [ID] [yazı]</td>
+              <td style="width: 15px;">Özel Mesaj</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/pmkapat</td>
+              <td style="width: 15px;">Özel Mesajları Kapatma</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/yurumetarzi</td>
+              <td style="width: 15px;">Yürüme Animasyonları</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/karakter</td>
+              <td style="width: 15px;">Karakter Bilgileri</td>
+            </tr>
+						<tr>
+							<td style="width: 15px;">/me [emote]</td>
+              <td style="width: 15px;">Emote Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/do [emote]</td>
+							<td style="width: 15px;">Emote Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/ame [emote]</td>
+							<td style="width: 15px;">Emote Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/rapor [raporunuz]</td>
+              <td style="width: 15px;">Rapor Komutu</td>
+						</tr><tr>
+							<td style="width: 15px;">/rapor iptal</td>
+              <td style="width: 15px;">Rapor Kapatma Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/sorusor [sorunuz]</td>
+              <td style="width: 15px;">Soru Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/saat</td>
+							<td style="width: 15px;">Saat Komutu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/fontsize [1 - 1.5] (Standart 1)</td>
+							<td style="width: 15px;">Yazı Boyutu Değiştime Komutu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/durum</td>
+              <td style="width: 15px;">Sağlık Durumunuzu Sıralar</td>
+            </tr>
+            <tr>
+						<tr>
+							<td style="width: 15px;">/paraver [ID] [Miktar]</td>
+              <td style="width: 15px;">Nakit Alışverişi Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/ustara [ID] / [kabul][reddet]</td>
+							<td style="width: 15px;">Üst Arama Komutu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/lisansgoster [ID]</td>
+							<td style="width: 15px;">Lisans Gösterme Komutu</td>
+						</tr>
+            <tr>
+							<td style="width: 15px;">/lisanslarim</td>
+							<td style="width: 15px;">Lisans Kontrol Komutu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/kutu</td>
+							<td style="width: 15px;">Kutu Etkileşim Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/zar</td>
+							<td style="width: 15px;">Zar Komutu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/czar</td>
+							<td style="width: 15px;">Çift Zar Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/yazitura</td>
+							<td style="width: 15px;">Yazı Tura Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/kollar [değer] [0-85]</td>
+							<td style="width: 15px;">Kıyafete Uygun Kol Seçim Komutu</td>
+            </tr>
+            <tr>
+							<td style="width: 15px;">/sactopla</td>
+							<td style="width: 15px;">Saç Toplama Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/id [oyuncu isim]</td>
+							<td style="width: 15px;">Oyuncu Bulma Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/kiyafetal</td>
+							<td style="width: 15px;">Kıyafet Satın Alım Menüsü</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/kimlikgoster [ID]</td>
+							<td style="width: 15px;">Kimlik Gösterme Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/ruhsatgoster [ID]</td>
+							<td style="width: 15px;">Ruhsat Gösterme Komutu</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/banka</td>
+							<td style="width: 15px;">Banka Menüsüne Erişim</td>
+            </tr>
+						<tr>
+							<td style="width: 15px;">/admins</td>
+							<td style="width: 15px;">Aktif Yetkili Listesi</td>
+						</tr>
+						<tr>
+							<td style="width: 15px;">/helpers</td>
+							<td style="width: 15px;">Aktif Helper Listesi</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="animations" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Animasyonlar</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut</b></td>
+              <td style="width: 15px;"><b>Eylem</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;"><b>Normal Animasyonlar</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/z</td>
+              <td style="width: 15px;">Animasyon İptali</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim dance[1-37]</td>
+              <td style="width: 15px;">Dans Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sleep[1-5]</td>
+              <td style="width: 15px;">Uyuma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sit[1-11]</td>
+              <td style="width: 15px;">Oturma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim chair[1-6]</td>
+              <td style="width: 15px;">Sandalye Oturma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim lay[1-7]</td>
+              <td style="width: 15px;">Uzanma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sign[1-17]</td>
+              <td style="width: 15px;">İşaret Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim stance[1-34]</td>
+              <td style="width: 15px;">Duruş Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim crossarms[1-10]</td>
+              <td style="width: 15px;">Duruş Animasyonları II</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim drunk[1-5]</td>
+              <td style="width: 15px;">Sarhoş Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim angry[1-3]</td>
+              <td style="width: 15px;">Kızgın Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim lean[1-15]</td>
+              <td style="width: 15px;">Yaslanma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim dance[1-37]</td>
+              <td style="width: 15px;">Dans Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim /kiss[1-2]</td>
+              <td style="width: 15px;">Öpücük Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim greetings[1-7]</td>
+              <td style="width: 15px;">Selamlama Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim salute[1-3]</td>
+              <td style="width: 15px;">Selamlama Animasyonları II</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim wave[1-9]</td>
+              <td style="width: 15px;">Selamlama Animasyonları III</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim radio[1-2]</td>
+              <td style="width: 15px;">Telsiz Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim damn[1-2]</td>
+              <td style="width: 15px;">Lanet Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim facepalm[1-4]</td>
+              <td style="width: 15px;">Yüze Vurma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim fall[1-3]</td>
+              <td style="width: 15px;">Düşme Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim /suicide[1-2]</td>
+              <td style="width: 15px;">İntihar Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim fight[1-6]</td>
+              <td style="width: 15px;">Dövüş Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim fucku[1-7]</td>
+              <td style="width: 15px;">Hakaret Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim hug[1-4]</td>
+              <td style="width: 15px;">Sarılma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim inspect[1-2]</td>
+              <td style="width: 15px;">İnceleme Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sport[1-10]</td>
+              <td style="width: 15px;">Spor Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim door[1-2]</td>
+              <td style="width: 15px;">Kapı Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim strip[1-4]</td>
+              <td style="width: 15px;">Strip Dans Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sex[1-6]</td>
+              <td style="width: 15px;">Cinsellik Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim mechanic[1-5]</td>
+              <td style="width: 15px;">Tamir Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim meditate[1-3]</td>
+              <td style="width: 15px;">Meditasyon Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim kneel[1-2]</td>
+              <td style="width: 15px;">Eğilme Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim no[1-4]</td>
+              <td style="width: 15px;">Reddetme Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim clap[1-5]</td>
+              <td style="width: 15px;">Alkış Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim push[1-3]</td>
+              <td style="width: 15px;">İtme Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim scared[1-4]</td>
+              <td style="width: 15px;">Korkma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim injured[1-2]</td>
+              <td style="width: 15px;">Yaralı Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim think[1-4]</td>
+              <td style="width: 15px;">Düşünme Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim thumbsup[1-3]</td>
+              <td style="width: 15px;">Başarılı Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim type[1-4]</td>
+              <td style="width: 15px;">Bankamatik Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim whistle[1-2]</td>
+              <td style="width: 15px;">Islık Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim gangsign[1-2]</td>
+              <td style="width: 15px;">Çete Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim slide[1-4]</td>
+              <td style="width: 15px;">Yerde Kayma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim bat[1-2]</td>
+              <td style="width: 15px;">Sopa Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim medic[1-2]</td>
+              <td style="width: 15px;">İlkyardım Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim force[1-2]</td>
+              <td style="width: 15px;">Güç Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim mirror[1-3]</td>
+              <td style="width: 15px;">Ayna Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim karate[1-2]</td>
+              <td style="width: 15px;">Karate Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim boxing[1-2]</td>
+              <td style="width: 15px;">Box Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim threat[1-2]</td>
+              <td style="width: 15px;">Tehdit Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim surrender</td>
+              <td style="width: 15px;">Teslim Olma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim handsup</td>
+              <td style="width: 15px;">Elleri Kaldırma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sleepwalker</td>
+              <td style="width: 15px;">Uyurgezer Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim airguitar</td>
+              <td style="width: 15px;">Elektrogitar Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim carrybag</td>
+              <td style="width: 15px;">Taşıma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim nosepick</td>
+              <td style="width: 15px;">Burun Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim ok</td>
+              <td style="width: 15px;">Olumlu Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim exhaust</td>
+              <td style="width: 15px;">Yorulma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim pickup</td>
+              <td style="width: 15px;">Yerden Alma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim smell</td>
+              <td style="width: 15px;">Koku Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim shock</td>
+              <td style="width: 15px;">Şok Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim head</td>
+              <td style="width: 15px;">Saç Kaşıma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim heat</td>
+              <td style="width: 15px;">Isınma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim hitchhiking</td>
+              <td style="width: 15px;">Otostop Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim carkey</td>
+              <td style="width: 15px;">Kumanda Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim eat</td>
+              <td style="width: 15px;">Yemek Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim cop</td>
+              <td style="width: 15px;">Kılıf Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim ehm</td>
+              <td style="width: 15px;">Öksürme Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim ring</td>
+              <td style="width: 15px;">Yüzük Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim pray</td>
+              <td style="width: 15px;">Dua Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim dj</td>
+              <td style="width: 15px;">DJ Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim pull</td>
+              <td style="width: 15px;">Çekme Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim rabbit</td>
+              <td style="width: 15px;">Tavşan Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;"><b>Objeli Animasyonlar</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim dancestick[1-3]</td>
+              <td style="width: 15px;">Objeli Dans Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim dancehorse[1-3]</td>
+              <td style="width: 15px;">Objeli Dans Animasyonları II</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim smoke[1-6]</td>
+              <td style="width: 15px;">Sigara Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/a bag[1-17]</td>
+              <td style="width: 15px;">Çanta Taşıma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim tray[1-3]</td>
+              <td style="width: 15px;">Çanta Taşıma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim guitar[1-4]</td>
+              <td style="width: 15px;">Gitar Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim water[1-3]</td>
+              <td style="width: 15px;">Çanta Taşıma Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim gift[1-2]</td>
+              <td style="width: 15px;">Hediye Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim tablet[1-2]</td>
+              <td style="width: 15px;">Tablet Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim phone[1-2]</td>
+              <td style="width: 15px;">Telefon Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim clean[1-3]</td>
+              <td style="width: 15px;">Temizlik Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim umbrella[2-3]</td>
+              <td style="width: 15px;">Şemsiye Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim pankart</td>
+              <td style="width: 15px;">Pankart Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim backpack</td>
+              <td style="width: 15px;">Sırt Çantası Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim notepad</td>
+              <td style="width: 15px;">Not Defteri Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim checklist</td>
+              <td style="width: 15px;">Kontrol Listesi Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim readbook</td>
+              <td style="width: 15px;">Kitap Okuma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim infomap</td>
+              <td style="width: 15px;">Harita Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim carrybox</td>
+              <td style="width: 15px;">Kutu Taşıma Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim mikrofon[1-2]</td>
+              <td style="width: 15px;">Mikrofon Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim drug</td>
+              <td style="width: 15px;">Uyuşturucu Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim rose</td>
+              <td style="width: 15px;">Çiçek Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim mugshot</td>
+              <td style="width: 15px;">Sicil Numarası Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim coffee</td>
+              <td style="width: 15px;">Kahve Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim whiskey</td>
+              <td style="width: 15px;">Viski Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim beer[1-17]</td>
+              <td style="width: 15px;">Bira Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim cup</td>
+              <td style="width: 15px;">Bardak Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim donut</td>
+              <td style="width: 15px;">Donut Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim burger</td>
+              <td style="width: 15px;">Hamburger Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim sandwich</td>
+              <td style="width: 15px;">Sandiviç Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim cola</td>
+              <td style="width: 15px;">Kola Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim egobar</td>
+              <td style="width: 15px;">Çikolata Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim wine</td>
+              <td style="width: 15px;">Şarap Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim emptyglass</td>
+              <td style="width: 15px;">Boş Bardak Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim champagne</td>
+              <td style="width: 15px;">Şampanya Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim champ[1-7]</td>
+              <td style="width: 15px;">Şampanya Şişesi Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim hay</td>
+              <td style="width: 15px;">Saman Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim megafon</td>
+              <td style="width: 15px;">Megafon Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim job[1-7]</td>
+              <td style="width: 15px;">İş Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim tool[1-3]</td>
+              <td style="width: 15px;">Alet Animasyonları</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim bucket</td>
+              <td style="width: 15px;">Kova Animasyonu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/anim homeless</td>
+              <td style="width: 15px;">Evsiz Animasyonu</td>
+            </tr>
+          </var>
+					</tbody>
+				</table>
+			</div>
+        </div>
+
+      <div id="vehicles" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+          <div class="panel-header"><div>Araç Komutları</div><hr /></div>
+
+          <div style="overflow-y: scroll; max-height: 400px;">
+
+          <table style="width: 100%;">
+
+        <tbody>
+          <tr>
+            <td style="width: 15px;"><b>Komut/Kısayol</b></td>
+            <td style="width: 15px;"><b>İşlev</b></td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">Y</td>
+            <td style="width: 15px;">Motor Açma / Kapatma</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">N</td>
+            <td style="width: 15px;">Kilit Açma / Kapatma</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">H</td>
+            <td style="width: 15px;">Far / Uzun Far Kısayolu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">H (Basılı Tut)</td>
+            <td style="width: 15px;">3. Etkileşim (Üst Açma vb)</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">E</td>
+            <td style="width: 15px;">Korna (Siren)</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">V</td>
+            <td style="width: 15px;">Kamera Açıları</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/abilgi</td>
+            <td style="width: 15px;">Araç Bilgi Ekranı</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/aracekle [birlik-isyeri]</td>
+            <td style="width: 15px;">Birliğe/İşyerine Araç Ekleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/araccikar</td>
+            <td style="width: 15px;">Birlikten Araç Çıkartma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/anahtarlarim</td>
+            <td style="width: 15px;">Anahtar Listeli</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/akirala</td>
+            <td style="width: 15px;">Araç Kiralama Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/aracsat [sistem-kisi]</td>
+            <td style="width: 15px;">Araç Satma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/kilit</td>
+            <td style="width: 15px;">Kilit Açma / Kapatma (Komut)</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/akaput</td>
+            <td style="width: 15px;">Araç Kaput Kısayolu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/abagaj</td>
+            <td style="width: 15px;">Araç Bagaj Kısayolu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/motor</td>
+            <td style="width: 15px;">Motor Açma / Kapatma (Komut)</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/araclarim</td>
+            <td style="width: 15px;">Sahip Olunan Araç Listesi</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/agps [araç ID]</td>
+            <td style="width: 15px;">Araç Konumu Gösteren GPS</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/benzin [miktar]</td>
+            <td style="width: 15px;">Benzin Doldurma Komutu</td>
+          </tr>
+					</tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="housing" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Mülk Komutları</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısyyol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+            <td style="width: 15px;"><b>Ev Komutları</b></td>
+           </tr>
+            <tr>
+              <td style="width: 15px;">E</td>
+              <td style="width: 15px;">Ev Giriş / Çıkış Kısayolu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ekilit</td>
+              <td style="width: 15px;">Ev Kilitleme / Kilit Açma</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/eduzenle [çeşit] [miktar]</td>
+              <td style="width: 15px;">Ev Kilitleme / Kilit Açma</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;"><b>Kira Açma / Kapatma</b> /eduzenle kiralık</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;"><b>Kira Fiyatı</b> /eduzenle kira [miktar]</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;"><b>Kiracı Kovma</b> /eduzenle kiracıçıkar</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/esatinal</td>
+              <td style="width: 15px;">Ev Satın Alma Komutu (Sistem)</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/esat [ev ID] [kişi ID] [Fiyat]</td>
+              <td style="width: 15px;">Ev Satma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;"><b>İşletme Komutları</b></td>
+             </tr>
+             <tr>
+              <td style="width: 15px;">E</td>
+              <td style="width: 15px;">İşletme Giriş / Çıkış Kısayolu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ikilit</td>
+              <td style="width: 15px;">İşletme Kilitleme / Kilit Açma</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/igirisucret [miktar]</td>
+              <td style="width: 15px;">Giriş Ücretini Belirler [Maks 200$]</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ikasakontrol</td>
+              <td style="width: 15px;">Biriken Parayı Görme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/iparacek [miktar]</td>
+              <td style="width: 15px;">Biriken Parayı Çekme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/idavet [işyeri ID] [oyuncu ID]</td>
+              <td style="width: 15px;">Çalışan Davet Etme Komutu</td>
+            </tr>
+          
+            <tr>
+              <td style="width: 15px;"><b>Kabul Etme</b> /idavetkabul</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/istencikar [ID]</td>
+              <td style="width: 15px;">İşçi Kovma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/stoksatinal</td>
+              <td style="width: 15px;">Stok Satın Alma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/stokyukle</td>
+              <td style="width: 15px;">Araca Stok Yükleme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/stokal</td>
+              <td style="width: 15px;">Araçtan Stok Alma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/stokgor</td>
+              <td style="width: 15px;">Stok Listeleme Komutu</td>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="lspd" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>LSPD Komutları</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>Action</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/pdisbasi</td>
+              <td style="width: 15px;">İşbaşı Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/MDC</td>
+              <td style="width: 15px;">Mobil Data Merkezi Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/apb [ID] [sebep]</td>
+              <td style="width: 15px;">Aranma Kaydı Oluşturma</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ekipkur [partner ID] [ekip ismi]</td>
+              <td style="width: 15px;">Ekip Kumra Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ekipliste</td>
+              <td style="width: 15px;">Ekip Listeleme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ekipdagit</td>
+              <td style="width: 15px;">Ekip Dağıtma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/t [yazı]</td>
+              <td style="width: 15px;">Telsiz Yazısı</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/tk [frekans no (1-99)]</td>
+              <td style="width: 15px;">Frekans Değiştirme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/yt [yazı]</td>
+              <td style="width: 15px;">Yakın Telsiz Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/dt [yazı]</td>
+              <td style="width: 15px;">Departmanlar Arası Telsiz</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/radar</td>
+              <td style="width: 15px;">Araç Radar Paneli Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/beanbag</td>
+              <td style="width: 15px;">Beanbag Tüfek Komutu [İNAKTİF]</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/o [yazı]</td>
+              <td style="width: 15px;">Operatör Telsizi Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/pdestek</td>
+              <td style="width: 15px;">Destek Talep Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/pkabul [ID]</td>
+              <td style="width: 15px;">Destek Kabul Etme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/destekayril</td>
+              <td style="width: 15px;">Destek Kapatma / Ayrılma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/tutukla [ID] [süre] [sebep]</td>
+              <td style="width: 15px;">El Koyma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/gözaltı [ID] [süre] [sebep]</td>
+              <td style="width: 15px;">Gözaltı Komutu [İNAKTİF]</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/gözaltıcikar [ID]</td>
+              <td style="width: 15px;">Gözaltı Çıkartma Komutu [İNAKTİF]</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/kelepce [ID]</td>
+              <td style="width: 15px;">Kelepçe Takma / Çıkartma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ustara [ID]</td>
+              <td style="width: 15px;">Üst Arama Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/kapikir</td>
+              <td style="width: 15px;">Kapı Kırma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/plaka</td>
+              <td style="width: 15px;">Yakındaki Plakaların Listesi</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/cezakes [kişi/plaka/ehliyet]</td>
+              <tr>
+                <td style="width: 15px;"><b>Kişi</b> [ID] [Miktar] [Sebep]</td>
+              </tr>
+              <tr>
+                <td style="width: 15px;"><b>Araç</b> [Plaka] [Miktar] [Sebep]</td>
+              </tr>
+              <tr>
+                <td style="width: 15px;"><b>Ehliyet</b> [Ehliyet ID] [Miktar] [Sebep]</td>
+              </tr>
+              <tr>
+                <td style="width: 15px;">/barikat</td>
+                <td style="width: 15px;">Barikat Kurma Komutu</td>
+              </tr>
+              <tr>
+                <td style="width: 15px;">/barikatkaldir [barikat ID]</td>
+                <td style="width: 15px;">Barikat Kaldırma Komutu</td>
+              </tr>
+              <tr>
+                <td style="width: 15px;">/elkoy [ID] [eşya ID]</td>
+                <td style="width: 15px;">El Koyma Komutu</td>
+              </tr>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="lsems" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>LSFD / EMS Komutları</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/fdisbasi</td>
+              <td style="width: 15px;">LSFD İşbaşı Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/fdekipman</td>
+              <td style="width: 15px;">LSFD Ekipman Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/ilkyardim [ID]</td>
+              <td style="width: 15px;">İlkyardım Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/tedavi [ID]</td>
+              <td style="width: 15px;">Tedavi Komutu (Hastalık)</td>
+            </tr> 
+            <tr>
+              <td style="width: 15px;">/ihbarlar</td>
+              <td style="width: 15px;">İhbar Listeleme Komutu</td>
+            </tr> 
+            <tr>
+              <td style="width: 15px;">/ihbaryanit</td>
+              <td style="width: 15px;">İhbar Yanıtlama Komutu</td>
+            </tr> 
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="mechanic" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Tamirhane Komutları</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/modifiye</td>
+              <td style="width: 15px;">Modifiye Erişim Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/modifiyebasla</td>
+              <td style="width: 15px;">Modifiye Monte Komutu</td>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="news" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Haber Ajansı Komutları</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/yayinac [başlık]</td>
+              <td style="width: 15px;">Yayın Başlatma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/yayin [başlık]</td>
+              <td style="width: 15px;">Yayın Başlatma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/reklam [mesaj]</td>
+              <td style="width: 15px;">Reklam Verme Komutu</td>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="other" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+          <div class="panel-header"><div>Diğer Birlik Komutları</div><hr /></div>
+
+          <div style="overflow-y: scroll; max-height: 400px;">
+
+          <table style="width: 100%;">
+        <tbody>
+          <tr>
+            <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+            <td style="width: 15px;"><b>İşlev</b></td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/birlik</td>
+            <td style="width: 15px;">Birlik Sayfasını Açma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/bilrikkur</td>
+            <td style="width: 15px;">Birlik Kurma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/birlikdavet</td>
+            <td style="width: 15px;">Oyuncuyu Birliğe Davet Etme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;"><b>Kabul Etme </b>/birlikdavet</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/birlikcikar</td>
+            <td style="width: 15px;">Oyuncuyu Birlikten Kovma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/birlikaktif </td>
+            <td style="width: 15px;">Oyuncuyu Birlikten Kovma Komutu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+
+        <div id="cargo" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Kargoculuk Mesleği</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/gopostal</td>
+              <td style="width: 15px;">Kargo İşbaşı Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/kargo al</td>
+              <td style="width: 15px;">NPC'den Kargo Alma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/kargo koy</td>
+              <td style="width: 15px;">Kargoyu Araca Koyma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/kargo araçtanal</td>
+              <td style="width: 15px;">Kargoyu Araçtan Alma Komutu</td>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="truck" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Kamyon Nakliye Mesleği</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/kamyonbaşla</td>
+              <td style="width: 15px;">Meslek Başlangıç Komutu</td>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="taxi" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Taksicilik Mesleği</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/taksimetre [fiyat]</td>
+              <td style="width: 15px;">Taksimetreyi Açar ve Kapatır.</td>
+            </tr>
+          </tbody>
+				</table>
+			</div>
+        </div>
+
+        <div id="farm" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+          <div class="panel-header"><div>Çiftçilik & Hayvancılık</div><hr /></div>
+
+          <div style="overflow-y: scroll; max-height: 400px;">
+
+          <table style="width: 100%;">
+
+        <tbody>
+          <tr>
+            <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+            <td style="width: 15px;"><b>İşlev</b></td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/uruntopla</td>
+            <td style="width: 15px;">Yetişmiş Mahsülü Toplama Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/hayvanisle</td>
+            <td style="width: 15px;">Yetişkin Hayvanı İşleme Komutu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+
+        <div id="Helper" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+            <div class="panel-header"><div>Tester Komutları</div><hr /></div>
+
+            <div style="overflow-y: scroll; max-height: 400px;">
+
+            <table style="width: 100%;">
+
+          <tbody>
+            <tr>
+              <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+              <td style="width: 15px;"><b>İşlev</b></td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/tc</td>
+              <td style="width: 15px;">Tester Chat</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/tckapat</td>
+              <td style="width: 15px;">Tester Chat Kapatma</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/sorular</td>
+              <td style="width: 15px;">Soruları Listeleme</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/sorucevap [soru ID]</td>
+              <td style="width: 15px;">Soru Cevaplama Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/reklamlar</td>
+              <td style="width: 15px;">Onay Bekleyen Reklamlar</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/areklam</td>
+              <td style="width: 15px;">Reklam Onaylama</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/blipekle</td>
+              <td style="width: 15px;">Blip Ekleme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/blipkaldir</td>
+              <td style="width: 15px;">Blip Kaldırma Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/blipduzenle</td>
+              <td style="width: 15px;">Blip Düzenleme Komutu</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/yakinblipler</td>
+              <td style="width: 15px;">Çevredeki Blipleri Listeleme</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/setdim</td>
+              <td style="width: 15px;">Sanal Dünya(Virtual World) Ayarlama</td>
+            </tr>
+            <tr>
+              <td style="width: 15px;">/aradyokaldir</td>
+              <td style="width: 15px;">Oyuncu Radyosunu Kaldırma</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        </div>        
+
+        <div id="Admin2" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+          <div class="panel-header"><div>Yetkili (II) Komutları</div><hr /></div>
+
+          <div style="overflow-y: scroll; max-height: 400px;">
+
+          <table style="width: 100%;">
+
+        <tbody>
+          <tr>
+            <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+            <td style="width: 15px;"><b>İşlev</b></td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/raporlar</td>
+            <td style="width: 15px;">Rapor Bakma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/arapor</td>
+            <td style="width: 15px;">Rapor Yanıtlama Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/ajail [ID] [Süre] [Sebep]</td>
+            <td style="width: 15px;">Oyuncu Ceza Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/ac</td>
+            <td style="width: 15px;">Admin Chat</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/ackapat</td>
+            <td style="width: 15px;">Admin Chat Kapatma</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/goto [ID]</td>
+            <td style="width: 15px;">Oyuncuya Gitme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/get [ID]</td>
+            <td style="width: 15px;">Oyuncuyu Çekme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/gonder</td>
+            <td style="width: 15px;">Başka Oyuncuya Gönderme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/iyilestir</td>
+            <td style="width: 15px;">Oyuncu İyileştirme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/aaduzenle</td>
+            <td style="width: 15px;">Araç Düzenleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/kick</td>
+            <td style="width: 15px;">Oyuncu Kickleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/skick</td>
+            <td style="width: 15px;">Oyuncuyu Sessiz Kickleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/igit</td>
+            <td style="width: 15px;">İşyerine Gitme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/egit</td>
+            <td style="width: 15px;">Eve Gitme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/agit</td>
+            <td style="width: 15px;">Araca Gitme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/acek</td>
+            <td style="width: 15px;">Araç Çekme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/slap</td>
+            <td style="width: 15px;">Oyuncu Tokatlama Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/freeze</td>
+            <td style="width: 15px;">Oyuncu Dondurma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/sethp</td>
+            <td style="width: 15px;">Oyuncuya Can Verme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/atamir</td>
+            <td style="width: 15px;">Araç Tamir Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/acevir</td>
+            <td style="width: 15px;">Araç Çevirme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/marketekle</td>
+            <td style="width: 15px;">Market Ekleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/miekle</td>
+            <td style="width: 15px;">Markete Eşya Ekleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/mistok</td>
+            <td style="width: 15px;">İşyerine Stok Ekleme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/marketsil</td>
+            <td style="width: 15px;">Market Silme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/check</td>
+            <td style="width: 15px;">Karakter Kontrol Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/yakinkapilar</td>
+            <td style="width: 15px;">Yakındaki Kapıları Gösterme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/abarikatkaldir</td>
+            <td style="width: 15px;">Barikat Kaldırma Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/birlikgor</td>
+            <td style="width: 15px;">Birliği Görme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/lisansver</td>
+            <td style="width: 15px;">Oyuncuya Lisans Verme Komutu</td>
+          </tr>
+          <tr>
+            <td style="width: 15px;">/lisansgor</td>
+            <td style="width: 15px;">Oyuncu Lisanslarını Görme Komutu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      </div>
+
+
+    <div id="Admin3" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+      <div class="panel-header"><div>Yetkili (III) Komutları</div><hr /></div>
+
+      <div style="overflow-y: scroll; max-height: 400px;">
+
+      <table style="width: 100%;">
+    <tbody>
+      <tr>
+        <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+        <td style="width: 15px;"><b>İşlev</b></td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/ban [ID] [Sebep]</td>
+        <td style="width: 15px;">Oyuncu Yasaklama Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/karakterduzenle</td>
+        <td style="width: 15px;">Karakter Düzenleme Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/aeduzenle</td>
+        <td style="width: 15px;">Ev Düzenleme Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/karakteryarattir</td>
+        <td style="width: 15px;">Yaratma Ekranına Gönderme</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/akapiekle</td>
+        <td style="width: 15px;">Kapı Ekleme Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/kapiduzenle</td>
+        <td style="width: 15px;">Ekli Kapıyı Düzenleme Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/setarmor</td>
+        <td style="width: 15px;">Oyuncuya Zırh Verme Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/birlikduzenle</td>
+        <td style="width: 15px;">Birlik Düzenleme Komutu</td>
+      </tr>
+      <tr>
+        <td style="width: 15px;">/lisanssil</td>
+        <td style="width: 15px;">Oyuncudan Lisans Silme Komutu</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+
+<div id="Admin4" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+  <div class="panel-header"><div>Yetkili (IV) Komutları</div><hr /></div>
+
+  <div style="overflow-y: scroll; max-height: 400px;">
+
+  <table style="width: 100%;">
+
+<tbody>
+  <tr>
+    <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+    <td style="width: 15px;"><b>İşlev</b></td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/sban</td>
+    <td style="width: 15px;">Sessiz Ban Komutu</td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="Admin5" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+  <div class="panel-header"><div>Yetkili (V) Komutları</div><hr /></div>
+
+  <div style="overflow-y: scroll; max-height: 400px;">
+
+  <table style="width: 100%;">
+<tbody>
+  <tr>
+    <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+    <td style="width: 15px;"><b>İşlev</b></td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/aiekle</td>
+    <td style="width: 15px;">İşyeri Ekleme Komutu</td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/aiduzenle</td>
+    <td style="width: 15px;">İşyeri Düzenleme Komutu</td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/aisil</td>
+    <td style="width: 15px;">İşyeri Silme Komutu</td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/aayarat</td>
+    <td style="width: 15px;">Araç Yaratma Komutu</td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/duyuru</td>
+    <td style="width: 15px;">Duyuru Komutu</td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/asilahver</td>
+    <td style="width: 15px;">Silah Verme Komutu</td>
+  </tr>
+  <tr>
+    <td style="width: 15px;">/azar</td>
+    <td style="width: 15px;">Zar Bugtan Çıkartma Komutu</td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="Admin6" class="panel panel-dark panel-scale" style="display: none; width: 760px;">
+  <div class="panel-header"><div>Yetkili (VI) Komutları</div><hr /></div>
+
+  <div style="overflow-y: scroll; max-height: 400px;">
+
+  <table style="width: 100%;">
+
+<tbody>
+  <tr>
+    <td style="width: 15px;"><b>Komut / Kısayol</b></td>
+    <td style="width: 15px;"><b>İşlev</b></td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="lsc-dark.js"></script>
+</body>
+</html>

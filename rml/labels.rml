@@ -1,0 +1,64 @@
+<rml>
+	<head>
+		<title>Client Streamer Labels</title>
+		<style>
+			body, #label-container
+			{				
+				font-family: arialbd;
+				font-style: normal;
+				font-size: 1.4vh;
+
+				width: 100%;
+				height: 100%;
+			}
+
+			.label {
+				position: absolute;
+            
+				font-effect: outline( 1px #000000AC );
+				width: auto;
+				height: auto;
+				text-align: center;
+
+				transition: opacity 0.4s;
+			}
+
+			.hide
+			{
+				display:none;
+			}
+
+			.color-red {
+				color: #FF0000;
+			}
+			.color-blue {
+				color: #00F3FF
+			}
+			.color-green {
+				color: #00ff00
+			}
+			.color-yellow {
+				color: #f0ff00
+			}
+			.color-purple {
+				color: #9300FF
+			}
+			.color-pink {
+				color: #ff0078
+			}
+			.color-gray {
+				color: #b4b4b4
+			}
+			.color-orange {
+				color: #EAAA09
+			}
+			.color-white {
+				color: white;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="label-container"></div>
+	</body>
+</rml>

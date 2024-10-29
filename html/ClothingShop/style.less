@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+}
+.helpText{
+    float: right;
+    width: 270px;
+    height: 168px;
+    background-color: #000000c9;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-right: 50px;
+    margin-top: 100px;
+    span{
+    font-size: 15px;
+}
+    h1{
+        width: 270px;
+        height: 40px;
+        background-image:  linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(0,0,0,1) 320%);     
+        text-align: center;
+        font-size: 19px;
+        font-family: 'Work Sans', sans-serif;
+        padding-top: 10px;
+        color: white;
+        font-weight: 500;
+    }
+    h3{
+        margin-left: -5px;
+        margin-top: 20px;
+        font-size: 12px;
+        color: white;
+        text-align: center;
+    }
+    .w{
+        float: left;
+        display: block;
+    }
+}
+.mainContent{
+    margin-top: 320px;
+}
+.leftbar{
+    width: 270px;
+    height: 465px;
+    background-color: #000000c9;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 50px;
+    margin-top: 100px;
+    display: inline-block;
+    .clothes{
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+    .acc{
+        padding-left: 20px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        background-color: #b1b1b1;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin: 10px;
+        margin-left: 13px;
+    }
+
+    img{
+        width: 24px;
+        height: 24px;
+    }
+    h1{
+        width: 270px;
+        height: 40px;
+        background-image:  linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(0,0,0,1) 320%);     
+        text-align: center;
+        font-size: 19px;
+        font-family: 'Work Sans', sans-serif;
+        padding-top: 10px;
+        color: white;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: bold;
+        color: #469CC8;
+    }
+}
+
+.rightbar{
+    position: absolute;
+    right: 0;
+    width: 270px;
+    height: 168px;
+    background-color: #000000c9;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-right: 50px;
+    margin-top: -280px;
+    justify-items: center;
+    justify-content: center;
+    h1{
+        width: 270px;
+        height: 40px;
+        background-image:  linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(0,0,0,1) 320%);   
+        text-align: center;
+        font-size: 19px;
+        font-family: 'Work Sans', sans-serif;
+        padding-top: 10px;
+        color: white;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 15px;
+        color: #469CC8;
+        margin-left: 9px;
+    }
+    span{
+        color: white;
+        font-weight: 700;
+        font-size: 22px;
+        margin-left: 9px;
+    }
+    button{
+        margin-left: 9px;
+        margin-top: 25px;
+        background: linear-gradient(90deg, rgba(46,177,0,1) 0%, rgba(8,100,0,1) 100%);
+        color: white;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        width: 120px;
+        transition: 0.2s;
+        height: 30px;
+        font-family: 'Work Sans', sans-serif;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+    .disag{
+        background: linear-gradient(90deg, rgba(177,0,0,1) 0%, rgba(100,0,0,1) 100%);
+    }
+    button:hover{
+        
+        background: #2eb100;
+    }
+    .disag:hover{
+        
+        background: rgba(177,0,0,1);
+    }
+}
+
+.bottombar{
+    position: absolute;
+    right: 0px;
+    margin-right: 52px;
+    margin-top: -100px;
+    button{
+        width: 50px;
+        height: 50px;
+        background-color: #b1b1b1;
+        outline: none;
+        border:none;
+        border-radius: 10px;
+    }
+    span{
+      
+        width: 150px;
+        height: 22px;
+        margin-bottom: 10px;
+        display: -webkit-inline-box;
+        color: white;
+        padding-left: 30px;
+        font-weight: 700;
+
+        
+    }
+    input {
+        width: 150px;
+        height: 22px;
+        margin-bottom: 10px;
+        display: -webkit-inline-box;
+        padding-left: 30px;
+        font-weight: 700;
+        background: transparent;
+        color: white;
+        border: none;
+    }
+    .clothesChange{
+        margin-bottom: 10px;
+        background-color: #000000c9;
+        border-radius: 15px;
+    }
+    .clothesTexture{
+        background-color: #000000c9;
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .mainContent{
+        margin-top: 190px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .mainContent{
+        margin-top: 180px;
+    }
+}
+@media screen and (max-width: 800px) {
+	body {
+		font-size: 12px;
+	}
+    .mainContent{
+        margin-top: 0px;
+    }
+	.leftbar{
+        width: 170px;
+        height: 465px;
+        background-color: #000000c9;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-left: 20px;
+        margin-top: 100px;
+        display: inline-block;
+        .clothes{
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+        .acc{
+            padding-left: 20px;
+        }
+        button{
+            width: 40px;
+            height: 40px;
+            background-color: #b1b1b1;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    
+        img{
+            width: 18px;
+            height: 18px;
+        }
+        h1{
+            width: 170px;
+            height: 40px;
+            background-image:  linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(0,0,0,1) 320%);     
+            text-align: center;
+            font-size: 15px;
+            font-family: 'Work Sans', sans-serif;
+            padding-top: 10px;
+            color: white;
+            font-weight: 500;
+        }
+        h2{
+            font-size: 12px;
+            font-weight: bold;
+            color: #469CC8;
+        }
+    }
+    .helpText{
+        float: right;
+        width: 170px;
+        height: 168px;
+        background-color: #000000c9;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-right: 20px;
+        margin-top: 100px;
+        span{
+        font-size: 15px;
+    }
+        h1{
+            width: 170px;
+            height: 40px;
+            background-image:  linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(0,0,0,1) 320%);     
+            text-align: center;
+            font-size: 19px;
+            font-family: 'Work Sans', sans-serif;
+            padding-top: 10px;
+            color: white;
+            font-weight: 500;
+        }
+        h3{
+            display: none;
+        }
+        .w{
+            float: left;
+            display: none;
+            display: block;
+        }
+    }
+    .rightbar{
+        position: absolute;
+        right: 0;
+        width: 170px;
+        height: 168px;
+        background-color: #000000c9;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-right: 20px;
+        margin-top: -280px;
+        justify-items: center;
+        justify-content: center;
+        h1{
+            width: 170px;
+            height: 40px;
+            background-image:  linear-gradient(90deg, rgba(73,160,205,1) 0%, rgba(0,0,0,1) 320%);   
+            text-align: center;
+            font-size: 19px;
+            font-family: 'Work Sans', sans-serif;
+            padding-top: 10px;
+            color: white;
+            font-weight: 500;
+        }
+        h2{
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 20px;
+            color: #469CC8;
+            margin-left: 9px;
+        }
+        span{
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            margin-left: 9px;
+        }
+        button{
+            margin-left: 9px;
+            margin-top: 10px;
+            background: linear-gradient(90deg, rgba(46,177,0,1) 0%, rgba(8,100,0,1) 100%);
+            color: white;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            width: 70px;
+            transition: 0.2s;
+            height: 30px;
+            font-family: 'Work Sans', sans-serif;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+        .disag{
+            background: linear-gradient(90deg, rgba(177,0,0,1) 0%, rgba(100,0,0,1) 100%);
+        }
+        button:hover{
+            
+            background: #2eb100;
+        }
+        .disag:hover{
+            
+            background: rgba(177,0,0,1);
+        }
+    }
+    
+    .bottombar{
+        position: absolute;
+        right: 0px;
+        margin-right: 38px;
+        margin-top: -100px;
+        button{
+            width: 25px;
+            height: 25px;
+            background-color: #b1b1b1;
+            outline: none;
+            border:none;
+            border-radius: 5px;
+        }
+        span{
+          
+            width: 70px;
+            height: 5px;
+            margin-bottom: 10px;
+            display: -webkit-inline-box;
+            color: white;
+            padding-left: 30px;
+            font-weight: 700;
+            font-size: 8px;
+    
+            
+        }
+        .clothesChange{
+            margin-bottom: 10px;
+            background-color: #000000c9;
+            border-radius: 10px;
+        }
+        .clothesTexture{
+            background-color: #000000c9;
+            border-radius: 10px;
+        }
+    }
+}
+
+.slider {
+    width: 100%;
+}

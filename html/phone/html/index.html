@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Document</title>
+</head>
+<style>
+    .send-input2 {
+        flex: 3;
+        border-radius: 5px;
+        background-color: #fff;
+        padding-left: 8px;
+        margin: 2px;
+        height: 360px;
+        font-size: 0.8em;
+        margin-top: 19px;
+        width: 229px;
+    }
+</style>
+
+<body>
+    <div class="phone-container" id="app" v-if="load">
+        <div class="sc-bdVaJa kpKlYZ"></div>
+        <div class="phone-content" v-bind:style="{ backgroundImage: 'url(' + backgroundUrl + ')' }" style="background-position: center;">
+            <div class="phone-header phone-header-light" :class="{'phone-header-dark': appSelected != ''}">
+                <div class="phone-header-left">
+                    <div class="phone-header-time">{{hours}}:{{minutes}}</div>
+                    <div class="phone-header-icon">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.418 78.418" class="injected-svg" data-src="/7952a950ab1c6ee6f7c5878fa506c044.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M13.33-31.934l28.076.146c.635,0,.83.244.83.879l.1,27.979c0,4.1,1.807,7.471,5.225,7.471,3.32,0,5.078-3.125,6.641-6.543L83.105-64.453A10.216,10.216,0,0,0,84.277-68.9a4.811,4.811,0,0,0-4.932-4.98A10.952,10.952,0,0,0,74.9-72.705L12.4-43.8c-3.271,1.514-6.543,3.32-6.543,6.689C5.859-33.789,9.082-31.934,13.33-31.934Z"
+                                    transform="translate(-5.859 73.877)"></path>
+                            </svg></div>
+                    </div>
+                </div>
+                <div class="phone-header-right">
+                    <div class="phone-header-icon">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.923 81.83" class="injected-svg" data-src="/106bd8109038d267baa3d55055830a88.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Groupe_6" data-name="Groupe 6" transform="translate(186.775 -27.962)">
+                                    <path id="Tracé_34-1" data-name="Tracé 34"
+                                        d="M83.789,7.755h11.67c4.443,0,6.689-2.492,6.689-7.477V-66.561c0-4.985-2.246-7.477-6.689-7.477H83.789c-4.443,0-6.689,2.492-6.689,7.477V.278C77.1,5.262,79.346,7.755,83.789,7.755Zm-33.691,0H61.816c4.443,0,6.689-2.492,6.689-7.477V-48.606c0-4.985-2.246-7.423-6.689-7.423H50.1c-4.395,0-6.689,2.438-6.689,7.423V.278C43.408,5.262,45.7,7.755,50.1,7.755Zm-33.643,0h11.67c4.443,0,6.738-2.492,6.738-7.477V-29.958c0-5.039-2.295-7.477-6.738-7.477H16.455c-4.443,0-6.689,2.438-6.689,7.477V.278C9.766,5.262,12.012,7.755,16.455,7.755Z"
+                                        transform="translate(-163 102)"></path>
+                                    <path id="Tracé_37-2" data-name="Tracé 37"
+                                        d="M81.17.135H92.84c4.443,0,6.738-2.246,6.738-6.738v-17c0-4.541-2.295-6.74-6.738-6.74H81.17c-4.443,0-6.689,2.2-6.689,6.74v17C74.481-2.111,76.727.135,81.17.135Z"
+                                        transform="translate(-261.256 109.657)"></path>
+                                </g>
+                            </svg></div>
+                    </div>
+                    <div class="phone-header-icon">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.196 61.621" class="injected-svg" data-src="/b098df791cf8618a05a0f8ae97e7d23f.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M13.574-39.795a1.723,1.723,0,0,0,2.588-.049A45.992,45.992,0,0,1,50.391-54.492a46.2,46.2,0,0,1,34.375,14.7,1.726,1.726,0,0,0,2.49-.049l5.225-5.273a1.557,1.557,0,0,0,.146-2.2c-8.691-10.693-24.951-18.7-42.236-18.7-17.236,0-33.5,8.008-42.187,18.7a1.557,1.557,0,0,0,.146,2.2ZM28.857-24.463a1.682,1.682,0,0,0,2.637-.146,25.907,25.907,0,0,1,18.9-8.4,26.475,26.475,0,0,1,19.092,8.545,1.615,1.615,0,0,0,2.49,0l5.859-5.81a1.511,1.511,0,0,0,.146-2.2c-5.615-6.836-15.918-12.061-27.588-12.061-11.621,0-21.924,5.225-27.539,12.061a1.513,1.513,0,0,0,.146,2.2ZM50.391-4.395c.879,0,1.66-.439,3.076-1.855L62.5-14.941a1.588,1.588,0,0,0,.244-2.148,16.123,16.123,0,0,0-12.354-5.957,15.81,15.81,0,0,0-12.5,6.25,1.446,1.446,0,0,0,.44,1.856L47.314-6.25C48.779-4.834,49.561-4.395,50.391-4.395Z"
+                                    transform="translate(-7.817 66.016)"></path>
+                            </svg></div>
+                    </div>
+                    <div class="phone-header-icon">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.629 59.863" class="injected-svg" data-src="/0b73bc44a3ab5e5827481c326ff02150.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g transform="translate(-9.766 65.771)">
+                                    <path
+                                        d="M29.785-5.908h67.92c6.738,0,11.914-.684,15.625-4.395,3.76-3.76,4.395-8.887,4.395-15.625V-45.752c0-6.738-.635-11.914-4.395-15.625-3.711-3.711-8.887-4.395-15.625-4.395H29.639c-6.543,0-11.768.684-15.479,4.395S9.766-52.49,9.766-45.947v20.02c0,6.738.635,11.914,4.346,15.625C17.871-6.592,23.047-5.908,29.785-5.908Zm-1.025-5.42c-4.248,0-8.3-.635-10.645-2.978s-2.93-6.348-2.93-10.6V-46.631c0-4.394.586-8.447,2.881-10.791,2.344-2.344,6.494-2.93,10.84-2.93H98.73c4.2,0,8.3.635,10.645,2.93,2.344,2.344,2.93,6.4,2.93,10.645V-24.9c0,4.248-.635,8.252-2.93,10.6-2.344,2.344-6.445,2.978-10.645,2.978Zm-.537-4.834H99.268c3.271,0,5.029-.44,6.445-1.758,1.367-1.367,1.758-3.174,1.758-6.445v-23c0-3.223-.44-5.029-1.758-6.4-1.367-1.367-3.174-1.758-6.445-1.758H28.223c-3.271,0-5.078.391-6.445,1.758s-1.758,3.174-1.758,6.4v23c0,3.271.391,5.078,1.758,6.445C23.145-16.6,24.951-16.162,28.223-16.162Zm94.336-10.5c2.929-.146,6.836-3.906,6.836-9.57s-3.907-9.424-6.836-9.57Z">
+                                    </path>
+                                </g>
+                            </svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-notification-container"><span></span></div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'call'">
+                <div id="keypad-page" v-if="appSelected == 'call' && subAppSelected == 'keypad'">
+                    <div class="keypad-header">
+                        <div class="keypad-number" style="font-size: 29px;">
+                            {{inputNumber}}
+                        </div>
+                        <br>
+                        <div class="keypad-number">
+                            {{inputNumberContact}}
+                        </div>
+                    </div>
+                    <div>
+                        <div class="keypad-row">
+                            <div class="keypad-btn" @click="addInputNumber(1)">1</div>
+                            <div class="keypad-btn" @click="addInputNumber(2)">2
+                                <div class="keypad-letters">A B C</div>
+                            </div>
+                            <div class="keypad-btn" @click="addInputNumber(3)">3
+                                <div class="keypad-letters">D E F</div>
+                            </div>
+                        </div>
+                        <div class="keypad-row">
+                            <div class="keypad-btn" @click="addInputNumber(4)">4
+                                <div class="keypad-letters">G H I</div>
+                            </div>
+                            <div class="keypad-btn" @click="addInputNumber(5)">5
+                                <div class="keypad-letters">J K L</div>
+                            </div>
+                            <div class="keypad-btn" @click="addInputNumber(6)">6
+                                <div class="keypad-letters">M N O</div>
+                            </div>
+                        </div>
+                        <div class="keypad-row">
+                            <div class="keypad-btn" @click="addInputNumber(7)">7
+                                <div class="keypad-letters">P Q R S</div>
+                            </div>
+                            <div class="keypad-btn" @click="addInputNumber(8)">8
+                                <div class="keypad-letters">T U V</div>
+                            </div>
+                            <div class="keypad-btn" @click="addInputNumber(9)">9
+                                <div class="keypad-letters">W X Y Z</div>
+                            </div>
+                        </div>
+                        <div class="keypad-row">
+                            <div id="asterisk" class="keypad-btn">*</div>
+                            <div class="keypad-btn" @click="addInputNumber(0)">0
+                                <div id="plus">+</div>
+                            </div>
+                            <div class="keypad-btn">
+                                <div id="sharp-icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.816 74.616" class="injected-svg" data-src="/c495d89915be76877e9fb70f421ffd42.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path id="Tracé_66-4" data-name="Tracé 66"
+                                                d="M13.916-16.943H29.248v14.8A3.859,3.859,0,0,0,30.317.824,3.859,3.859,0,0,0,33.248,2,3.859,3.859,0,0,0,36.179.824a3.859,3.859,0,0,0,1.069-2.972v-14.8h21.68v14.8A3.859,3.859,0,0,0,60,.824,3.859,3.859,0,0,0,62.928,2,3.859,3.859,0,0,0,65.859.824a3.859,3.859,0,0,0,1.069-2.972v-14.8H82.422a3.885,3.885,0,0,0,2.963-1.079,3.885,3.885,0,0,0,1.187-2.921,3.871,3.871,0,0,0-1.16-2.964A3.871,3.871,0,0,0,82.422-25H66.943V-45.361H82.422a3.859,3.859,0,0,0,2.972-1.069,3.859,3.859,0,0,0,1.178-2.931A3.834,3.834,0,0,0,85.4-52.3a3.834,3.834,0,0,0-2.981-1.06H66.943v-15.1a3.834,3.834,0,0,0-1.06-2.981,3.834,3.834,0,0,0-2.94-1.169A3.834,3.834,0,0,0,60-71.438a3.834,3.834,0,0,0-1.06,2.981v15.088H37.256V-68.457a3.834,3.834,0,0,0-1.06-2.981,3.834,3.834,0,0,0-2.94-1.169,3.834,3.834,0,0,0-2.94,1.169,3.834,3.834,0,0,0-1.06,2.981v15.088H13.916a3.834,3.834,0,0,0-2.981,1.06,3.834,3.834,0,0,0-1.169,2.94,3.859,3.859,0,0,0,1.178,2.931,3.859,3.859,0,0,0,2.972,1.069H29.248V-25H13.916a3.871,3.871,0,0,0-2.988,1.091,3.871,3.871,0,0,0-1.162,2.962,3.885,3.885,0,0,0,1.185,2.924,3.885,3.885,0,0,0,2.965,1.08ZM37.256-25V-45.361h21.68V-25Z"
+                                                transform="translate(-9.761 72.611)"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="keypad-row">
+                            <div id="call-btn" class="keypad-btn" @click="callNumber(inputNumber)">
+                                <div id="call-icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.382 92.48" class="injected-svg" data-src="/39db6bd874f2b066da69db76b41218f8.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path
+                                                d="M36.621-12.842c14.4,14.453,31.934,25.586,46.24,25.586a21.312,21.312,0,0,0,16.5-7.227c2.637-2.93,4.248-6.3,4.248-9.668a8.152,8.152,0,0,0-3.515-6.885L85.107-21.68c-2.393-1.66-4.346-2.441-6.1-2.441-2.295,0-4.346,1.269-6.592,3.516L68.9-17.09a2.828,2.828,0,0,1-1.9.781,4.04,4.04,0,0,1-2-.586c-3.076-1.66-8.35-6.152-13.232-11.035S42.334-38.037,40.723-41.162a4.187,4.187,0,0,1-.537-2,2.735,2.735,0,0,1,.732-1.855l3.516-3.564c2.2-2.295,3.516-4.3,3.516-6.592,0-1.807-.781-3.76-2.441-6.1l-10.6-14.844a8.37,8.37,0,0,0-7.129-3.613,13.794,13.794,0,0,0-9.521,4.248,21.952,21.952,0,0,0-7.031,16.6C11.231-44.58,22.217-27.246,36.621-12.842Z"
+                                                transform="translate(-11.231 79.736)"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div id="keypad-delete" @click="removeInputNumber()">
+                                <img src="./img/icons/back.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="favourites-page" v-if="appSelected == 'call' && subAppSelected == 'favorite'">
+                    <div id="header-app" class=" ">
+                        <div class="header-row">
+                            <div class="header-left">
+                                <div class="plus-icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.818 64.99" class="injected-svg" data-src="/13a2a55a2366cf9b626859917959d528.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <path
+                                                d="M41.7-2.734a3.876,3.876,0,0,0,3.906-3.857V-31.25H69.678a3.993,3.993,0,0,0,3.906-3.955,3.993,3.993,0,0,0-3.906-3.955H45.605V-63.867A3.876,3.876,0,0,0,41.7-67.725a3.918,3.918,0,0,0-3.955,3.857V-39.16H13.721a4,4,0,0,0-3.955,3.955,4,4,0,0,0,3.955,3.955H37.744V-6.592A3.918,3.918,0,0,0,41.7-2.734Z"
+                                                transform="translate(-9.766 67.725)"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div class="header-middle">Services</div>
+                            <div class="header-right"></div>
+                        </div>
+                    </div>
+                    <div class="action-modal-container" v-if="callService">
+                        <div id="action-modal">
+                            <ul>
+                                <li class="action-description">{{callService.name}}</li>
+                                <li class="" @click="callNumber(callService.phonenumber)">Appeler</li>
+                                <li class="" @click="sendMessageFromContact(callService.phonenumber)">Envoyer un message</li>
+                            </ul>
+                            <div @click="showCallingServices(null)">Annuler</div>
+                        </div>
+                    </div>
+                    <ul class="list-view">
+                        <li v-for="item in services" @click="showCallingServices(item)">
+                            <img :src="item.imageUrl" :alt="item.name">
+                            <h2>{{item.name}}</h2>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="contact-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'call' && subAppSelected == 'contact'">
+                    <div id="header-app" class=" " v-if="!showingContact">
+                        <div class="header-row">
+                            <div class="header-left" style="visibility: hidden;">Groups</div>
+                            <div class="header-middle">Contacts</div>
+                            <div class="header-right" @click="selectedApp('call', 'newContact')">
+                                <div class="plus-icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.818 64.99" class="injected-svg" data-src="/13a2a55a2366cf9b626859917959d528.svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M41.7-2.734a3.876,3.876,0,0,0,3.906-3.857V-31.25H69.678a3.993,3.993,0,0,0,3.906-3.955,3.993,3.993,0,0,0-3.906-3.955H45.605V-63.867A3.876,3.876,0,0,0,41.7-67.725a3.918,3.918,0,0,0-3.955,3.857V-39.16H13.721a4,4,0,0,0-3.955,3.955,4,4,0,0,0,3.955,3.955H37.744V-6.592A3.918,3.918,0,0,0,41.7-2.734Z" transform="translate(-9.766 67.725)"></path></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchbar-container">
+                            <div id="searchbar-icon">
+                                <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.973 72.656" class="injected-svg" data-src="/2af1d030373b8dec2bea05922c7477ba.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.988-13.769a28.974,28.974,0,0,0,17.236-5.713L74.023-.635A4.158,4.158,0,0,0,76.855.488a3.838,3.838,0,0,0,3.906-3.955A3.682,3.682,0,0,0,79.639-6.25l-18.7-18.8a28.785,28.785,0,0,0,6.2-17.92,29.237,29.237,0,0,0-29.15-29.2,29.279,29.279,0,0,0-29.2,29.2A29.279,29.279,0,0,0,37.988-13.769Zm0-5.615A23.736,23.736,0,0,1,14.356-42.969,23.736,23.736,0,0,1,37.988-66.553,23.694,23.694,0,0,1,61.572-42.969,23.7,23.7,0,0,1,37.988-19.385Z" transform="translate(-8.789 72.168)"></path> </svg></div>
+                            </div><input type="text" v-model="inputSearchContact" name="searchbar" id="searchbar" placeholder="Recherche">
+                        </div>
+                    </div>
+                    <div class="page-container" v-if="!showingContact">
+                        <ul id="contact-list">
+                            <li id="D" class="separator" @click="selectedApp('call', 'contact')">
+                                <h2>Mes contacts </h2>
+                            </li>
+                            <li v-for="(item, index) in filteredListContact" @click="selectedApp('call', 'showingcontact'), showingContact = item">
+                                <a>
+                                    <h3>{{item.name}} <span class="bold">{{item.phonenumber}}</span></h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="contact-details-page" v-if="appSelected == 'call' && subAppSelected == 'showingcontact' && showingContact">
+                    <div id="header-app" class="no-border">
+                        <div class="header-row">
+                            <div class="header-left" style="width: 100%;" @click="showingContact = null, selectedApp('call', 'contact')">
+                                <div class="back-icon">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve" class="injected-svg" data-src="/f722c6cc94a11d47b6c829c00dff079f.svg"><g>    <g>        <path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12    C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084    c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864    l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"></path>    </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span>
+                                    Mes contacts
+                                </span>
+                            </div>
+                            <div class="header-middle" style="width: 40px;"></div>
+                            <div class="header-right" @click="selectedApp('call', 'editContact')">Modifier</div>
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <div id="contact-photo" class="">{{showingContact.name.split('')[0]}}</div>
+                    </div>
+                    <h2>{{showingContact.name}}</h2>
+                    <div class="btn-row">
+                        <div class="btn-container" @click="sendMessageFromContact(showingContact.phonenumber)">
+                            <div class="circle-btn">
+                                <div class="icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 511.096 511.096" viewBox="0 0 511.096 511.096" class="injected-svg" data-src="/a00d2eb5b3aa951db53681f4da7abfcc.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Speech_Bubble_48_"><g><path d="m74.414 480.548h-36.214l25.607-25.607c13.807-13.807 22.429-31.765 24.747-51.246-59.127-38.802-88.554-95.014-88.554-153.944 0-108.719 99.923-219.203 256.414-219.203 165.785 0 254.682 101.666 254.682 209.678 0 108.724-89.836 210.322-254.682 210.322-28.877 0-59.01-3.855-85.913-10.928-25.467 26.121-59.973 40.928-96.087 40.928z"></path></g></g></svg></div>
+                                </div>
+                            </div>
+                            <h4>Envoyer un message</h4>
+                        </div>
+                        <div class="btn-container" @click="callNumber(showingContact.phonenumber)">
+                            <div class="circle-btn">
+                                <div class="icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.382 92.48" class="injected-svg" data-src="/39db6bd874f2b066da69db76b41218f8.svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <path d="M36.621-12.842c14.4,14.453,31.934,25.586,46.24,25.586a21.312,21.312,0,0,0,16.5-7.227c2.637-2.93,4.248-6.3,4.248-9.668a8.152,8.152,0,0,0-3.515-6.885L85.107-21.68c-2.393-1.66-4.346-2.441-6.1-2.441-2.295,0-4.346,1.269-6.592,3.516L68.9-17.09a2.828,2.828,0,0,1-1.9.781,4.04,4.04,0,0,1-2-.586c-3.076-1.66-8.35-6.152-13.232-11.035S42.334-38.037,40.723-41.162a4.187,4.187,0,0,1-.537-2,2.735,2.735,0,0,1,.732-1.855l3.516-3.564c2.2-2.295,3.516-4.3,3.516-6.592,0-1.807-.781-3.76-2.441-6.1l-10.6-14.844a8.37,8.37,0,0,0-7.129-3.613,13.794,13.794,0,0,0-9.521,4.248,21.952,21.952,0,0,0-7.031,16.6C11.231-44.58,22.217-27.246,36.621-12.842Z" transform="translate(-11.231 79.736)"></path> </svg></div>
+                                </div>
+                            </div>
+                            <h4>Appeler</h4>
+                        </div>
+                        <div v-if="showingContact.banknumber" class="btn-container" @click="sendToVirement(showingContact.banknumber)">
+                            <div class="circle-btn">
+                                <div class="icon" style="text-align: center;">
+                                    <i class="fas fa-dollar-sign" style="color: white;"></i>
+                                </div>
+                            </div>
+                            <h4>Faire un virement</h4>
+                        </div>
+                    </div>
+                    <ul id="contact-details-list">
+                        <li>
+                            <h4>Numéro de téléphone</h4>
+                            <h2>{{showingContact.phonenumber}}</h2>
+                        </li>
+                        <li v-if="showingContact.banknumber">
+                            <h4>Numéro de banque</h4>
+                            <h2>{{showingContact.banknumber}}</h2>
+                        </li>
+                        <li @click="sendMessageFromContact(showingContact.phonenumber)">
+                            <h2>Envoyer un message</h2>
+                        </li>
+                        <li>
+                            <h4>Notes</h4>
+                            <p>{{showingContact.note}}</p>
+                        </li>
+                        <li class="separator separator-md"></li>
+                        <li @click="sendPosition(showingContact.phonenumber)">
+                            <h2>Envoyer ma position</h2>
+                        </li>
+                        <li class="separator separator-lg"></li>
+                    </ul>
+                </div>
+                <div id="contact-details-page" v-if="appSelected == 'call' && subAppSelected == 'editContact'">
+                    <div id="header-app" class="no-border ">
+                        <div class="header-row">
+                            <div class="header-left" @click="selectedApp('call', 'contact'), showingContact = null;">
+                                <div class="back-icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve" class="injected-svg"
+                                            data-src="/f722c6cc94a11d47b6c829c00dff079f.svg"><g><g><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12    C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084    c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864    l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></div>
+                                </div>
+                                <span>
+                                    Annuler
+                                </span>
+                            </div>
+                            <div class="header-middle"></div>
+                            <div class="header-right" @click="modifyContact(showingContact)">Valider</div>
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <div id="contact-photo" class="photo-lg">{{showingContact.name.split('')[0]}}</div>
+                    </div>
+                    <h3>Ajouter une photo</h3>
+                    <ul id="contact-details-list">
+                        <li><input type="text" name="firstname" id="firstname" v-model="newContact.name" :placeholder="showingContact.name"></li>
+                        <li><input type="text" name="phone" id="phone" v-model="newContact.phonenumber" maxlength="6" :placeholder="showingContact.phonenumber"></li>
+                        <li>
+                            <input v-if="showingContact.banknumber" type="text" name="phone" id="phone" v-model="showingContact.banknumber" minlength="11" maxlength="11" :placeholder="showingContact.banknumber">
+                            <input v-else type="text" name="phone" id="phone" v-model="showingContact.banknumber" minlength="11" maxlength="11" placeholder="Compte bancaire">
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            <h4>Notes</h4>
+                            <textarea name="notes" id="notes" rows="3" v-model="newContact.note" :placeholder="showingContact.note"></textarea></li>
+                        <li class="separator"></li>
+                        <li>
+                            <h2 class="text-red" @click="deleteContact(showingContact.id)">Supprimer</h2>
+                        </li>
+                        <li class="separator separator-lg"></li>
+                    </ul>
+                </div>
+                <div id="contact-details-page" v-if="appSelected == 'call' && subAppSelected == 'newContact'">
+                    <div id="header-app" class="no-border ">
+                        <div class="header-row">
+                            <div class="header-left">
+                                <div class="back-icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve" class="injected-svg"
+                                            data-src="/f722c6cc94a11d47b6c829c00dff079f.svg"><g><g><path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12    C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084    c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864    l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></div>
+                                </div>
+                                <span @click="selectedApp('call', 'contact'), showingContact = null;">
+                                    Annuler
+                                </span>
+                            </div>
+                            <div class="header-middle"></div>
+                            <div class="header-right" @click="sendNewContact">Valider</div>
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <div id="contact-photo" class="photo-lg" v-if="newContact.name">{{newContact.name.split('')[0]}}</div>
+                    </div>
+                    <h3>Ajouter une photo</h3>
+                    <ul id="contact-details-list">
+                        <li><input type="text" name="firstname" id="firstname" v-model="newContact.name" placeholder="Nom"></li>
+                        <li><input type="text" name="phone" id="phone" v-model="newContact.phonenumber" placeholder="Numéro" maxlength="6"></li>
+                        <li><input type="text" name="phone" id="phone" v-model="newContact.banknumber" maxlength="11" placeholder="Compte bancaire"></li>
+                        <li class="separator"></li>
+                        <li>
+                            <h4>Notes</h4>
+                            <textarea name="notes" id="notes" rows="3" v-model="newContact.note " placeholder="Introduis une note"></textarea></li>
+                        <li class="separator separator-lg"></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <nav>
+                        <a class="nav-link" :class="{ active: appSelected == 'call' && subAppSelected == 'favorite'}" @click="selectedApp('call', 'favorite')">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.755 77.99" class="injected-svg" data-src="/4aa7098e779a55034b841c725e6d5e42.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g transform="translate(-7.807 74.512)">
+                                                <path
+                                                    d="M23.486,3.027c.977.732,2.2.586,3.76-.537L48.682-13.184,70.117,2.49c1.563,1.123,2.783,1.27,3.76.537.977-.684,1.27-1.855.635-3.76l-8.3-25.2L87.744-41.455c1.611-1.172,2.051-2.295,1.709-3.418C89.063-46,88.037-46.68,86.035-46.68l-26.514.1L51.416-71.826c-.635-1.9-1.514-2.686-2.734-2.686-1.172,0-2.1.781-2.734,2.686L37.842-46.582l-26.514-.1c-2,0-3.027.684-3.418,1.807-.342,1.123.146,2.246,1.709,3.418L31.152-25.928l-8.3,25.2C22.217,1.172,22.559,2.344,23.486,3.027Z">
+                                                </path>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div>Services</div>
+                        </a>
+                        <a class="nav-link" :class="{ active: appSelected == 'call' && subAppSelected == 'contact'}" @click="selectedApp('call', 'contact')">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.439 75.439" class="injected-svg" data-src="/783db0f9757cdd9b2113eb841a37c511.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g transform="translate(-6.836 72.9)">
+                                                <path
+                                                    d="M44.58,2.539a37.854,37.854,0,0,0,37.7-37.744A37.886,37.886,0,0,0,44.531-72.9a37.844,37.844,0,0,0-37.7,37.7A37.9,37.9,0,0,0,44.58,2.539Zm0-25.1c-12.647,0-22.07,5.664-25.244,10.644a34.255,34.255,0,0,1-9.082-23.291A34.259,34.259,0,0,1,44.531-69.482,34.269,34.269,0,0,1,78.857-35.205a34.191,34.191,0,0,1-9.131,23.34C66.6-16.943,57.178-22.559,44.58-22.559Zm0-6.592c7.324,0,12.939-6.25,12.939-14.4,0-7.666-5.713-14.062-12.939-14.062s-13.037,6.4-12.988,14.063C31.592-35.4,37.207-29.2,44.58-29.15Z">
+                                                </path>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div>Contact</div>
+                        </a>
+                        <a aria-current="page" class="nav-link" :class="{ active: appSelected == 'call' && subAppSelected == 'keypad'}" @click="selectedApp('call', 'keypad')">
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.271 74.609" class="injected-svg" data-src="/76877adef5d2b492a9df8607dde018ae.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g transform="translate(-9.766 72.51)">
+                                                <path
+                                                    d="M20.9-50.293A11.171,11.171,0,0,0,31.982-61.377,11.181,11.181,0,0,0,20.9-72.51,11.159,11.159,0,0,0,9.766-61.377,11.149,11.149,0,0,0,20.9-50.293Zm28.027,0A11.171,11.171,0,0,0,60.01-61.377,11.181,11.181,0,0,0,48.926-72.51,11.191,11.191,0,0,0,37.793-61.377,11.181,11.181,0,0,0,48.926-50.293Zm28.027,0A11.139,11.139,0,0,0,88.037-61.377,11.149,11.149,0,0,0,76.953-72.51,11.191,11.191,0,0,0,65.82-61.377,11.181,11.181,0,0,0,76.953-50.293ZM20.9-24.072A11.171,11.171,0,0,0,31.982-35.156,11.181,11.181,0,0,0,20.9-46.289,11.159,11.159,0,0,0,9.766-35.156,11.149,11.149,0,0,0,20.9-24.072Zm28.027,0A11.171,11.171,0,0,0,60.01-35.156,11.181,11.181,0,0,0,48.926-46.289,11.191,11.191,0,0,0,37.793-35.156,11.181,11.181,0,0,0,48.926-24.072Zm28.027,0A11.139,11.139,0,0,0,88.037-35.156,11.149,11.149,0,0,0,76.953-46.289,11.191,11.191,0,0,0,65.82-35.156,11.181,11.181,0,0,0,76.953-24.072ZM20.9,2.1A11.139,11.139,0,0,0,31.982-8.984,11.213,11.213,0,0,0,20.9-20.117,11.191,11.191,0,0,0,9.766-8.984,11.118,11.118,0,0,0,20.9,2.1Zm28.027,0A11.139,11.139,0,0,0,60.01-8.984,11.213,11.213,0,0,0,48.926-20.117,11.223,11.223,0,0,0,37.793-8.984,11.149,11.149,0,0,0,48.926,2.1Zm28.027,0A11.107,11.107,0,0,0,88.037-8.984,11.181,11.181,0,0,0,76.953-20.117,11.223,11.223,0,0,0,65.82-8.984,11.149,11.149,0,0,0,76.953,2.1Z">
+                                                </path>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div>Clavier</div>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'message' && subAppSelected == 'allMessage'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" @click="selectedApp('', ''), currentMessage = null">Retour</div>
+                        <div class="header-middle">Messages</div>
+                        <div class="header-right" @click="readingMessage()">Nouveau</div>
+                    </div>
+                </div>
+                <div class="mail-box">
+                    <a v-for="(item, index) in stackMessagebyNumber" @click="readingMessage(item)">
+                        <div class="mail-core ">
+                            <div class="notif-container">
+                                <div class="mail-notification" v-if="isNotReaded(item.messages)"></div>
+                            </div>
+                            <div class="item-mail">
+                                <div class="item-mail-top"><span id="mail-sender">{{item.name}}</span>
+                                    <div class="item-mail-top-right"><span id="mail-date" style="font-weight: bold;">{{moment(item.messages[item.messages.length - 1].dateAt).startOf().fromNow()}}</span>
+                                        <div class="item-mail-top-arrow">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="8px" height="8px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve" class="injected-svg"
+                                                    data-src="/6183db20ccf09898f0656063ba4d0f22.svg"><g> <g><path d="M364.951,395.871L136.003,624.828c-6.304,6.289-9.771,14.698-9.771,23.664c0,8.971,3.468,17.375,9.771,23.674    l20.063,20.052c6.294,6.31,14.707,9.782,23.674,9.782c8.966,0,17.369-3.473,23.669-9.782l272.599-272.594    c6.323-6.319,9.786-14.763,9.762-23.738c0.024-9.017-3.433-17.45-9.762-23.773L203.662,99.782    c-6.3-6.31-14.703-9.782-23.675-9.782c-8.966,0-17.369,3.473-23.674,9.782l-20.057,20.052c-13.051,13.051-13.051,34.297,0,47.343    L364.951,395.871z"></path> </g></g></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mail-content">
+                                    {{formatEmphasisText(item.messages[item.messages.length - 1].content, 50)}}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="currentMessage && appSelected == 'message' && subAppSelected == 'oneMessage'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" @click="selectedApp('message', 'allMessage'), currentMessage = null">Retour</div>
+                        <div class="header-middle">{{currentMessage.name}}</div>
+                        <div class="header-right" @click="modalSmsMenu = true">Modifier</div>
+                    </div>
+                </div>
+                <div class="messages-wrapper">
+                    <div class="messages-container">
+                        <div class="message-bubble-container to" v-for="(item, index) in currentMessage.messages" v-if="player.phonenumber == item.from">
+                            <div class="message-bubble to" v-if="item.content.includes('Ma position: X:') == false && item.content.includes('Image:') == false">
+                                {{item.content}}
+                                <div style="text-align: right; font-size: 10px;">
+                                    <i>
+                                        <span>{{moment(item.dateAt).startOf().fromNow()}}</span>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="message-bubble to" v-else-if="item.content.includes('Ma position: X:') == true" @click="giveMyPosition(item.content)">
+                                {{item.content}}
+                                <div style="text-align: right; font-size: 10px;">
+                                    <i>
+                                        <span>{{moment(item.dateAt).startOf().fromNow()}}</span>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="message-bubble to" v-else-if="item.content.includes('Image:') == true">
+                                {{item.content.split(':')[1]}}
+                                <div style="text-align: right; font-size: 10px;">
+                                    <div style="width: 205px;height: 185px;background-position: center;background-size: cover;" :style="{ backgroundImage: 'url(' + linkApi + item.content.split(':')[1] + ')' }" @click="selectPicture(item)"></div>
+                                </div>
+                                <div style="text-align: right; font-size: 10px;">
+                                    <i>
+                                        <span>{{moment(item.dateAt).startOf().fromNow()}}</span>
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-bubble-container from" v-else>
+                            <div class="message-bubble from" v-if="item.content.includes('Ma position: X:') == false && item.content.includes('Image:') == false">
+                                {{item.content}}
+                                <div style="text-align: right; font-size: 10px;">
+                                    <i>
+                                        <span>{{moment(item.dateAt).startOf().fromNow()}}</span>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="message-bubble from" v-else-if="item.content.includes('Ma position: X:') == true" @click="giveMyPosition(item.content)">
+                                {{item.content}}
+                                <div style="text-align: right; font-size: 10px;">
+                                    <i>
+                                        <span>{{moment(item.dateAt).startOf().fromNow()}}</span>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="message-bubble from" v-else-if="item.content.includes('Image:') == true">
+                                {{item.content.split(':')[1]}}
+                                <div style="text-align: right; font-size: 10px;">
+                                    <div style="width: 205px;height: 185px;background-position: center;background-size: cover;" :style="{ backgroundImage: 'url(' + linkApi + item.content.split(':')[1] + ')' }" @click="selectPicture(item)"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="send-container">
+                        <span style="position: absolute;bottom: 13px;font-size: 9px;left: 11px;" :class="{ success : inputMessage.length <= 220, warning : inputMessage.length > 220 && inputMessage.length <= 270, danger : inputMessage.length > 270}"> {{inputMessage.length}}/300</span>
+                        <label>
+                            <textarea v-model="inputMessage" type="text" id="msgInput" maxLength="300" class="send-input" placeholder="Entrez votre message"></textarea>
+                        </label>
+                        <input @click="sendMessage" type="submit" class="send-btn" value="Envoyer">
+                    </div>
+                    <div class="action-modal-container" v-if="modalSmsMenu">
+                        <div id="action-modal">
+                            <ul>
+                                <li class="action-description">Que voulez-vous faire ?</li>
+                                <li class="" v-if="currentMessage.name == currentMessage.phonenumber" @click="selectedApp('call', 'newContact'); newContact.phonenumber = currentMessage.phonenumber; modalSmsMenu = false">Ajouter au contact</li>
+                                <li class="" style="color: rgb(221, 97, 97)" @click="deleteMessages(currentMessage.messages); modalSmsMenu = false">Supprimer</li>
+                                <li class="" style="color:#327bf6" @click="modalSmsMenu = false; callNumber(currentMessage.phonenumber); currentMessage = null;">Appeler</li>
+                            </ul>
+                            <div @click="modalSmsMenu = false;">Annuler</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'message' && subAppSelected == 'newMessage'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" @click="selectedApp('message', 'allMessage')">Annuler</div>
+                        <div class="header-middle" style="width: 100%;">Nouveau message</div>
+                        <div class="header-right" style="visibility: hidden;">Retour</div>
+                    </div>
+                </div>
+                <div class="messages-wrapper">
+                    <div class="messages-container">
+                        <div class="newMessage" style="display: flex; border-bottom: 1px solid #dcdcdc; padding: 5px;">
+                            <div class="label">
+                                <span style="color: #a9a8a8;">À:</span>
+                            </div>
+                            <div class="input" style="margin-left: 10px;">
+                                <input class="inputNewsms" v-model="inputPhoneMessage" type="text" min="0" maxlength="6" placeholder="Numéro de téléphone" style="border: none;">
+                            </div>
+                        </div>
+                        <div class="message-bubble-container to">
+                        </div>
+                        <div class="message-bubble-container from">
+                            <div class="message-bubble from">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="send-container">
+                        <label>
+                            <textarea v-model="inputMessage" type="text" id="msgInput" maxLength="300" class="send-input" placeholder="Entrez votre message"></textarea>
+                        </label>
+                        <input @click="sendMessage" type="submit" class="send-btn" value="Envoyer">
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'bank'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" v-if="subAppSelected == 'history'" @click="selectedApp('', '')">Retour</div>
+                        <div class="header-left" v-if="subAppSelected == 'virement'" @click="selectedApp('bank', 'history')">Retour</div>
+                        <div class="header-middle">Ma Banque</div>
+                        <div class="header-right" v-if="subAppSelected == 'history'" @click="selectedApp('bank', 'virement')">Virement</div>
+                        <div class="header-right" style="visibility: hidden;" v-if="subAppSelected == 'virement'" @click="selectedApp('bank', 'virement')">Virement</div>
+                    </div>
+                </div>
+                <div class="account-container">
+                    <div class="account-header">
+                        <h1 class="balance">{{formatPrice(myAccountSolde)}}</h1>
+                        <h2 class="text-light balance-label" style="letter-spacing: 1px; font-size: 14px;">{{myBankNumber}}</h2>
+                    </div>
+                    <div class="transaction-group" v-if="appSelected == 'bank' && subAppSelected == 'history'">
+                        <h3 class="transaction-group-label">Mes transactions</h3>
+                        <ul class="transaction-list">
+                            <li v-for="item in myHistory">
+                                <div class="transaction-img-container"><img src="./img/icons/atm.png"></div>
+                                <div class="transaction-details">
+                                    <h4 class="transaction-name">{{item.content}}</h4>
+                                    <div class="text-light">{{moment(item.dateAt).startOf().fromNow()}}</div>
+                                </div>
+                                <div class="income" v-if="item.type == 1">{{formatPrice(item.amount)}}</div>
+                                <div class="deduct" v-if="item.type == 2">{{formatPrice(item.amount)}}</div>
+                                <div class="deduct" v-if="item.type == 0">{{formatPrice(item.amount)}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="virement" v-if="appSelected == 'bank' && subAppSelected == 'virement'">
+                        <div class="transaction-group">
+                            <h3 class="transaction-group-label">Introduire un virement</h3>
+                        </div>
+                        <div class="input" style="margin-top: 9px;">
+                            <div class="newMessage" style="display: flex; border-bottom: 1px solid #dcdcdc; padding: 5px; ">
+                                <div class="label">
+                                    <span style="color: #a9a8a8;">À:</span>
+                                </div>
+                                <div class="input" style="margin-left: 10px;">
+                                    <input class="inputNewsms" v-model="newVirement.numero" type="text" min="0" maxlength="11" placeholder="Numéro de compte" style="margin-left: 0px !important; border: none;">
+                                </div>
+                            </div>
+                            <div class="newMessage" style="display: flex; border-bottom: 1px solid #dcdcdc; padding: 5px;">
+                                <div class="label">
+                                    <span style="color: #a9a8a8;">Nom:</span>
+                                </div>
+                                <div class="input" style="margin-left: 10px;">
+                                    <input class="inputNewsms" v-model="newVirement.nom" type="text" min="0" maxlength="20" placeholder="Bénéficiaire" style="margin-left: 0px !important; border: none;">
+                                </div>
+                            </div>
+                            <div class="newMessage" style="display: flex; border-bottom: 1px solid #dcdcdc; padding: 5px;">
+                                <div class="label">
+                                    <span style="color: #a9a8a8;">$:</span>
+                                </div>
+                                <div class="input" style="margin-left: 10px;">
+                                    <input class="inputNewsms" v-model="newVirement.montant" type="number" min="0" maxlength="30" placeholder="Montant" style="margin-left: 0px !important; border: none;">
+                                </div>
+                            </div>
+                            <div class="newMessage" style="display: flex; border-bottom: 1px solid #dcdcdc; padding: 5px;">
+                                <div class="label">
+                                    <span style="color: #a9a8a8;">Motif:</span>
+                                </div>
+                                <div class="input" style="margin-left: 10px;">
+                                    <input class="inputNewsms" v-model="newVirement.communication" type="text" min="0" maxlength="20" placeholder="Communication" style="margin-left: 0px !important; border: none;">
+                                </div>
+                            </div>
+                            <center style="margin-top: 10px;">
+                                <button class="ios_button" style="color: white; font-weight: bold;" @click="sendVirement">
+                                    Envoyer
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'setting'">
+                <div class="settingsBackround" v-if="appSelected == 'setting' && subAppSelected == 'main'">
+                    <div id="header-app" class=" ">
+                        <div class="header-row">
+                            <div class="header-left" @click="selectedApp('', '')">Retour</div>
+                            <div class="header-middle">Réglages</div>
+                            <div class="header-right"></div>
+                        </div>
+                    </div>
+                    <div class="settings-banner"> </div>
+                    <div class="mail-box">
+                        <a @click="selectedApp('setting', 'background')">
+                            <div>
+                                <div class="settings-core">
+                                    <div class="item-settings">
+                                        <div class="settings-img-container" style="background: rgb(112, 215, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="palette" class="svg-inline--fa fa-palette fa-w-16 fontAwesome-icon3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="color: rgb(255, 255, 255);"><path fill="currentColor" d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg></div>
+                                        <div class="text-settings">Fond d'ecran</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a @click="selectedApp('setting', 'sim')">
+                            <div>
+                                <div class="settings-core">
+                                    <div class="item-settings">
+                                        <div class="settings-img-container" style="background: rgb(101, 196, 102);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sim-card" class="svg-inline--fa fa-sim-card fa-w-12 fontAwesome-icon4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="color: rgb(255, 255, 255);"><path fill="currentColor" d="M0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V128L256 0H64C28.7 0 0 28.7 0 64zm224 192h-64v-64h64v64zm96 0h-64v-64h32c17.7 0 32 14.3 32 32v32zm-64 128h64v32c0 17.7-14.3 32-32 32h-32v-64zm-96 0h64v64h-64v-64zm-96 0h64v64H96c-17.7 0-32-14.3-32-32v-32zm0-96h256v64H64v-64zm0-64c0-17.7 14.3-32 32-32h32v64H64v-32z"></path></svg></div>
+                                        <div class="text-settings">Cartes SIM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="settings-banner3"> </div>
+                </div>
+                <div class="settingsBackround" v-if="appSelected == 'setting' && subAppSelected == 'background'">
+                    <div id="header-app" class=" ">
+                        <div class="header-row">
+                            <div class="header-left" @click="selectedApp('setting', 'main')">Retour</div>
+                            <div class="header-middle">Fond d'écran</div>
+                            <div class="header-right"></div>
+                        </div>
+                    </div>
+                    <div class="settings-banner">
+                        <center>
+                            <span style="font-weight: bold; font-size: 15px; font-family: 'SFProTextRegular';">Choisissez votre fond d'écran:</span>
+                        </center>
+                    </div>
+                    <div class="mail-box">
+                        <center style="max-height: 473px; overflow-x: scroll;">
+                            <div v-for="item in background" class="background" style="width: 100px; height: 100px; display: inline-block; background-size: cover; margin: 4px" v-bind:style="{ 'background-image': 'url(' + item.link + ')' }" @click="changeBackground(item)"></div>
+                        </center>
+                    </div>
+                </div>
+                <div class="settingsBackround" v-if="appSelected == 'setting' && subAppSelected == 'sim'">
+                    <div id="header-app" class=" ">
+                        <div class="header-row">
+                            <div class="header-left" @click="selectedApp('setting', 'main')">Retour</div>
+                            <div class="header-middle">Carte SIM</div>
+                            <div class="header-right"></div>
+                        </div>
+                    </div>
+                    <div class="settings-banner" style="padding: 5px;">
+                        <center>
+                            <span style="font-weight: bold; font-size: 14px; font-family: 'SFProTextRegular';">
+                                Mon numéro de téléphone: <br> <span style="font-weight: normal;">{{player.phonenumber}}</span>
+                            </span>
+                        </center>
+                    </div>
+                    <div class="mail-box">
+                        <center style="margin-top: 10px;">
+                            <button class="ios_button" style="color: white; font-weight: bold; font-family: 'SFProTextRegular'; background-color: rgb(228, 83, 83);" @click="removeSim">
+                                Retirer
+                            </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgba(0, 0, 0, 0.979);" v-if="appSelected == 'call' && subAppSelected == 'inCalling'">
+                <div class="bandeau" style="width: 100%; background-color: rgb(101, 196, 102);height: 27px; position: absolute; top: 0;"></div>
+                <div class="call-number" style="color: white; font-size: 27px; text-align: center; margin-top: 18%;">
+                    <div class="name">
+                        {{inCalling.name}}
+                    </div>
+                    <div class="timer" style="font-size: 14px; margin-top: 5px;">
+                        {{inCalling.displaytime}}
+                    </div>
+                </div>
+
+                <div class="call_end" @click="endCall(inCalling.phonenumber)" style="position: absolute; bottom: 50px; left: 105px; text-align: center;">
+                    <i class="fas fa-phone-slash fa-1x" style="color: white; font-size: 18px; line-height: 46px;"></i>
+                </div>
+
+            </div>
+            <div class="app-container" style="background-color: rgba(0, 0, 0, 0.979);" v-if="appSelected == 'call' && subAppSelected == 'proposeCall'">
+                <div class="bandeau" style="width: 100%; background-color: rgb(101, 196, 102);height: 27px; position: absolute; top: 0;"></div>
+                <div class="call-number" style="color: white; font-size: 27px; text-align: center; margin-top: 18%;">
+                    <div class="name">
+                        {{inCalling.name}}
+                    </div>
+                    <div class="timer" style="font-size: 14px; margin-top: 5px;">
+                        {{inCalling.displaytime}}
+                    </div>
+                </div>
+                <div class="buble" style="display: flex;">
+                    <div class="call_end" @click="endCall(inCalling.phonenumber)" style="position: absolute; bottom: 50px; right: 35px; text-align: center;">
+                        <i class="fas fa-phone-slash fa-1x" style="color: white; font-size: 18px; line-height: 46px;"></i>
+                    </div>
+                    <div class="call_end" @click="acceptCall(inCalling.phonenumber)" style="position: absolute; bottom: 50px; left: 35px; text-align: center; background-color:rgb(101, 196, 102);">
+                        <i class="fas fa-phone fa-1x" style="color: white; font-size: 18px; line-height: 46px;"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'camera'">
+                <div class="screen" style="width: 100%;position: absolute;top: 0;height: 470px; background-size: cover; background-repeat: no-repeat; background-position: center;" :style="{ backgroundImage: 'url(' +  camera + ')' }"></div>
+                <div class="camera-bottom-nav">
+                    <div class="camera-nav-buttons">
+                        <div class="camera-button-galery" v-if="pictures.length" :style="{ backgroundImage: 'url(' + linkApi + pictures[pictures.length -1].content + ')' }"></div>
+                        <div class="camera-button-galery" v-else></div>
+                        <div class="camera-button-record" v-if="canTakePicture && pictures.length < 10" @click="takeScreenShot" :class="{opacityfive: !canTakePicture}"></div>
+                        <div class="camera-button-turn" @click="setSelfie"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'galerie'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" @click="selectedApp('', '')">Retour</div>
+                        <div class="header-middle">Albums</div>
+                        <div class="header-right" style="visibility: hidden;" @click="selectedApp('bank', 'virement')">Virement</div>
+                    </div>
+                </div>
+                <div class="account-container" style="display: inline-block;">
+                    <div class="show-picture" style="display: inline-block; width: 78px; height: 78px; background-size: cover; background-position: center; margin-left: 2px;" v-for="item in pictures" :style="{ backgroundImage: 'url(' + linkApi + item.content + ')' }" @click="selectPicture(item)"></div>
+                    <div class="action-modal-container" v-if="selectedPicture">
+                        <div id="action-modal">
+                            <ul>
+                                <li class="action-description">{{selectedPicture.content}}</li>
+                                <li class="" @click="sendPictureShowContact(selectedPicture)">Envoyer par SMS</li>
+                                <li class="" @click="backgroundUrl = linkApi + selectedPicture.content; selectedApp('', ''); selectedPicture = null;">Mettre un fond d'écran</li>
+                                <li class="" style="color: rgb(221, 97, 97)" @click="deleteScreen(selectedPicture.id)">Supprimer</li>
+                            </ul>
+                            <div @click="selectPicture(null)">Annuler</div>
+                        </div>
+                    </div>
+                    <div class="action-modal-container" v-if="pictureShowContact">
+                        <div id="action-modal">
+                            <ul style="max-height: 383px;overflow-x: scroll;">
+                                <li class="action-description" v-for="item in contacts" style="font-family: 16px; color: black" @click="sendPictureSms(pictureShowContact.content, item.phonenumber)">{{item.name}} - {{item.phonenumber}}</li>
+                            </ul>
+                            <div @click="sendPictureShowContact(null)">Annuler</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'lspd'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" @click="selectedApp('', '')">Retour</div>
+                        <div class="header-middle">Intranet Police</div>
+                        <div class="header-right" v-if="subAppSelected == 'main'" @click="selectedApp('lspd', 'avr')">AVR</div>
+                        <div class="header-right" v-if="subAppSelected == 'avr'" @click="selectedApp('lspd', 'main')">RV</div>
+                    </div>
+                </div>
+                <div class="line-wanted" v-if="subAppSelected == 'main'">
+                    <input class="inputNewsms" v-model="searchVehicle" type="text" min="0" maxlength="20" placeholder="Plaque, modèle" style="text-align: center; margin-left: 0px !important; border: none; width: 100%;">
+                    <div class="line-content" v-for="item in filteredListVehicles" style="font-size: 12px;">
+                        <div class="avr-line">
+                            <strong>
+                                    &nbsp;&nbsp;{{item.model}}
+                                </strong>
+                        </div>
+                        <div class="avr-line">
+                            {{item.plate}}
+                        </div>
+                        <div class="avr-line" style="width: 17%;">
+                            <div style="display: inline-block; margin-top: 2px; width: 40px; height: 14px;" :style="{ backgroundColor: item.primaryColor }"></div>
+                            <div style="display: inline-block; margin-top: 2px; width: 40px; height: 14px;" :style="{ backgroundColor: item.secondaryColor }"></div>
+                        </div>
+                        <div class="avr-line">
+                            {{item.proprio.replace('_', ' ')}}
+                        </div>
+                    </div>
+                </div>
+                <div class="line-wanted" v-if="subAppSelected == 'avr'" style="font-size: 13px;">
+                    <input class="inputNewsms" v-model="searchWanted" type="text" min="0" maxlength="20" placeholder="Nom" style="text-align: center; margin-left: 0px !important; border: none; width: 100%;">
+                    <div class="line-wanted">
+                        <div class="line-content" v-for="item in filteredListWanted">
+                            <div class="wanted-name">
+                                <strong>
+                                    &nbsp;&nbsp;{{item.name}}
+                                </strong>
+                            </div>
+                            <div class="wanted-reason">
+                                {{item.reason }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-container" style="background-color: rgb(243 19 30);" v-if="appSelected == 'lifeinvader'">
+                <iframe style="width: 289px; position: absolute; height: 558px; top: 18px;" src="https://lifeinvader.allocarpe.com/" frameborder="0"></iframe>
+            </div>
+            <div class="app-container" style="background-color: rgb(255, 255, 255);" v-if="appSelected == 'lifeinvader'">
+                <div id="header-app" class=" ">
+                    <div class="header-row">
+                        <div class="header-left" @click="selectedApp('', '')">Retour</div>
+                        <div class="header-middle">Publicité</div>
+                        <div class="header-right" style="visibility: hidden;" @click="selectedApp('bank', 'virement')">Virement</div>
+                    </div>
+                </div>
+                <div class="messages-wrapper">
+                    <div class="messages-container">
+                        <div class="newMessage" style="display: flex; border-bottom: 1px solid #dcdcdc; padding: 5px;">
+                            <div class="label">
+                                <span style="color: #a9a8a8;">Titre:</span>
+                            </div>
+                            <div class="input" style="margin-left: 10px;">
+                                <input class="inputNewsms" v-model="publicityTitle" type="text" min="0" maxlength="30" placeholder="Titre de la publicité" style="border: none;">
+                            </div>
+                        </div>
+                        <label>
+                            <textarea v-model="publicityTexte" type="text" id="msgInput" maxLength="99" class="send-input2" placeholder="Introduisez l'annonce ici"></textarea>
+                        </label>
+                        <span style="position: absolute;top: 19%; font-size: 9px;right: 2%" :class="{ success : publicityTexte.length <= 50, warning : publicityTexte.length > 50 && publicityTexte.length <= 70, danger : publicityTexte.length > 70}"> {{publicityTexte.length}}/99</span>
+                        <center style="margin-top: 10px;">
+                            <button class="ios_button" v-if="publicityTitle.length > 1 && publicityTexte.length > 1" style="color: white; font-weight: bold; background-color: #f11717; font-family: 'SFProTextSemibold';" @click="sendPublicity">
+                                Publier (${{publicityPrice}})
+                            </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-screen-background" v-if="appSelected == ''">
+                <div class="app-screen">
+                    <div class="app-screen-container">
+                        <a class="app-icon" v-for="(item, index) in app" @click="selectedApp(item.selectedApp, item.selectedSubApp)" v-if="!item.faction">
+                            <div class="app-icon-image" v-bind:style="{ backgroundImage: 'url(' + item.imageUrl + ')' }"></div>
+                            <span class="app-text">{{item.name}}</span>
+                        </a>
+                        <a class="app-icon" v-for="(item, index) in app" @click="selectedApp(item.selectedApp, item.selectedSubApp)" v-if="item.faction && item.faction.includes(faction)">
+                            <div class="app-icon-image" v-bind:style="{ backgroundImage: 'url(' + item.imageUrl + ')' }"></div>
+                            <span class="app-text">{{item.name}}</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom-nav-container">
+                    <div class="bottom-nav-list">
+                        <div class="bottom-nav-list-container">
+                            <a class="app-icon" v-for="(item, index) in subApp" @click="selectedApp(item.selectedApp, item.selectedSubApp)">
+                                <div class="app-notification-badge" v-if="item.badge">{{item.badge}}</div>
+                                <div class="app-icon-image" v-bind:style="{ backgroundImage: 'url(' + item.imageUrl + ')' }">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="returnbar" v-if="appSelected != ''" @click="selectedApp(''), currentMessage = null"></div>
+    </div>
+    <script src="./js/moment.js"></script>
+    <script src="../vue.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

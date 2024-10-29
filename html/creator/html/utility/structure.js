@@ -1,0 +1,22 @@
+const structureLabels = [
+    'Burun Genişliği',
+    'Burun Yüksekliği',
+    'Burun Uzunluğu',
+    'Burun Köprüsü Şekli',
+    'Burun Tipi',
+    'Burun Köprüsü Orantısı',
+    'Kaş Yüksekliği',
+    'Kaş Genişliği',
+    'Elmacık Kemiği Genişliği',
+    'Elmacık Kemiği Yüksekliği',
+    'Yanak Dolgunluğu',
+    'Göz Kapakları',
+    'Dudak Dolgunluğu',
+    'Arka Çene Kemiği Genişliği',
+    'Arka Çene Kemiği Yüksekliği',
+    'Çene Uzunluğu',
+    'Çene Pozisyonu',
+    'Çene Genişliği',
+    'Çene Çıkıntısı',
+    'Boyun Genişliği'
+];

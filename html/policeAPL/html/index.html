@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC Phone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />        
+    <link rel="stylesheet/less" type="text/css" href="./css/style.less" />   
+    
+</head>
+<body>
+ 
+
+    <!-- <component v-bind:is="getTabComponent" v-bind:data="data"></component> -->
+    
+    <div class="apl_wrapper">
+        <div class="apl_Header">
+            <span>Radar</span>
+        </div>
+        <div class="apl_Content">
+                <div class="speed">
+                    Hız:
+                </div>
+                <div class="kmh">
+                    {{ this.setSpeed }} km/h
+                </div>
+                <div class="plate">
+                    Plaka: 
+                </div>
+                <div class="plate_text">
+                    {{ this.setPlate }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    
+    <script src="./vue.min.js"></script>
+    <script src="./less.min.js"></script>
+    <!-- CONTENT PAGES -->
+
+    <!-- CONTENT PAGES END -->
+    <script src="js/jquery.js"></script>
+    <script src="./app.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+    
+
+    <script>
+        
+    </script>
+</body>
+    
+</html>

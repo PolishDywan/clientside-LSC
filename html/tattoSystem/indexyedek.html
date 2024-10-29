@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC tattoShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />        
+    <link rel="stylesheet" type="text/css" href="./style.css" />   
+    
+</head>
+<body>
+ 
+
+    <!-- <component v-bind:is="getTabComponent" v-bind:data="data"></component> -->
+    
+    <div class="mainContent">
+
+        <div class="closeButton">
+            <button @click="close()">KAPAT</button>
+        </div>
+
+        <div class="tattoList">
+            <ul v-for="(index, value) in tattos">
+                <li v-for="n in index">
+                    <div class="tattoItem">
+                        {{ n.name }}
+                    </div>
+                    <div class="interactionButtons">
+                        <button @click='tryTatto(value, n)'>Dene</button>
+                        <button @click='buyTatto(value, n)'>Satın al</button>
+                    </div>                    
+                </li>
+            </ul>                      
+        </div> 
+        
+        
+    </div>
+    
+    
+    <script src="./vue.min.js"></script>
+    <script src="./app.js"></script>    
+</body>
+    
+</html>

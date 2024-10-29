@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+	font-family: myFont;
+	background-color: transparent !important;
+}
+.box {
+	background-color: #fff;
+	width: 1100px;
+	height: 550px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+	background: linear-gradient(90deg, rgba(215,217,218,1) 0%, rgba(233,233,234,1) 100%);
+	height: 85px;
+	width: 100%;
+	color: #000;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.header .logo {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+}
+.header img {
+	margin-left: 25px;
+	margin-top:15px;
+}
+.header .info {
+	position: relative;
+	float:right;
+	margin-right: 50px;
+	margin-top: 25px;
+}
+
+.header .info .head {
+	font-size: 30px;
+	text-align: right;
+	font-family: 'Roboto', sans-serif;
+}
+.header .info .sub {
+	font-size: 15px;
+}
+
+.header .hour {
+	width: 150px;
+	text-align: center;
+	position: relative;
+	margin-left: 475px;
+	padding-top: 25px;
+	font-size: 40px;
+}
+/** THE BODY **/
+.bodyMenu {
+	width: 100%;
+	color: #FFF;
+	height: 465px;
+	font-family: myFont2;
+	position: relative;
+}
+.bodyMenu .title {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 25px;
+	color: black;
+}
+.bodyMenu .tiles {
+	width: 100%;
+}
+
+.bodyMenu .bigTile {
+	width: 290px;
+	height: 290px;
+	position: absolute;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.bigTile .title {
+	font-size: 55px;
+	height: 200px;
+	margin-top: 50px;
+	position: absolute;
+}
+.bigTile .sub {
+	position: absolute;
+	bottom: 10px;
+	left: 125px;
+	font-family: myFont3;
+}
+.withdraw {	
+	background-color: #FEC627;
+}
+.transfer {
+	background-color: #E4E4E4;
+	margin-left: 295px;
+	color: #000;
+}
+.deposit {
+	background-color: #00B035;
+	margin-left: 590px;
+}
+.exit {
+	position: absolute;
+	bottom: 50px;
+	right: 525px;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #FFF;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.exitreal{
+	cursor: pointer;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background-color: #d73131;
+	padding-left:30px;
+	color:white;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	padding-right: 30px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.qua_pro{
+	padding:8px;
+	background-color: #268f44;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.qua_pro i{
+	color:white;
+
+}
+.qua_here_name{
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+.qua_card_main{
+	width: 30%;
+	height: 420px;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+	margin-top: 30px;
+	margin-left: 55px;
+}
+.qua_card_main h1{
+background-color: #268f44;
+margin-top: 0px;
+font-size: 18px;
+font-weight: lighter;
+font-family: 'Roboto', sans-serif;
+padding:10px;
+padding-left: 15px;
+text-transform: uppercase;
+}
+.qua_card_main img{
+	width: 85%;
+	margin: 0 auto;
+	display: block;
+}
+.qua_card_area{
+	width: 94%;
+	height: 30%;
+	padding: 10px;
+	margin: 0 auto;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.qua_may{
+	background-color: #8080801f;
+	border-radius: 5px;
+}
+.qua_may h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+.qua_real{
+	background-color: #00b0353b;
+	padding: 10px;
+	border-radius: 5px;
+}
+.qua_real h4{
+	margin: 0px;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+}
+.withdrow{
+	padding: 8px;
+	background-color: #d73131;
+	color: white;
+	border: none;
+	margin-top: 10px;
+	outline:none;
+	border-radius: 6px;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	margin-left: 30px;
+
+}
+.qua_dep{
+	padding: 8px;
+	background-color: #268f44;
+	color: white;
+	border: none;
+	margin-top: 10px;
+	outline:none;
+	border-radius: 6px;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	margin-left: 35px;	
+}
+.qua_t{
+	border-bottom: 2px solid black;
+	border: none;
+	outline: none;
+	width: 30%;
+	transition: 0.3s;
+	border-radius: 5px;
+	box-shadow: inset 0px -2px 0px;
+	padding: 5px;
+}
+.qua_t:hover{
+	width: 70%;
+}
+.bodyWd {
+	width: 100%;
+	color: #FFF;
+	height: 465px;
+	font-family: myFont2;
+	position: relative;
+}
+.w3-input::placeholder{
+	color: black;
+	font-family: 'Roboto', sans-serif;
+}
+.bodyWd .title {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	padding-top: 10px;
+	color: black;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
+.bodyWd .form {
+	width: 880px;
+	margin-left: 10%;
+}
+.bodyWd .form .button {
+	position: absolute;
+}
+.bodyWd .form .button input{
+	border:0;
+	padding:0;
+	line-height:1;
+
+	height: 62px;
+	width: 200px;
+	background-color: #E4E4E4;
+	font-family: myFont2;
+	font-size: 50px;
+	postion: inherit;
+	margin-left: 190px;
+	margin-top: 50px;
+	text-align: center;
+	
+}
+.bodyWd .form .button .minus {
+margin-left: 135px;
+    margin-top: 55px;
+    width: 55px;
+    position: inherit;
+    padding: 5px;
+    color: black;
+    font-size: 40px;
+}
+.bodyWd .form .button .plus {
+	width: 55px;
+	position: absolute;
+	margin-top: 55px;
+	margin-left: 390px;
+	padding: 5px;
+	color: black;
+    font-size: 40px;
+}
+.bodyWd .form .validate {
+	margin-top: 130px;
+	margin-left: 230px;
+	padding: 10px;
+	border: none;
+	color: #000;
+	font-size: 25px;
+	padding: 8px;
+    background-color: #268f44;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.qua_form{
+	float:left;
+	margin-top: 30px;
+	height: 350px;
+	border-radius: 5px;
+}
+.login_title{
+    font-family: 'Roboto', sans-serif;	
+}

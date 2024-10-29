@@ -1,0 +1,71 @@
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.back {
+  width: 38%;
+  margin: 0 auto;
+  padding: 50px;
+  max-height: 680px;
+  background-image: url(background.png);
+  background-size: 510px;
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: 165px;
+  overflow: hidden;
+}
+.rese {
+  margin: 0 auto;
+  width: 60%;
+  max-height: 680px;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.rese input{
+    border:none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.rese .medion {
+  border: none;
+  outline: none;
+  width: 420px;
+  padding: 2px;
+  word-break: break-all;
+  resize: none;
+  height: 54%;
+  border-radius: 5px;
+  color: black;
+}
+.rese p{
+    background-color: transparent;
+    border-radius: 5px;
+    width: 30%;
+    padding: 2px;
+    height: 100%;
+    overflow: scroll;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

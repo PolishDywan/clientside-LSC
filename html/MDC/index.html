@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSC Character Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link href="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+</head>
+<body>
+ 
+    <div class="mdcHeader">
+        
+         
+    </div>
+    <div class="mdcContent">
+        <div class="leftBar">
+            <div class="leftBarContent">     
+                <button @click="selectPage(6)">Veri Merkezi</button>
+                <button>Dosyalar</button>
+                <button @click="selectPage(1)">Sorgulama İşlemleri</button>
+               <!--  <button @click="selectPage(2)">Araç Sorgula</button>-->
+                <button @click="selectPage(3)">Arananlar ({{ this.data.wantedList.length }})</button>
+                <button @click="selectPage(5)">911 Çağrıları ({{ this.data.calls.length }})</button>
+                
+                
+            </div>
+            <div class="leftBarBottomLogo">
+                <img src="https://steamuserimages-a.akamaihd.net/ugc/781854100510855418/A68756B9970FC7AE517EE725CDD05E6CE3FCF8FA/">
+                <button class="closeButton" @click="closeMDC()">Çıkış</button>                            
+            </div>
+        </div>
+        <div class="mdc">
+            <component v-bind:is="getTabComponent" v-bind:data="data"></component>
+        </div>  
+
+    </div>
+
+    <script src="./vue.min.js"></script>
+    <script src="./less.min.js"></script>
+    <script src="https://unpkg.com/vuesax@4.0.1-alpha.16/dist/vuesax.min.js"></script>
+    <!-- CONTENT PAGES -->
+    <script src="./utils/mainpage.js"></script>
+    <script src="./utils/searchpage.js"></script>
+    <script src="./utils/peopleresults.js"></script>
+    <script src="./utils/wantedlist.js"></script>
+    <script src="./utils/callslist.js"></script>
+    <script src="./utils/reportspage.js"></script>
+    <!-- CONTENT PAGES END -->
+    <script src="./app.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+    
+
+    <script>
+        
+    </script>
+</body>
+    
+</html>

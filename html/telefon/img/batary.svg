@@ -1,0 +1,42 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>battery-status-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="shp0" d="M0 288L0 224C0 215.16 7.16 208 16 208L32 208L32 192C32 183.16 39.16 176 48 176L64 176L64 160C64 142.33 78.33 128 96 128L480 128C497.67 128 512 142.33 512 160L512 352C512 369.67 497.67 384 480 384L96 384C78.33 384 64 369.67 64 352L64 336L48 336C39.16 336 32 328.84 32 320L32 304L16 304C7.16 304 0 296.84 0 288ZM96 352L144 352L144 160L96 160L96 352Z" />
+		</g>
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+</svg>

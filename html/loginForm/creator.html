@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <link rel="stylesheet" type="text/css" href="../semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style2.css">
+    <title>lsc</title>
+</head>
+
+<body>
+    <div class="content">
+        <div id="karaktersec">
+            <div id="header">
+                <div id="logo"><img src="./assets/images/logo.png" /></div>
+                <div id="title"><span>KARAKTERLER</span></div>
+            </div>
+            <div id="main"></div>
+            <div id="footer" class="hidden">
+                <div class="button"><span>KARAKTER YARAT</span></div>
+            </div>
+        </div>
+        <div id="karakterduzenle" class="hidden">
+            <div id="header">
+                <div id="logo"><img src="./assets/images/logo.svg" /></div>
+                <div id="title"><span>Karakter ADI</span></div>
+            </div>
+            <!-- 
+
+                 <div class="eleman">
+                        <span>Anne Yüz</span>
+                        <div class="input">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                            <div class="deger">50</div>
+                        </div>
+                    </div>
+            -->
+            <div id="main">
+                <div class="eleman">
+                    <span>Doğum Yeri</span>
+                    <div class="input">
+                        <input type="text" spellcheck="false" placeholder="Los Santos" id="dogumYeri" value="Los Santos">
+                    </div>
+                </div>
+                <div class="eleman">
+                    <span>Uyruk</span>
+
+                        <div class="ui primary fluid search selection dropdown" id="uyruk">
+                            <input type="hidden" name="country">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Uyruğu Seçin</div>
+                            <div class="menu">
+                            <div class="item" data-value="us"><i class="us flag"></i>Birleşik Devletler</div>
+                            <div class="item" data-value="ar"><i class="ar flag"></i>Arjantin</div>
+                            <div class="item" data-value="am"><i class="am flag"></i>Ermenistan</div>
+                            <div class="item" data-value="au"><i class="au flag"></i>Avustralya</div>
+                            <div class="item" data-value="bs"><i class="bs flag"></i>Bahamalar</div>
+                            <div class="item" data-value="be"><i class="be flag"></i>Belçika</div>
+                            <div class="item" data-value="ba"><i class="ba flag"></i>Bosna</div>
+                            <div class="item" data-value="br"><i class="br flag"></i>Brezilya</div>
+                            <div class="item" data-value="bg"><i class="bg flag"></i>Bulgaristan</div>
+                            <div class="item" data-value="ca"><i class="ca flag"></i>Kanada</div>
+                            <div class="item" data-value="cn"><i class="cn flag"></i>Çin</div>
+                            <div class="item" data-value="cu"><i class="cu flag"></i>Küba</div>
+                            <div class="item" data-value="cz"><i class="cz flag"></i>Çek Cumhuriyeti</div>
+                            <div class="item" data-value="dk"><i class="dk flag"></i>Danimarka</div>
+                            <div class="item" data-value="eg"><i class="eg flag"></i>Mısır</div>
+                            <div class="item" data-value="gb"><i class="gb flag"></i>İngiltere</div>
+                            <div class="item" data-value="fi"><i class="fi flag"></i>Finlandiya</div>
+                            <div class="item" data-value="fr"><i class="fr flag"></i>Fransa</div>
+                            <div class="item" data-value="de"><i class="de flag"></i>Almanya</div>
+                            <div class="item" data-value="in"><i class="in flag"></i>Hindistan</div>
+                            <div class="item" data-value="il"><i class="il flag"></i>İsrail</div>
+                            <div class="item" data-value="it"><i class="it flag"></i>İtalya</div>
+                            <div class="item" data-value="jm"><i class="jm flag"></i>Jamaika</div>
+                            <div class="item" data-value="jp"><i class="jp flag"></i>Japonya</div>
+                            <div class="item" data-value="mk"><i class="mk flag"></i>Makedonya</div>
+                            <div class="item" data-value="mx"><i class="mx flag"></i>Meksika</div>
+                            <div class="item" data-value="pl"><i class="pl flag"></i>Polonya</div>
+                            <div class="item" data-value="pt"><i class="pt flag"></i>Portekiz</div>
+                            <div class="item" data-value="ro"><i class="ro flag"></i>Romanya</div>
+                            <div class="item" data-value="ru"><i class="ru flag"></i>Rusya</div>
+                            <div class="item" data-value="es"><i class="es flag"></i>İspanya</div>
+                            <div class="item" data-value="se"><i class="se flag"></i>İsveç</div>
+                            <div class="item" data-value="ug"><i class="ug flag"></i>Uganda</div>
+                            <div class="item" data-value="ua"><i class="ua flag"></i>Ukrayna</div>
+                            <div class="item" data-value="ve"><i class="ve flag"></i>Venezuela</div>
+                            <div class="item" data-value="vn"><i class="vn flag"></i>Vietnam</div>
+                            <div class="item" data-value="av"><i class="av flag"></i>Arnavutluk</div>
+                            <div class="item" data-value="at"><i class="at flag"></i>Avusturya</div>
+                            <div class="item" data-value="by"><i class="by flag"></i>Belarus</div>
+                            <div class="item" data-value="dk"><i class="dk flag"></i>Danimarka</div>
+                            <div class="item" data-value="ee"><i class="ee flag"></i>Estonya</div>
+                            <div class="item" data-value="gl"><i class="gl flag"></i>Grönland</div>
+                            <div class="item" data-value="nl"><i class="nl flag"></i>Hollanda</div>
+                            <div class="item" data-value="hr"><i class="hr flag"></i>Hırvatistan</div>
+                            <div class="item" data-value="lv"><i class="lv flag"></i>Letonya</div>
+                            <div class="item" data-value="lt"><i class="lt flag"></i>Litvanya</div>
+                            <div class="item" data-value="lu"><i class="lu flag"></i>Lüksemburg</div>
+                            <div class="item" data-value="hu"><i class="hu flag"></i>Macaristan</div>
+                            <div class="item" data-value="mk"><i class="mk flag"></i>Makedonya</div>
+                            <div class="item" data-value="mt"><i class="mt flag"></i>Malta</div>
+                            <div class="item" data-value="md"><i class="md flag"></i>Moldova</div>
+                            <div class="item" data-value="mc"><i class="mc flag"></i>Monako</div>
+                            <div class="item" data-value="no"><i class="no flag"></i>Norveç</div>
+                            <div class="item" data-value="pl"><i class="pl flag"></i>Polonya</div>
+                            <div class="item" data-value="pt"><i class="pt flag"></i>Portekiz</div>
+                            <div class="item" data-value="sm"><i class="sm flag"></i>San Marino</div>
+                            <div class="item" data-value="sk"><i class="sk flag"></i>Slovakya</div>
+                            <div class="item" data-value="si"><i class="si flag"></i>Slovenya</div>
+                            <div class="item" data-value="sb"><i class="sb flag"></i>Sırbistan</div>
+                            <div class="item" data-value="vk"><i class="vk flag"></i>Vatikan</div>
+                            <div class="item" data-value="gr"><i class="gr flag"></i>Yunanistan</div>
+                            <div class="item" data-value="ie"><i class="ie flag"></i>İrlanda</div>
+                            <div class="item" data-value="ch"><i class="ch flag"></i>İsviçre</div>
+                            <div class="item" data-value="is"><i class="is flag"></i>İzlanda</div>
+                          </div>
+                           </div>
+
+                </div>
+                <div class="eleman">
+                    <span>Yaş</span>
+                    <div class="input">
+                        <input type="range" min="16" max="80" value="16" class="slider" id="myRange">
+                        <div class="deger">16</div>
+                    </div>
+                </div>
+                <div class="eleman">
+                    <span>İkinci Dil</span>
+                    
+                    <div class="ui primary fluid search selection dropdown" id="dil">
+                        <input type="hidden" name="country">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Dili Seçin</div>
+                        <div class="menu">    
+                        <div class="item" data-value="no"></i>İkinci Dil Yok</div>                        
+                        <div class="item" data-value="am"><i class="am flag"></i>Ermenice</div>
+                        <div class="item" data-value="ba"><i class="ba flag"></i>Sırpça</div>
+                        <div class="item" data-value="bg"><i class="bg flag"></i>Bulgarca</div>
+                        <div class="item" data-value="cn"><i class="cn flag"></i>Çince</div>
+                        <div class="item" data-value="cz"><i class="cz flag"></i>Çekçe</div>
+                        <div class="item" data-value="dk"><i class="dk flag"></i>Danca</div>
+                        <div class="item" data-value="fi"><i class="fi flag"></i>Fince</div>
+                        <div class="item" data-value="fr"><i class="fr flag"></i>Fransızca</div>
+                        <div class="item" data-value="de"><i class="de flag"></i>Almanca</div>
+                        <div class="item" data-value="in"><i class="in flag"></i>Hintçe</div>
+                        <div class="item" data-value="il"><i class="il flag"></i>İbranice</div>
+                        <div class="item" data-value="it"><i class="it flag"></i>İtalyanca</div>
+                        <div class="item" data-value="jp"><i class="jp flag"></i>Japonca</div>
+                        <div class="item" data-value="pt"><i class="pt flag"></i>Portekizce</div>
+                        <div class="item" data-value="ru"><i class="ru flag"></i>Rusça</div>
+                        <div class="item" data-value="es"><i class="es flag"></i>İspanyolca</div>
+                        <div class="item" data-value="av"><i class="av flag"></i>Arnavutça</div>
+                        <div class="item" data-value="ee"><i class="ee flag"></i>Estonca</div>
+                        <div class="item" data-value="gl"><i class="gl flag"></i>Grönlandça</div>
+                        <div class="item" data-value="ar"><i class="ar flag"></i>Arapça</div>
+                        <div class="item" data-value="an"><i class="an flag"></i>Felemenkçe</div>
+                        <div class="item" data-value="hr"><i class="hr flag"></i>Hırvatça</div>
+                        <div class="item" data-value="lv"><i class="lv flag"></i>Letonca</div>
+                        <div class="item" data-value="lt"><i class="lt flag"></i>Litvanca</div>
+                        <div class="item" data-value="lu"><i class="lu flag"></i>Lüksemburgca</div>
+                        <div class="item" data-value="hu"><i class="hu flag"></i>Macarca</div>
+                        <div class="item" data-value="mk"><i class="mk flag"></i>Makedonca</div>
+                        <div class="item" data-value="mt"><i class="mt flag"></i>Maltaca</div>
+                        <div class="item" data-value="md"><i class="md flag"></i>Rumence</div>
+                        <div class="item" data-value="no"><i class="no flag"></i>Norveççe</div>
+                        <div class="item" data-value="pl"><i class="pl flag"></i>Lehçe</div>
+                        <div class="item" data-value="sk"><i class="sk flag"></i>Slovakça</div>
+                        <div class="item" data-value="si"><i class="si flag"></i>Slovence</div>
+                        <div class="item" data-value="sb"><i class="sb flag"></i>Sırpça</div>
+                        <div class="item" data-value="gr"><i class="gr flag"></i>Yunanca</div>
+                        <div class="item" data-value="ie"><i class="ie flag"></i>İrlandaca</div>
+                        <div class="item" data-value="is"><i class="is flag"></i>İzlandaca</div>
+
+                      </div>
+                       </div>
+
+                </div>
+                <div id="footer2">
+                    <div class="button2" id="btnOkey"><span>TAMAMLA</span></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/app2.js"></script>
+<script src="../semantic-ui/semantic.min.js"></script>
+
+
+<script>
+    
+    console.clear();
+    $('.ui.dropdown').dropdown();
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', (e) => {
+        dropdown.classList.toggle('dropdown__options--visible')
+    })
+    
+    dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
+        opt.addEventListener('click', (e) => {      
+        dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
+        })
+    })
+    })
+
+
+    $('.karaktersec .footer .button').click(function(event){
+        $('.karaktersec .footer').hide();
+    })
+    
+
+</script>
+<script>
+    $(function(){
+        $('#dogumYeri').keypress(function(e){
+        // allowed char: 1 , 2 , 3, 4, 5, N, O, A, B, C
+        var chr = String.fromCharCode(e.which);
+        if ("qwertyuıopğüasdfghjklşizxcvbnmöç 1234567890-+()QWERTYUIOPĞÜASDFGHJKLŞİZXCVBNMÖÇ".indexOf(chr) < 0)
+            return false;
+        });
+    });
+
+</script>
+</html>

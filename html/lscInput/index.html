@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lsc:inputs</title>
+    <script src="./jscolor.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url("../assets/css/all.min.css");
+        *:focus {
+            outline: none;
+        }
+
+        html {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            outline-style: none;
+            box-shadow: none;
+            border-color: transparent;
+            height: 100%;
+            width: 100%;
+            background: transparent !important;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+
+        body:not(input) {
+            user-select: none;
+        }
+
+        .content {
+            padding: 15px 27px;
+            box-sizing: border-box;
+            width: 707.83px;
+            height: 258px;
+            display: grid;
+            background: linear-gradient(180deg, rgba(136, 194, 226, 0.38) 0%, rgba(235, 248, 255, 0.38) 100%);
+            backdrop-filter: blur(3px);
+            border-radius: 20px;
+        }
+
+        input {
+            border: 0;
+            width: 442px;
+            height: 64px;
+            background: rgba(33, 32, 32, 0.16);
+            border-radius: 10px;
+        }
+        
+        input:not(#inputabi){
+            width:150px;
+            
+        }
+
+        input:not(#inputabi):hover{
+            background: rgba(33, 32, 32, 0.32);
+        }
+
+
+        .verify {
+            color: #fff;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            width: 52px;
+            height: 52px;
+            background: rgba(0, 255, 25, 0.54);
+            border-radius: 8px;
+        }
+        .verify2{
+            display:grid;
+            justify-content:center;
+            align-content:center;
+            background: rgba(0, 255, 25, 0.54);
+            height:92px;
+            width:92px;
+            border-radius:8px;
+        }
+        .verify2.w{
+            background: rgba(255, 0, 0, 0.54);
+        }
+
+        .verify:hover,.verify2:hover {
+            cursor: pointer;
+
+            background: rgba(0, 255, 25, 0.45);
+        }
+
+        .verify2.w:hover{
+            background: rgba(255, 0, 0, 0.45);
+        }
+        .bir {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: repeat(2, max-content);
+        }
+
+        .uc,
+        .iki {
+            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2,max-content);
+        }
+
+        .iki.o{
+            gap:47px;
+        }
+
+        .f{
+            gap:10px !important;
+        }
+
+        .bir span{
+            margin-top:20px;
+        }
+
+        .bir span,
+        #inputabi {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            color: #FFFFFF;
+            text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+        }
+
+        #inputabi{
+            box-sizing: border-box;
+            padding: 10px;
+
+        }
+
+        .verifyBro{
+            display:grid;
+            
+        }
+
+        i{
+            font-size:40px;
+            color:#fff;
+        }
+
+        .verify2 i{
+            font-size:60px;
+        }
+
+
+        @media (min-width: 768px) {
+            .mainContent {
+                transform: scale(0.6);
+            }
+        }
+
+
+        @media (min-width: 992px) {
+            .mainContent {
+                transform: scale(0.8);
+            }
+        }
+
+
+        @media (min-width: 1200px) {
+            .mainContent {
+                transform: scale(1);
+            }
+        }
+    </style>
+   
+</head>
+
+<body>
+    <div class="mainContent">
+        <div class="content">
+            <div class="bir"><img
+                    src="https://forum.lsc-rp.com/Themes/ninetynine/images/_style3/logo.png" /><span>{{ headerText }}</span></div>
+
+            <!-- Input text -->
+            <div class="verifyBro" v-if="type == 0">
+            <div class="iki"><input id="inputabi" spellcheck="false" type="text" v-model="textInput"></div>
+                <div class="uc">
+                    <div class="verify" @click="save"><span><i class="far fa-check"></i></span></div>
+                </div>
+            </div>
+
+            <!-- ???? -->
+            <div class="onayBro" v-if="type == 1">
+                <div class="iki o">
+                    <div id="y" class="verify2" @click="approve($event)"><span><i class="far fa-check"></i></span></div>
+                    <div id="n" class="verify2 w" @click="approve($event)"><span><i class="far fa-times"></i></span></div>
+                </div>
+            </div>
+
+            <!-- RGB -->
+            <div class="rgbBro" v-if="type == 2">
+                <div class="iki o f">
+                    <div id="pr1" style="display:block;border-radius:8px;height:80px;width:80px;"></div>
+                    <div class="div" style="display:grid">
+                    <input id="rgbTrigger" style="align-self:center;height:20px;" v-bind="textInput" data-jscolor="{value:'rgba(255,255,255,1)', previewElement:'#pr1'}">
+                    <div class="verify" @click="save" style="height:40px; width:155px;"><span><i class="far fa-check"></i></span></div>
+                </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+
+<script src="../assets/vue.min.js"></script>
+<script src="./app.js"></script>
+
+</html>

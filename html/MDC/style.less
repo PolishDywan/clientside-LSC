@@ -1,0 +1,193 @@
+body{
+    background-color: transparent !important;
+    overflow: hidden;
+    outline-style: none;
+box-shadow: none;
+border-color: transparent;
+}
+:focus {outline:none;}
+&::-webkit-scrollbar {
+    display: none;
+}
+
+.mdcContent{
+    height: 35.2vw;
+    width: 50.3vw;
+    margin-top: -3.7vw;
+    margin-left: 20vw;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #49A0CD;
+    z-index: -1;
+    border: 0.15vw solid rgba(0, 0, 0, 0.76);
+}
+
+.mdcHeader{   
+    margin-top: 10vw; 
+    img{
+        margin-left: 20vw;
+        margin-top: 2vw;
+        height: 7vw;
+          
+    }
+}
+
+.leftBar{
+    margin-top: 2vh;
+    margin-left: 1vw;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    width: 10.5vw;
+    height: 33vw;   
+    border-radius: 20px 0px 0px 20px;
+    padding: 0.1vw;
+
+    .leftBarContent{
+        margin-top: 2vh;
+    }
+
+    .statistic{
+        height: 4vh;
+        width: 8vw;
+
+        label{
+            padding-top: 1vh;
+        }
+    }
+
+    button,
+    button::after {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    button {
+        width: 10vw;
+        background: rgba(83, 83, 83, 0.068);
+        border: 0.1vw solid rgba(0, 0, 0, 0.671);
+        border-radius: 0.4vw;
+        color: rgb(0, 0, 0);
+        display: block;
+        font-size: 0.7vw;
+        font-weight: bold;
+        margin: 0.5vw auto;
+        
+        padding: 0.2vw 0.7vw;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    button::before,
+    button::after {
+    background: rgb(0, 0, 0);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    }
+
+    button:hover {
+    color: #ffffff;
+    background-color: #49A0CD;
+    }
+
+
+    button::after {
+        height: 0;
+        left: 50%;
+        top: 50%;
+        width: 0;
+    }
+      
+    button:hover:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    
+    img{
+        margin-left: 1vw;
+        margin-bottom: 1vw;
+        height: 7vw;
+        opacity: 0.75;
+    }
+      
+    .closeButton{
+        width: 5vw;
+        height: 2vw;
+        font-weight: bold;
+        font-size: 1vw;
+        margin-left: 2.1vw;
+        background-color: #49A0CD;
+        border: 1px solid rgba(0, 0, 0, 0.918);
+    }
+    .closeButton:hover {
+        color: #49A0CD;
+        background-color: #ffffff2c;
+    }
+}
+
+.mdc{
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    float: left;      
+    background-color: rgba(255, 255, 255, 0.664);
+    width: 37.3vw;
+    height: 33vw;
+    padding: 0.4vw;
+    border-radius: 0px 20px 20px 0px;
+    background-image: url("https://i.hizliresim.com/QS1PAY.png");
+    background-repeat: no-repeat;
+    background-position: center;  
+    overflow: hidden;
+    overflow-y: scroll;  
+
+    .loader{        
+        size: 5vw;
+    }
+    .segment{
+        background-color: rgb(0, 89, 255);
+        opacity: 0.6;
+    }    
+}
+
+.leftBarBottomLogo{
+    margin-top: 10vw;
+    margin-left: 0.7vw;
+}
+
+.searchPage{
+    text-align: center;
+    .searchContent{
+        margin-top: 10vw;
+        
+        div{
+            margin: 2vw;
+        }
+
+        span{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            font-size: larger;
+        }
+        input{
+            height:2vw;
+            border-radius: 10px 10px 10px 10px;
+            padding-left: 2vw;
+        }
+        button{
+            border-radius: 10px 10px 10px 10px;
+            font-weight: bold;
+            font-size: medium;
+            width: 10vw;
+            height: 2vw;
+        }
+    }
+}
+
+.searchPeopleResult{
+    .list{
+        margin-left: 28vw;
+    }
+}

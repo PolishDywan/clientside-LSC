@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>speech-bubble (1)-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #26578a } 
+	</style>
+	<g id="Speech_Bubble_48_">
+		<g id="Layer">
+			<path id="Layer" class="shp0" d="M74.41 480.55L38.2 480.55L63.81 454.94C77.61 441.13 86.24 423.18 88.55 403.7C29.43 364.89 0 308.68 0 249.75C0 141.03 99.92 30.55 256.41 30.55C422.2 30.55 511.1 132.21 511.1 240.23C511.1 348.95 421.26 450.55 256.41 450.55C227.54 450.55 197.4 446.69 170.5 439.62C145.03 465.74 110.53 480.55 74.41 480.55L74.41 480.55Z" />
+		</g>
+	</g>
+</svg>

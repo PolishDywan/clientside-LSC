@@ -1,0 +1,22 @@
+html {
+	background-color: rgba(0,0,0,0);
+}
+
+#tm-data {
+	color: #FFFFFF;
+    left: 190px;
+	margin-top: 25px;
+    position: absolute;
+    top: 60px;
+}
+
+#tm-data li {
+	margin-top: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.noselect{
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+}

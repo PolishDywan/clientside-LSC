@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link rel="stylesheet/less" type="text/css" href="./style.less" />
+    <title>LSC Giriş Ekranı</title>
+</head>
+<body>
+    
+    <div class="content">       
+      <div class="login-form">
+        <div class="logo">
+            <img  width="150px" src="https://cdn.discordapp.com/attachments/790736378560118865/790787600008216607/pnggg.png">
+        
+            <b-form>
+                <b-form-group
+                  id="input-group-1"
+                  label=""
+                  label-for="input-1"
+                  description=""
+                >
+                    <b-form-input
+                        id="input-1"
+                        v-model="username"
+                        type="email"
+                        placeholder="Kullanıcı adı"
+                        required
+                    ></b-form-input>
+                    </b-form-group>
+            
+                    <b-form-group id="input-group-2" label="" label-for="input-2">
+                    <b-form-input
+                        id="input-2"
+                        v-model="password"
+                        placeholder="Şifre"
+                        required
+                    ></b-form-input>
+                    </b-form-group>          
+            
+                    <b-button>Giriş Yap</b-button>
+                    <b-button>Şifremi Unuttum</b-button>
+                </b-form>
+            </div> 
+            <div class="grid-item"></div>
+            <h1 class="masters"></h1>
+            <!-- Güncelleme Notları -->
+            <div class="grid-item-content">
+                  <b-media tag="li" class="my-4" v-for="(a,i) of updates" :key="i">
+                    <template #aside>
+                    <b-img blank blank-color="#27FF00" width="8" alt="placeholder"></b-img>
+                    </template>
+              
+                    <h5 class="mt-0 mb-1">{{a.header}}</h5>
+                    <p class="mb-0">
+                      {{a.text}}
+                    </p>
+                  </b-media>
+                </ul>
+            </div>
+        </div>
+
+        <div class="character-select">
+
+        </div>
+
+        <div class="character-create">
+
+        </div>
+
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>    
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+    <script src="../../assets/jquery.js"></script>
+    <script src="../../assets/less.min.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>
